@@ -1,0 +1,86 @@
+    <div ui-view>
+        <div class="row ginas-background">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <i class="fa fa-road fa-5x big"></i> <br/>
+
+                        <div class="caption">
+                            <h3>G-SRS Software</h3>
+                        </div>
+                        <p>
+                            The software tools created by the <b>ginas</b> project are
+                            developed, maintained, and distributed to <b>ginas</b> and other
+                            interested parties by the <a href="http://www.ncats.nih.gov/" class="ginas-background-link"
+                                                         target="_blank">National
+                            Center for Advancing Translational Sciences (NCATS)</a> at the <a
+                                href="http://www.nih.gov" class="ginas-background-link" target="_blank">National
+                            Institutes of Health
+                            (NIH)</a>.
+                            <br/>
+                            <br/>
+                            <button class="btn btn-primary inverse" ui-sref="gsrs.main">Explore software</button>
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <img src="./assets/images/pillIconColor.png"
+                             class="img-responsive img-circle" alt="ginas logo" id="pillIcon">
+
+                        <div class="caption">
+                            <h3>The ginas Project</h3>
+                        </div>
+                        The main goal of ginas is the production of software, called G-SRS, to assist agencies in
+                        registering and
+                        documenting information about substances found in medicines.
+
+                        The <b>G</b>lobal <b>In</b>gredient <b>A</b>rchival <b>S</b>ystem
+                        provides a common identifier for all of the substances used in
+                        medicinal products, utilizing a consistent definition of
+                        substances globally, including active substances under clinical
+                        investigation, consistent with the ISO 11238 standard.
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <i class="fa fa-globe fa-5x big"></i> <br/>
+
+                        <div class="caption">
+                            <h3>the ginas Team</h3>
+                        </div>
+                        ginas will be able to store, retrieve, and distribute
+                        substance-related information described in the ISO 11238
+                        standard. It will enable authorized agents to register new
+                        substances and curate and review existing substance data. <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>ginas presentations</h1>
+                <ul class="list-unstyled">
+                    <li ng-repeat="link in presentations">
+                        <div ng-if="link.url||link.doc">
+                        <h3 ng-if="link.date">{{link.date}}</h3>
+                        <a href={{link.url||link.doc}} target="_blank">{{link.heading}}<span ng-if="link.doc"> <i class="fa fa-file-pdf-o"></i></span></a>
+                            </div>
+                        <div ng-if="link.desc">
+                            <h3 ng-if="link.date">{{link.date}}</h3>
+                            <h4>{{link.heading}}</h4>
+                            <p>{{link.desc}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <h1>ginas in the news</h1>
+                <ul class ="list-unstyled">
+                    <li ng-repeat="link in links">
+                        <br/>
+                        <a href={{link.url}} target="_blank">{{link.heading}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

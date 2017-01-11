@@ -1,0 +1,177 @@
+html, body {
+    height:100%;
+}
+
+body {
+    font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+    padding-top: 50px;
+}
+
+a.navbar-brand.navbar-nav {
+    padding-top: 0px;
+}
+
+.ginas-background {
+    background-color: #0F294D;
+    background-image: linear-gradient(to bottom,#0F294D 0, #A2C9E3 300%);
+    color: white;
+    padding-bottom: 10%;
+}
+
+.ginas-background-link{
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ginas-background-link:hover {
+color:whitesmoke;
+}
+
+.banner-heading{
+    padding-top:4%;
+    font-size: 5em;
+}
+
+#ginas-image{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+#pillIcon {
+    margin: auto;
+}
+
+.big {
+    font-size: 10em;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+ .big-mobile {
+    font-size: 4em;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.btn-ginas, .btn-ginas:active, .btn-ginas:focus {
+    color: #fff;
+    border-color: #ccc;
+    background: none;
+    padding: 4% 18%;
+    font-size: 2em;
+}
+
+.btn-ginas:hover {
+color: #0F294D;
+    background-color:white;
+}
+
+.footer {
+    padding-top: 5%;
+    /*    background-color: #242424;
+    color: rgb(159, 194, 224) !important;*/
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* height: auto; */
+}
+
+.flip {
+    -webkit-perspective: 1000;
+    position: relative;
+}
+
+.flip .card.flipped {
+    -webkit-transform: rotateY(-180deg);
+}
+.flip .card {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+}
+
+.flip .card .face {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-backface-visibility: hidden ;
+    z-index: 2;
+}
+
+.flip .card .front {
+    /*
+    position: absolute;
+    */
+    z-index: 1;
+    cursor: pointer;
+}
+.flip .card .back {
+    -webkit-transform: rotateY(-180deg);
+   cursor: pointer;
+    position: absolute;
+    top: 0;
+
+}
+
+.box {
+    min-height: 200px;
+}
+
+#download-buttons{
+    padding:2%;
+}
+
+#main-div {
+    background-color: #fafafa;
+
+}
+
+.ginas-container{
+    background-color: white;
+    margin-top: -5%;
+    padding-top: 1%;
+}
+
+a {
+    cursor: pointer;
+}
+
+.main{
+    background-color: #0F294D;
+    color: white;
+}
+
+.main>a{
+    color: #fff !important;
+}
+
+.overflow{
+    word-break: break-word;
+}
+
+.swagger-auth-required{
+    background: #d9534f;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    border: 0;
+    border-radius: 10px;
+    line-height: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/*CONTACT FORM PARTS*/
+
+#hidframe{
+    display:none;
+}
+
+/*END CONTACT FORM PARTS*/

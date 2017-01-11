@@ -1,0 +1,28 @@
+6 sec - 15:15 vada perkins
+16:20 andrew marr question
+23:25 Larry Callahan 51:32 end
+51:33 current SRS system
+discussion to 1:22:03
+1:40:26 discussion with Paolo
+Status update with EMA evaluation of GINAS
+1:41:24 Status update of ISO IDMP in Europe
+to Paolo Alcini 1:43:47
+1:44:23 GINAS overview and architecture to 2:08:19
+discussion to 
+Paolo question 2:15:00 to 2:21:13
+discussion to 2:28:15
+
+4:25:59 Introductions to 4:30:30
+
+4:30:37 System Installation Options to 4:35:35
+Health Canada Setup Walkthrough to 4:38:10
+USB Liveboot to 5:00:09
+nonsense to 5:38:25
+
+ -- Amazon cloud instructions document seperately --
+
+GINAS Basic Configuration to 5:48:25
+5:55:41 GINAS Intro and Overview to 6:05:36
+
+
+6:15:00 healthcanada breaks

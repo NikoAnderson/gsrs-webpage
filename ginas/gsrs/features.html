@@ -1,0 +1,83 @@
+<div>
+    <div class="row ginas-background">
+        <div class="col-md-8 col-md-offset-2">
+            <h1 class="text-center">Features</h1>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="row text-center">
+                        <h3>
+                            <b>Consistent definitions</b>
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <ul class="fa-ul">
+                            <li><h4><i class="fa fa-pencil-square-o lists"></i> all
+                                substances used in marketed medicinal products
+                            </h4></li>
+                            <li><h4><i class="fa fa-pencil-square-o lists"></i> active
+                                substances under clinical investigation
+                            </h4></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row text-center">
+                        <h3>
+                            <b>Store, retrieve, and distribute</b>
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <ul class="fa-ul">
+                            <li><h4><i class="fa fa-database lists"></i>register new
+                                substances
+                            </h4></li>
+                            <li><h4><i class="fa fa-database lists"></i>curate</h4></li>
+                            <li><h4><i class="fa fa-database lists"></i> review existing
+                                data
+                            </h4></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row text-center">
+                        <h3>
+                            <b>support ISO11238 substance types</b>
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <ul class="fa-ul">
+                            <li><h4><i class="fa fa-code lists"></i> multiple language
+                                capability
+                            </h4></li>
+                            <li><h4><i class="fa fa-code lists"></i> internal controlled
+                                terminology
+                            </h4></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-md-8 col-md-offset-2">
+            <h1 class="text-center">Supported Substance Types</h1>
+            <h5>click for more info</h5>
+            <div class="row text-center">
+                <div class="col-xs-3 col-md-3 box text-center flip" ng-repeat="subclass in features">
+                        <div class="card" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
+                            <div class="face front">
+                        <div class="rounded" id={{subclass.type}}>
+                           <img src=./{{subclass.imageurl}} alt="chemical image" class="img-responsive"/>
+                            <h3>{{subclass.type}}</h3>
+                        </div>
+                                </div>
+                            <div class="face back">
+                                {{subclass.description}}
+                            </div>
+                        </div>
+                    </div>
+    </div>
+</div>
+</div>
+    </div>

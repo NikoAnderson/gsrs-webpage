@@ -1,0 +1,15 @@
+<div>
+    <div class="row ginas-background">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="banner-heading"><i class="fa fa-archive" aria-hidden="true"></i> Archive</div>
+            <h3>Older Versions and CHANGELOG</h3>
+        </div>
+    </div>
+    <div class="container ginas-container">
+        <div ng-repeat="release in releases">
+            <version release=release></version>
+            <changelog ng-if="release.changelog.length>0" changes=release.changelog></changelog>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div>
+    <div class="row ginas-background" id="ginas-welcome">
+        <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <div class="banner-heading hidden-xs"><i class="fa fa-question-circle-o"
+                                                                      aria-hidden="true"></i> FAQs</h1></div><br>
+            <div class="banner-heading visible-xs"><i class="fa fa-question-circle-o"
+                                                                              aria-hidden="true"></i> FAQs</h1></div><br>
+            <h3>Looking for answers? Start here.</h3>
+        </div>
+    </div>
+    <div class="container ginas-container">
+        <div class="row">
+            <div class="col-md-12" ng-repeat="subject in faqs track by $index">
+                <h2>{{subject.subject}}</h2>
+                <ul>
+                    <li ng-repeat="faq in subject.questions track by $index">
+                        <a ng-click="scrollTo(subject.subject, $index)">{{faq.question}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div ng-repeat="subject in faqs track by $index">
+
+                <h1>{{subject.subject}}</h1>
+                <div class="row" ng-repeat="faq in subject.questions track by $index">
+                    <div id={{subject.subject}}-{{$index}}>
+                        <div class="col-md-12">
+                            <h3><strong>{{faq.question}}</strong></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <p>{{faq.answer}}</p>
+                            <a ng-click="scrollTo('faq-container')"><h5>back to top</h5></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
