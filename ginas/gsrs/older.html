@@ -7,7 +7,7 @@
     </div>
     <div class="container ginas-container">
         <div ng-repeat="release in releases">
-            <version release=release></version>
+            <version release=release ></version>
             <changelog ng-if="release.changelog.length>0" changes=release.changelog></changelog>
         </div>
 

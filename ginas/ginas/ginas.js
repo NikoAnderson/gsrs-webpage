@@ -94,6 +94,11 @@ angular.module('ginasWeb.ginas', ['ui.router'])
                 parent: 'winter',
                 url: "/wednesday",
                 templateUrl: './ginas/wednesday.html'
+            })
+	    .state('ginas2017', {
+                parent: 'ginas.meetings',
+                url: "/ginas2017",
+                templateUrl: './ginas/ginas-oct2017.html'
             });
     }])
         ;
