@@ -100,5 +100,6 @@ angular.module('ginasWeb.ginas', ['ui.router'])
                 url: "/ginas2017",
                 templateUrl: './ginas/ginas-oct2017.html'
             });
-    }])
-        ;
+
+    }]);
+

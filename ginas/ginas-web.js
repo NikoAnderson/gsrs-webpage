@@ -30,6 +30,10 @@
                     controller: function ($scope, $sce) {
                         $scope.$sce = $sce;
                         $scope.links=[
+                            {
+                                heading: 'Ginas 2017: October 2017 Ginas Meeting',
+                                url: './#/meetings/ginas2017'
+                            },
                             {heading: 'IPQ 2015: Global Excipient Databases Are Advancing That Will Fill Content and Functionality Gaps ' +
                             'in Existing Regulatory Efforts and Further Industry/Regulator Communication',
                                 url: 'http://multibriefs.com/briefs/ipec/IPEC%20GInAS%20NIPTE%20IID.pdf'

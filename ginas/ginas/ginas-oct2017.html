@@ -42,7 +42,13 @@
 
     <div class="row">
         <div class="col-md-12">
-            GSRS deployment and development workshop will be held at NCATS from 9:00am until 1:00pm. Please reserve using the RSVP link.
+            GSRS deployment and development workshop will be held at <a href="https://ncats.nih.gov/" target="_blank">NCATS</a> from 9:00am until 1:00pm.
+            Please reserve using the RSVP link.<br/><br/>
+
+            <div class="text-center">
+            National Center for Advancing Translational Sciences <br/>
+            9800 Medical Center Drive<br/>
+            Rockville, Maryland 20850 </div>
             <br/><br/>
         </div></div>
 
@@ -98,12 +104,13 @@
     </div>
 
 <div class="row panel-group">
-    <br/>
-    <div class="col-md-12"><h2>Agenda</h2></div>
-<!--   <a data-toggle="collapse" href="#viewagenda">View Agenda</a></p>-->
-
-    <div id="viewagenda" >
-    <div class="row">
+    <br/><br/><br/>
+    <div class="col-md-12"><h2> Agenda</h2>
+        <a ng-click="showAgenda=!showAgenda" class="row text-center"><h3>View Agenda</h3></a>
+        <br/><br/>
+    </div>
+    <div id="viewagenda" ng-if="showAgenda">
+    <div class="row" >
         <div class="col-md-6 col-md-offset-2"><h4>
             Data Standards at CBER / CDER</h4>
         </div>
@@ -171,7 +178,7 @@
             Scilligence Drawing Tools and Helm </h4>
         </div>
         <div class="col-md-2">
-            <i>Jinbo Lee</i>
+            <i>Jinbo Lee / Tony Yuan</i>
         </div>
     </div>
     <hr>
