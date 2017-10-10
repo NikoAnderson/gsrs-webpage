@@ -254,7 +254,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get the first code object",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets the first code object in the codes list for that substance",
+        "description": "Gets the first code object in the codes list for that substance",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -277,7 +277,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get the first code object's code string",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets the first code object's code string in the codes list for that substance",
+        "description": "Gets the first code object's code string in the codes list for that substance",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -300,7 +300,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get official names",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets all official names for a given substance",
+        "description": "Gets all official names for a given substance",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -323,7 +323,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get JSONArray of 'name' string",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONArray of only the 'name' string for each name in the substance",
+        "description": "Gets a JSONArray of only the 'name' string for each name in the substance",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -346,7 +346,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get JSONArray of common names",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONArray of only the 'name' string for each name in the substance, only when the name is common",
+        "description": "Gets a JSONArray of only the 'name' string for each name in the substance, only when the name is common",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -369,7 +369,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get JSONArray of first common name",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONArray of only the 'name' string for each name in the substance, only when the name is common, limiting to 1 value",
+        "description": "Gets a JSONArray of only the 'name' string for each name in the substance, only when the name is common, limiting to 1 value",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -392,7 +392,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get JSONArray of first common name- skip first value",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONArray of only the 'name' string for each name in the substance, only when the name is common, skiping the first value, and limiting to 1 value",
+        "description": "Gets a JSONArray of only the 'name' string for each name in the substance, only when the name is common, skiping the first value, and limiting to 1 value",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -415,7 +415,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get JSONArray of names by creation date (ascending)",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONArray of names, sorted by their creation date (ascending)",
+        "description": "Gets a JSONArray of names, sorted by their creation date (ascending)",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -438,7 +438,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get JSONArray of names by creation date (descending)",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONArray of names, sorted by their creation date (descending)",
+        "description": "Gets a JSONArray of names, sorted by their creation date (descending)",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -461,7 +461,7 @@
       "get": {
         "tags": ["details"],
         "summary": "JSONArray of users who created a name",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONArray of all the distinct users who created a name",
+        "description": "Gets a JSONArray of all the distinct users who created a name",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -484,7 +484,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get smiles for a structure",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONString of the smiles for a structure",
+        "description": "Gets a JSONString of the smiles for a structure",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -507,7 +507,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get raw text for a structure",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a raw text form of a molfile",
+        "description": "Gets a raw text form of a molfile",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -530,7 +530,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get InChIKey for a structure",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Generates an InChIKey for the structure. ['inchikey' is a function that is defined by an extension. Other functions can be provided by implementing a FunctionPath, and adding them to the conf file]",
+        "description": "Generates an InChIKey for the structure. ['inchikey' is a function that is defined by an extension. Other functions can be provided by implementing a FunctionPath, and adding them to the conf file]",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -553,7 +553,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get name count",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets count of names for given record",
+        "description": "Gets count of names for given record",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -576,7 +576,7 @@
       "get": {
         "tags": ["details"],
         "summary": "Get map of names grouped by name types",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets a JSONObject which is a map from name types to lists of names that match those types",
+        "description": "Gets a JSONObject which is a map from name types to lists of names that match those types",
         "parameters":[ {
           "name": "id",
           "description": "The id of the substance",
@@ -612,7 +612,7 @@
       "get": {
         "tags": ["search"],
         "summary": "Search for 'ASPIRIN' with 'Code System' facet",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets facet value breakdown for facet 'Code System' in ASPIRIN search.",
+        "description": "Gets facet value breakdown for facet 'Code System' in ASPIRIN search.",
         "parameters":[],
         "responses": {
           "200": {
@@ -625,7 +625,7 @@
       "get": {
         "tags": ["search"],
         "summary": "Search for 'ASPIRIN' with 'Code System' facet values start with 'W'",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets facet value breakdown for facet 'Code System' in ASPIRIN search, filtering to only facet values which start with 'W'",
+        "description": "Gets facet value breakdown for facet 'Code System' in ASPIRIN search, filtering to only facet values which start with 'W'",
         "parameters":[],
         "responses": {
           "200": {
@@ -638,7 +638,7 @@
       "get": {
         "tags": ["search"],
         "summary": "Search for 'ASPIRIN' with 'Code System' facet count between 0 and 1",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Gets facet value breakdown for facet 'Code System' in ASPIRIN search, filtering to only facet values with count between 0 and 1",
+        "description": "Gets facet value breakdown for facet 'Code System' in ASPIRIN search, filtering to only facet values with count between 0 and 1",
         "parameters":[],
         "responses": {
           "200": {
@@ -729,7 +729,7 @@
       "get": {
         "tags": ["search"],
         "summary": "Substructure search for 'COCN' -  Asynch",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Searches substances for any substructure 'COCN'. This is an asynchronous result. Returns a JSONObject with a link and metadata for the full response, as well as a URL for polling if the response has been completed yet or not.",
+        "description": "Searches substances for any substructure 'COCN'. This is an asynchronous result. Returns a JSONObject with a link and metadata for the full response, as well as a URL for polling if the response has been completed yet or not.",
         "parameters":[],
         "responses": {
           "200": {
@@ -742,7 +742,7 @@
       "get": {
         "tags": ["search"],
         "summary": "Substructure search for 'COCN' - Synch",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Searches substances for any substructure 'COCN'. This form of the query will block until the search is complete, and then redirect to a resource which contains the results.",
+        "description": "Searches substances for any substructure 'COCN'. This form of the query will block until the search is complete, and then redirect to a resource which contains the results.",
         "parameters":[],
         "responses": {
           "200": {
@@ -755,7 +755,7 @@
       "get": {
         "tags": ["search"],
         "summary": "similar structures search for 'CCOC(N)=O'",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Searches substances similar structures to 'CCOC(N)=O', with tanimoto cutoff of 0.6. This is an asynchronous result. Returns a JSONObject with a link and metadata for the full response, as well as a URL for polling if the response has been completed yet or not.",
+        "description": "Searches substances similar structures to 'CCOC(N)=O', with tanimoto cutoff of 0.6. This is an asynchronous result. Returns a JSONObject with a link and metadata for the full response, as well as a URL for polling if the response has been completed yet or not.",
         "parameters":[],
         "responses": {
           "200": {
@@ -768,7 +768,7 @@
       "get": {
         "tags": ["search"],
         "summary": "similar structures search for 'CCOC(N)=O'- exact",
-        "description": "THIS IS NOT SUPPORTED YET. WILL BE AVAILABLE IN FUTURE RELEASES. --Searches substances similar structures to 'CCOC(N)=O'",
+        "description": "Searches substances similar structures to 'CCOC(N)=O'",
         "parameters":[],
         "responses": {
           "200": {
