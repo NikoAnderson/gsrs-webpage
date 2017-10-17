@@ -8,7 +8,7 @@
     <br>
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
-    <div class="alert alert-warning" role="alert"><code>POST</code> and <code>PUT</code>operations need user authentication.</div>
+   <!-- <div class="alert alert-warning" role="alert"><code>POST</code> and <code>PUT</code>operations need user authentication.</div>
     To try the POST and PUT operations,  click the <button class="swagger-auth-required" title="Authorization required">!</button> icon in that particular operation,
     The following values are already set:<br>
 
@@ -20,10 +20,10 @@
         1. Login to https://tripod.nih.gov/ginas/app/api/v1 with apitester/apitester <br>
         2. Use <b>Register Substance</b> link to register a substance, before Submit the substance, user has the option to view the json format by clicking <b>Show JSON</b><br>
         3. Copy the json and use it to try POST api operations.<br>
-    </p>
+    </p>-->
 
     <h3 ng-show="isLoading" swagger-translate="loading"></h3>
-    <div swagger-ui url="swaggerUrl" loading="isLoading" api-explorer="true" validator-url="false" error-handler="myErrorHandler" permalinks="false"></div>
+    <div swagger-ui url="swaggerUrl" loading="isLoading" api-explorer="true" validator-url="false" error-handler="myErrorHandler" permalinks="true"></div>
 </div>
 </div>
 
