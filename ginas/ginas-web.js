@@ -113,7 +113,7 @@
                             }, {
                                 type: 'Concept',
                                 imageurl: './assets/images/subclasses/concept.svg',
-                                description: 'Concepts are not records which are not substances, but are still of importance. These are typically ingredient concepts which are not specific enough to get a substance designation (such as "placebo"), or a variant concepts of a substance which have some distinction in meaning from their parent substances. Concepts may also be used for non-ingredient concepts, such as diseases, targets and pathways.'
+                                description: 'Concepts are records which are not substances, but are still of importance. These are typically ingredient concepts which are not specific enough to get a substance designation (such as "placebo"), or a variant concepts of a substance which have some distinction in meaning from their parent substances. Concepts may also be used for non-ingredient concepts, such as diseases, targets and pathways.'
                             }
                         ]
                     }
