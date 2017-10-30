@@ -647,6 +647,19 @@
         }
       }
     },
+    "/substances/search?q=root_approvalID:R16CO5Y76E": {
+      "get": {
+        "tags": ["search"],
+        "summary": "Search Substance by UNII",
+        "description": "Searches for a substance with UNII as 'R16CO5Y76E'",
+        "parameters":[],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
     "/substances/search?q=root_names_name:OXYTOCIN": {
       "get": {
         "tags": ["search"],
