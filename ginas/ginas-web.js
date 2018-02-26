@@ -29,6 +29,39 @@
                     templateUrl: 'ginas/ginas.html',
                     controller: function ($scope, $sce) {
                         $scope.$sce = $sce;
+                        $scope.mmeetings=[
+                            {
+                                heading: 'Ginas Monthly Meeting: February 2018',
+                                topics: [
+                                    {
+                                        url: './assets/files/monthlymeetings/GSRSDevelopmentUpdateFeb2018.pdf',
+                                        txt: 'GSRS Development Update'
+                                    } ,
+                                    {
+                                        url: './assets/files/monthlymeetings/ExcelToolsForGinasFeb2018.pdf',
+                                        txt: 'Excel Tools For Ginas'
+                                    },
+                                    {
+                                        url:'replace',
+                                        txt: 'Installing G-SRS in Different Environments'
+                                    }
+                                ]
+                            },
+                            {
+                                heading: 'Ginas Monthly Meeting: December 2017',
+                                topics: [
+                                    {
+                                        url: 'replace',
+                                        txt: 'Overview of data in FDA G-SRS system'
+                                    },
+                                    {
+                                        url: './assets/files/monthlymeetings/GSRSDevelopmentUpdateDec2017.pdf',
+                                        txt: 'Overview of NCATS Inxight Drug Information System'
+                                    }
+
+                                ]
+                            }
+                        ];
                         $scope.links=[
                             {
                                 heading: 'Ginas 2017: October 2017 Ginas Meeting',

@@ -58,6 +58,20 @@
         <div class="container">
         <div class="row">
             <div class="col-md-4">
+                <h1>ginas Monthly Meetings</h1>
+                <ul class="list-unstyled">
+                    <li ng-repeat="link in mmeetings">
+                        <br/>
+                        <h4>{{link.heading}}</h4> <br/>
+                        <ul ng-if="link.topics" class ="list-unstyled">
+                            <li ng-repeat="tp in link.topics">
+                                <a href={{tp.url}} target="_blank">{{tp.txt}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
                 <h1>ginas presentations</h1>
                 <ul class="list-unstyled">
                     <li ng-repeat="link in presentations">
@@ -73,7 +87,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <h1>ginas in the news</h1>
                 <ul class ="list-unstyled">
                     <li ng-repeat="link in links">
