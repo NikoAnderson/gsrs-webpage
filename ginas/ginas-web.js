@@ -42,7 +42,7 @@
                                         txt: 'Excel Tools For Ginas'
                                     },
                                     {
-                                        url:'replace',
+                                        url:'./assets/files/monthlymeetings/installing-ginas-ubuntu-pg-20180207.pdf',
                                         txt: 'Installing G-SRS in Different Environments'
                                     }
                                 ]
