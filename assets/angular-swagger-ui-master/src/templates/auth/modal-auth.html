@@ -1,0 +1,29 @@
+<div class="swagger-auth-modal">
+	<h2 swagger-translate="authAvailable"></h2>
+	<form role="form" name="authForm" class="form-horizontal" ng-submit="authForm.$valid&&authorize()" autocomplete="off">
+		<div ng-repeat= "item in auth track by $index">
+			<div class="form-group">
+				<label class="control-label col-xs-3" swagger-translate="authParamName"></label>
+				<div class="col-xs-9">
+					<span class="form-control" ng-bind="item.name"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3" swagger-translate="authParamType"></label>
+				<div class="col-xs-9">
+					<span class="form-control" ng-bind="item.in"></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-xs-3" for="apiKey" swagger-translate="authParamValue"></label>
+				<div class="col-xs-9">
+					<input class="form-control" id="apiKey" name="apiKey" type="text" ng-model="auth[$index].apiKey">
+				</div>
+			</div>
+		</div>
+		<div class="form-group buttons">
+			<button class="btn btn-default" type="button" ng-click="$close()" swagger-translate="authCancel"></button>
+			<button class="btn btn-primary" type="submit" swagger-translate="authAuthorize" ng-disabled="auth[tab].type=='oauth2'"></button>
+		</div>
+	</form>
+</div>

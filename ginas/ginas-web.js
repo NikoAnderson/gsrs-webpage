@@ -2,6 +2,69 @@
  * Created by sheilstk on 4/29/16.
  */
 //(function () {
+
+angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function ($window) {
+  function getWindowScrollTop() {
+    if (angular.isDefined($window.pageYOffset)) {
+      return $window.pageYOffset;
+    } else {
+      var iebody = (document.compatMode && document.compatMode !== 'BackCompat') ? document.documentElement : document.body;
+      return iebody.scrollTop;
+    }
+  }
+  return {
+    require: '^?uiScrollfixTarget',
+    link: function (scope, elm, attrs, uiScrollfixTarget) {
+      var absolute = true,
+          shift = 0,
+          fixLimit,
+          $target = uiScrollfixTarget && uiScrollfixTarget.$element || angular.element($window);
+
+      if (!attrs.uiScrollfix) {
+          absolute = false;
+      } else if (typeof(attrs.uiScrollfix) === 'string') {
+        // charAt is generally faster than indexOf: http://jsperf.com/indexof-vs-charat
+        if (attrs.uiScrollfix.charAt(0) === '-') {
+          absolute = false;
+          shift = - parseFloat(attrs.uiScrollfix.substr(1));
+        } else if (attrs.uiScrollfix.charAt(0) === '+') {
+          absolute = false;
+          shift = parseFloat(attrs.uiScrollfix.substr(1));
+        }
+      }
+
+      fixLimit = absolute ? attrs.uiScrollfix : elm[0].offsetTop + shift;
+
+      function onScroll() {
+
+        var limit = absolute ? attrs.uiScrollfix : elm[0].offsetTop + shift;
+
+        // if pageYOffset is defined use it, otherwise use other crap for IE
+        var offset = uiScrollfixTarget ? $target[0].scrollTop : getWindowScrollTop();
+        if (!elm.hasClass('ui-scrollfix') && offset > limit) {
+          elm.addClass('ui-scrollfix');
+          fixLimit = limit;
+        } else if (elm.hasClass('ui-scrollfix') && offset < fixLimit) {
+          elm.removeClass('ui-scrollfix');
+        }
+      }
+
+      $target.on('scroll', onScroll);
+
+      // Unbind scroll event handler when directive is removed
+      scope.$on('$destroy', function() {
+        $target.off('scroll', onScroll);
+      });
+    }
+  };
+}]).directive('uiScrollfixTarget', [function () {
+  return {
+    controller: ['$element', function($element) {
+      this.$element = $element;
+    }]
+  };
+}]);
+
     'use strict';
     //'ui.bootstrap','jsonFormatter','angularSpinners'
     var ginasWeb = angular.module('ginas', [
@@ -12,6 +75,8 @@
         'ui.bootstrap',
         'ngSanitize',
         'swaggerUi',
+        'ui.scrollfix',
+        'mgcrea.bootstrap.affix',
         'swaggerUiAuthorization',
         'ginasWeb.ginas',
         'angular-click-outside',
@@ -29,6 +94,35 @@
                     templateUrl: 'ginas/ginas.html',
                     controller: function ($scope, $sce) {
                         $scope.$sce = $sce;
+                        $scope.headline = function(text){
+                            var head = text.substring(0,200);
+                            var sentence = head.lastIndexOf('.');
+                            if(sentence > 0){
+                                 head = head.substring(0,(sentence+1));
+                            }
+                            return head;
+                        }
+                        $scope.news = [
+                        {
+                            title:"Lorem ipsum dolor sit amet, consectetur",
+                            date:"July 7, 2018",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        },
+                        {
+                            title:"Non pulvinar neque laoreet suspendisse interdum",
+                            date:"July 6, 2017",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        },
+                        {
+                            title:"Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh",
+                            date:"July 7, 2016",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        },
+                        {
+                            title:"Lorem ipsum dolor sit amet, consectetur",
+                            date:"July 7, 2016",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        }];
                         $scope.mmeetings=[
                             {
                                 heading: 'Ginas Monthly Meeting: February 2018',
@@ -104,12 +198,83 @@
                                 heading: 'past ginas presentations',
                                 url: './#/meetings/uppsala/monday'
                             }
-                        ]
+                        ];
+
+
+                        $scope.accordianMenu = function(data, title, content){
+                        }
+                         $scope.showGinas = false;
+                        $scope.showGsrs = false;
+                        $scope.showTeam = false;
+                        $scope.changeView = function(val){
+
+                        
+
+                             if(val == 'ginas'){
+                                $scope.title = 'The Ginas Project';
+                                $scope.content = "The main goal of ginas is the production of software, called G-SRS, to assist agencies in registering and documenting information about substances found in medicines. The Global Ingredient Archival System provides a common identifier for all of the substances used in medicinal products, utilizing a consistent definition of substances globally, including active substances under clinical investigation, consistent with the ISO 11238 standard. ";
+
+                                 $scope.showGinas = true;
+                                 $scope.showGsrs = false;
+                                $scope.showTeam = false;
+                              } 
+                                else if (val == 'gsrs') {
+                                    $scope.title = "G-SRS Software";
+                                     $scope.content = "The software tools created by the ginas project are developed, maintained, and distributed to ginas and other interested parties by the National Center for Advancing Translational Sciences (NCATS) at the National Institutes of Health (NIH), in close collaboration with the Food and Drug Administration (FDA).  ";
+
+                                    $scope.showGinas = false;
+                                    $scope.showGsrs = true;
+                                    $scope.showTeam = false;
+                                
+                              }   
+                              else if (val == 'team') {
+                                    $scope.title = "The Ginas Team";
+                                     $scope.content = "Ginas will be able to store, retrieve, and distribute substance-related information described in the ISO 11238 standard. It will enable authorized agents to register new substances and curate and review existing substance data. ";
+
+                                    $scope.showGinas = false;
+                                    $scope.showGsrs = false;
+                                    $scope.showTeam = true;
+                              }   
+                         }
+                         $scope.changeView('ginas');
+
+                         $scope.changeNews= function(val){
+                            if (val == 'articles'){
+                                $scope.active = $scope.news;
+                                $scope.showArticles = true;
+                                 $scope.showPresentations = false;
+                                $scope.showMeetings = false;
+                            }
+                        }
+
+                        var content = {
+                            ginas: {
+                                title: "",
+                                content: ""
+                            },
+                            gsrs: {
+
+                            }
+                        }
                     }
                 })
                 .state('ginas.main', {
                     url: '/'
                 })
+                .state('ginas.faq', {
+                url: "/faqs",
+                templateUrl: './faqs/faqs.html',
+                controller: 'faqsController'
+               
+            })
+                .state('ginas.articles', {
+                url: "/articles",
+                templateUrl: './ginas/news.html'
+            })
+                .state('ginas.testing', {
+                url: "/testing",
+                templateUrl: './ginas/testing.html'
+            })
                 .state('gsrs', {
                     url: "^/gsrs",
                     templateUrl: 'gsrs/gsrs.html',
@@ -176,7 +341,17 @@
             templateUrl: "menu/footer.html"
         };
     });
-    
+    /*.directive('accordion', function () {
+            return {
+                restrict: 'E',
+                scope: { model: '='},
+                templateUrl: 'panelTemplate.html',
+                link: function (scope, element, attr) {
+                    scope.parentId = attr.id;
+                }
+
+            }
+        })*/
     
     
 //})();
