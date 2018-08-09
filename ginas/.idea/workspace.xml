@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0215189a-08ba-49af-804b-6d7d4f80fc0e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ginas.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/ginas.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/ginas.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/delete/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faqs/faqs.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/faqs/faqs.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faqs/faqs.html" beforeDir="false" afterPath="$PROJECT_DIR$/faqs/faqs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ginas-web.js" beforeDir="false" afterPath="$PROJECT_DIR$/ginas-web.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ginas/ginas.html" beforeDir="false" afterPath="$PROJECT_DIR$/ginas/ginas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ginas/ginas.js" beforeDir="false" afterPath="$PROJECT_DIR$/ginas/ginas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ginas/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/ginas/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/gsrs/api.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/changelog.html" beforeDir="false" afterPath="$PROJECT_DIR$/gsrs/changelog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/gsrs.html" beforeDir="false" afterPath="$PROJECT_DIR$/gsrs/gsrs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/gsrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/gsrs/gsrs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/release.html" beforeDir="false" afterPath="$PROJECT_DIR$/gsrs/release.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/news.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/panelTemplate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/release.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/release/release.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/release.html" beforeDir="false" afterPath="$PROJECT_DIR$/release/release.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/september2015.html" beforeDir="false" />
-    </list>
+    <list default="true" id="0215189a-08ba-49af-804b-6d7d4f80fc0e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +12,7 @@
     <session id="-621733847">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -182,7 +154,7 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="388" />
+    <option name="x" value="191" />
     <option name="y" value="80" />
     <option name="width" value="1532" />
     <option name="height" value="1000" />
@@ -227,7 +199,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533830478683" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533830511417" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -259,15 +231,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533222124020</updated>
-      <workItem from="1533222125293" duration="11034000" />
+      <workItem from="1533222125293" duration="11139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11034000" />
+    <option name="totallyTimeSpent" value="11139000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="388" y="80" width="1532" height="1000" extended-state="0" />
+    <frame x="191" y="80" width="1532" height="1000" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Image Layers" />
