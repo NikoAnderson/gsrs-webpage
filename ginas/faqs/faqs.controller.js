@@ -7,6 +7,7 @@ angular.module('ginas')
 
 
 	})*/
+	$anchorScroll.yOffset = -50;
     $scope.scrollTo = function (subject, index) {
                         console.log(subject);
                         console.log(index);
@@ -17,6 +18,7 @@ angular.module('ginas')
                             prmElementToScrollTo= subject;
                         }
                         console.log(prmElementToScrollTo);
+                        $anchorScroll.yOffset = 50;
                         $anchorScroll(prmElementToScrollTo);
                     };
 $scope.news = [

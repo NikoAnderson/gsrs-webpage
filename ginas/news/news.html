@@ -1,0 +1,127 @@
+<style>
+  #main-div{
+      max-width:991px;
+  }
+  .banner-heading{
+      padding-top:0%;
+      font-size: 5em;
+  }
+
+  .header-icon{
+      height:50px;
+      width:50px;
+  }
+
+  .ginas-background{
+      padding-bottom:0px;
+  }
+
+
+
+</style>
+ <style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+ 
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div >
+    <div class="row ginas-background justify-content-center" id="faq-background" style = "align-items: center;">
+        <div class="col-md-4 col-sm-6 col-md-offset-1 " align="center">
+            <h1 class="banner-heading" style = "margin:10px"><!--<i class="fa fa-newspaper-o " aria-hidden="true"></i> -->News</h1>
+        </div>
+        <div class="col-md-6 col-sm-6 col-md-offset-1" align="center" style ="vertical-align: middle ;margin-top:10px;margin-bottom:10px">
+           <div style = "width:300px"> <h2 class = 'sm-banner' style = ''></i>The Ginas Project </h2>&nbsp <img class = "header-icon" src = "../ginas/assets/images/pillIconColor.png" style = 'float:left;margin-top:12px' /></div>
+        </div>
+    </div>
+    <div >
+        <div class="row">
+           <div class = "col-lg-12">
+             <h2>Latest News</h2>
+            </div>
+        </div>
+        <div class="row no-gutter">
+            
+             <div class="col-sm-4 col-sm-push-8" data-spy="affix" >
+                 <div class =  "cell" >
+                            <h3>News Archives</h3>
+                            <div class = "button active" ng-class="{ 'active': showArticles}" ng-click="changeNews('articles')">
+                                Articles
+                            </div>
+                            <div class = "button" ng-class="{ 'active': showMeetings}" ng-click="changeNews('meetings')">
+                               Meetings
+                            </div>
+                            <div class = "button" ng-class="{ 'active': showPresentations}" ng-click="changeNews('presentations')">
+                                Presentations
+                            </div>
+                         </div> 
+                <div class = "cell ui-scrollfix" ui-scrollfix="0">
+                   <div ng-show = "showArticles">
+                        <h3>Older Articles</h3>
+
+                            <div ng-repeat="article in news track by $index" style = "padding-bottom:8px" >
+                                <b>{{article.date}}</b><a ng-click="scrollTo(article.title, $index)">
+                                     {{article.title}}
+                                </a>
+                        </div>
+                    </div>
+
+                    <div ng-show = "showPresentations">
+                        <h3>Older Presentations</h3>
+
+                            <div ng-repeat="item in presentations track by $index" style = "padding-bottom:8px" >
+                                <b>{{item.date}}</b><a ng-click="scrollTo(item.heading, $index)">
+                                     {{item.heading}}
+                                </a>
+                            </div>
+                        </div>
+
+                    <div ng-show = "showMeetings">
+                        <h3>Older Meetings</h3>
+
+                            <div ng-repeat="item in mmeetings track by $index" style = "padding-bottom:8px" >
+                                <a  ng-click="scrollTo(item.heading, $index)">
+                                     {{item.heading}}
+                                </a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-pull-4" >
+                <div class = " ">
+
+                    <div ng-repeat="article in news track by $index" ng-show = "showArticles" class = "left-col cell">
+                        <br/><div class = "date" id={{article.title}}-{{$index}}>{{article.date}}</div>
+                       <h2>{{article.title}}</h2>
+                        <div class="row">
+                            <div class="col-md-12">
+                               <p ng-bind-html="article.text"></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div ng-repeat="item in presentations track by $index" ng-show = "showPresentations" class = "left-col cell">
+                        <br/><div class = "date" id={{item.heading}}-{{$index}}>{{item.date}}</div>
+                       <a ng-if ="item.url" href = "{{item.url}}"><h3>{{item.heading}}</h3></a>
+                       <div ng-if="!item.url"><h3>{{item.heading}}</h3>
+                            {{item.desc}}
+                       </div>
+                    </div>
+
+                    <div ng-repeat="item in mmeetings track by $index" ng-show = "showMeetings" class = "left-col cell">
+                       <div id={{item.heading}}-{{$index}}> 
+                       <h2>{{item.heading}}</h2>
+                        <div ng-repeat = "topics in item.topics">
+                            <a href = "{{topics.url}}">{{topics.txt}}</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    </div>

@@ -42,10 +42,7 @@ angular.module('ginasWeb.gsrs', ['ui.router','jsonFormatter', 'ui.bootstrap', 'n
                     $scope.platform = window.navigator.platform;
                 }
             })
-            .state('gsrs.data', {
-                url: "/data",
-                templateUrl: './gsrs/data.html'
-            })
+            
             .state('gsrs.faq', {
                 url: "/faq",
                 templateUrl: './gsrs/faq.html',
@@ -67,56 +64,8 @@ angular.module('ginasWeb.gsrs', ['ui.router','jsonFormatter', 'ui.bootstrap', 'n
                     $scope.platform = window.navigator.platform;
 
                 }
-            }).state('gsrs.api', {
-            url: "/api",
-            templateUrl: './gsrs/api.html',
-            controller: function ($scope, apiFactory, $http) {
-                $scope.isLoading = false;
-                $scope.url = $scope.swaggerUrl = 'https://tripod.nih.gov/ginas-swagger-ui/gsrs.json';
-
-                $scope.myErrorHandler = function(message, code){
-                    console.log(code);
-                    console.log(message);
-                };
-
-            /*    $scope.calls = apiFactory.getCalls();
-                
-                $scope.makeCall = function(call){
-                    $http.get(call.url, {cache: true}, {
-                        headers: {
-                            'Content-Type': 'text/plain'
-                        }
-                    }).then(function (response) {
-                        _.set(call, 'results', response.data);
-                    });
-                }*/
-
-            }
-        })
+            })
     }])
-    .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
 
-        $scope.ok = function () {
-            $uibModalInstance.close();
-        };
 
-        $scope.cancel = function () {
-            $uibModalInstance.dismiss('cancel');
-        };
-    })
-.directive('version', function () {
-    return {
-        templateUrl: "./gsrs/version.html",
-        scope:{
-            release: '='
-        }
-    };
-}).directive('changelog', function () {
-    return {
-        templateUrl: "./gsrs/changelog.html",
-        scope:{
-            changes: '='
-        }
-    };
-});
 

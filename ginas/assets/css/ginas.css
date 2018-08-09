@@ -13,7 +13,7 @@ a.navbar-brand.navbar-nav {
 
 .ginas-background {
     background-color: #0F294D;
-    background-image: linear-gradient(to bottom,#0F294D 0, #A2C9E3 300%);
+  /*  background-image: linear-gradient(to bottom,#0F294D 0, #A2C9E3 300%);*/
     color: white;
     padding-bottom: 10%;
 }
@@ -202,12 +202,13 @@ a {
         }
         /*home page banner content */
         .top-menu{
-            margin-bottom:15px;
+            
+            margin-top:15px;
         }
-        .top-menu:first-child{
+        .main-menu:first-child{
             border-left:0px;
         }
-        .top-menu:last-child{
+        .main-menu:last-child{
             border-right:0px;
         }
 
@@ -222,6 +223,12 @@ a {
             padding-bottom:10px;
 
 
+        }
+        .main-menu.active{
+            background-color:#375576;
+        }
+        .main-menu:hover{
+            background-color:#6d90a7;
         }
         /*menu below front banner*/
         .front-menu2{
@@ -239,12 +246,7 @@ a {
         .front-menu2:hover{
             background-color:#d3d3d3;
         }
-        .main-menu.active{
-            background-color:#9cc1da;
-        }
-        .main-menu:hover{
-            background-color:#6d90a7;
-        }
+        
         .test {
             text-align:center;
         }
@@ -280,7 +282,7 @@ a {
             margin-bottom:15px;
         }
         .banner{
-            background-color:#3A5273;
+            background-color:#375576;
             color:white;
         }
 
@@ -309,6 +311,9 @@ a {
             display:inline-block;
             float:right;
         }
+        .button:hover{
+            background-color:#9cc1da;
+        }
         .date{
             font-size:17px;
             color:#3A5273;
@@ -331,6 +336,8 @@ a {
 
         .ginas-background{
             padding-bottom:0px;
+            margin-top:15px;
+            background-color:#2A4668;
         }
 
         #main-div{
@@ -358,9 +365,6 @@ a {
             vertical-align: middle;
             margin-top:10px;
             margin-bottom:10px;
-        }
-        .ginas-background{
-            padding-bottom:0px;
         }
 
         /*angular-ui-bootstrap accordion re-styling*/
@@ -396,7 +400,6 @@ a {
 
         .affix{
             top:30px;
-            width: auto;
-        display: block;
-        width:33%;
+
+       
         }

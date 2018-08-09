@@ -96,52 +96,35 @@
                     onload="if(submitted){submitForm();}" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
             <h1 class="text-center">Sign up for Email Updates</h1>
-            <form class="form-horizontal" name="contactForm" role="form" id="contact-form" action="https://docs.google.com/forms/d/1nn4Ctlloipi6ENeTt80y2FhbcsrXTmXky93N4oTMtUo/formResponse"
-                method="POST" target="my_frame" onsubmit="submitted=true;">
+            <div class="form-elements">
+            <fieldset class="pure-group">
+              <label for="FirstName">First Name: </label>
+              <input id="FirstName" name="FirstName" placeholder="What your Mom calls you" />
+            </fieldset>
 
-                <div class="form-group" role="listitem">
-                    <label for="entry_1301820629" class="col-sm-3 control-label">First Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="entry.1301820629" value=""
-                               class="form-control" id="entry_1301820629" dir="auto"
-                               aria-label="Name  " title="" required>
-                    </div>
-                </div>
-                <div class="form-group" role="listitem">
-                    <label for="entry_670035918" class="col-sm-3 control-label">Last Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="entry.670035918" value=""
-                               class="form-control" id="entry_670035918" dir="auto"
-                               aria-label="Name  " title="" required>
-                    </div>
-                </div>
+            <fieldset class="form-group">
+              <label for="LastName">Message: </label>
+              <input id="LastName" name="LastName" rows="10"
+              placeholder=""></input>
+            </fieldset>
 
-                <div class="form-group" role="listitem">
-                    <label class="col-sm-3 control-label" for="entry_1283870749">Email</label>
-                    <div class="col-sm-9">
-                        <input type="email" name="entry.1283870749" value=""
-                               class="form-control" id="entry_1283870749" dir="auto"
-                               aria-label="Email  Must be a valid email address"
-                               title="Must be a valid email address" required>
-                    </div>
-                </div>
+            <fieldset class="form-group">
+              <label for="Email"><em>Your</em> Email Address:</label>
+              <input id="Email" name="Email" type="Email" value=""
+              required placeholder="your.name@email.com"/>
+              <span class="email-invalid" style="display:none">
+                Must be a valid email address</span>
+            </fieldset>
 
-                <div class="form-group" role="listitem">
-                    <label class="col-sm-3 control-label" for="entry_1074140443">Team</label>
-                    <div class="col-sm-9">
-                        <input type="text" name="entry.1074140443" value=""
-                               class="form-control" id="entry_1074140443" dir="auto"
-                               aria-label="Team" title="">
-                    </div>
-                </div>
-                <div class="form-group" role="listitem">
-                    <label class="col-sm-3 control-label" for="entry_987241197">Comments</label>
-                    <div class="col-sm-9">
-								<textarea lines ="8" name="entry.987241197" value=""
-                                          class="form-control" id="entry_987241197" aria-label="Comments"
-                                          title=""></textarea>
-                    </div>
-                </div>
+            <fieldset class="form-group">
+              <label for="Team">team </label>
+              <input id="Team" name="Team" placeholder="green" />
+            </fieldset>
+
+            <fieldset class="form-group">
+              <label for="Comments">comments </label>
+              <textarea id="Comments" name="Comments" placeholder="green"></textarea>
+            </fieldset>
                 <input type="hidden" name="draftResponse"
                        value="[,,&quot;-4712198275298785250&quot;]"> <input
                     type="hidden" name="pageHistory" value="0"> <input

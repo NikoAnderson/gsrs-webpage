@@ -1,6 +1,20 @@
+
+<style>
+    .navbar{
+        background-color:white;
+        border: 0px;
+    }
+    .navbar-cont{
+        background-color: #f8f8f8;
+        border-color: #e7e7e7;
+        border-bottom:1px solid #e7e7e7;
+        border-left:1px solid #e7e7e7;
+        border-right:1px solid #e7e7e7;
+    }
+</style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation"
      id="menu" click-outside="print();">
-    <div class="container-fluid">
+    <div class="container-fluid navbar-cont" style = "max-width:997px">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" ng-click="isCollapsed = !isCollapsed">
                 <span class="sr-only">Toggle navigation</span>
@@ -12,21 +26,12 @@
         </div>
         <div class="collapse navbar-collapse" ng-click="print();" uib-collapse="!isCollapsed">
 <ul class="nav navbar-nav navbar-left">
-    <li ng-class="{main: $state.includes('ginas')}"><a ui-sref="ginas.main">ginas</a></li>
-    <li ng-class="{main: $state.includes('gsrs')}"><a ui-sref="gsrs.main">G-SRS Software</a></li>
+    <li ng-class="{main: $state.includes('ginas')}"><a ui-sref="ginas.main">Home</a></li>
+    <li ng-class="{active: $state.includes('ginas.about')}"><a ui-sref="ginas.about">About</a></li>
+    <li ng-class="{active: $state.includes('ginas.faq')}"><a ui-sref="ginas.faq">FAQs</a></li>
+    <li ng-class="{active: $state.includes('ginas.articles')}"><a ui-sref="ginas.articles">News</a></li>
+    <li ng-class="{active: $state.includes('ginas.release')}"><a ui-sref="ginas.release">Download</a></li>
 </ul>
-            <ul class="nav navbar-nav navbar-right" ng-if="'ginas'|includedByState">
-
-                <li ng-class="{active: $state.includes('ginas.about')}"><a ui-sref="ginas.about">About</a></li>
-                <li ng-class="{active: $state.includes('ginas.faq')}"><a ui-sref="ginas.faq">FAQ</a></li>
-                <li ng-class="{active: $state.current.parent.includes('meetings')}"><a ui-sref="ginas2017">Meetings</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" ng-if="'gsrs'|includedByState">
-
-                <li ng-class="{active: $state.includes('gsrs.release')}"><a ui-sref="gsrs.release">Getting Started</a></li>
-                <li ng-class="{active: $state.includes('gsrs.api')}"><a ui-sref="gsrs.api">Documentation</a></li>
-                <li ng-class="{active: $state.includes('gsrs.faq')}"><a ui-sref="gsrs.faq">FAQ</a></li>
-            </ul>
         </div>
         <!--/.nav-collapse -->
     </div>

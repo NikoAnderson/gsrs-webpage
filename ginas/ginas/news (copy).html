@@ -1,0 +1,99 @@
+<style>
+  #main-div{
+      max-width:991px;
+  }
+  .banner-heading{
+      padding-top:0%;
+      font-size: 5em;
+  }
+
+  .header-icon{
+      height:50px;
+      width:50px;
+  }
+
+  .ginas-background{
+      padding-bottom:0px;
+  }
+
+
+
+</style>
+ <style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+ 
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div >
+    <div class="row ginas-background justify-content-center" id="faq-background" style = "align-items: center;">
+        <div class="col-md-4 col-sm-6 col-md-offset-1 " align="center">
+            <h1 class="banner-heading" style = "margin:10px"><!--<i class="fa fa-newspaper-o " aria-hidden="true"></i> -->News</h1>
+        </div>
+        <div class="col-md-6 col-sm-6 col-md-offset-1" align="center" style ="vertical-align: middle ;margin-top:10px;margin-bottom:10px">
+           <div style = "width:300px"> <h2 class = 'sm-banner' style = ''></i>The Ginas Project </h2>&nbsp <img class = "header-icon" src = "../ginas/assets/images/pillIconColor.png" style = 'float:left;margin-top:12px' /></div>
+        </div>
+    </div>
+    <div >
+        <div class="row">
+           <div class = "col-lg-12">
+             <h2>Latest News</h2>
+            </div>
+        </div>
+        <div class="row no-gutter">
+               <accordion model="faq" id="test"></accordion>
+             <div class="col-sm-4 col-sm-push-8" data-spy="affix" >
+                 <div class =  "cell" >
+                            <h3>News Archives</h3>
+                            <div class = "button active" ng-class="{ 'active': showArticles}" ng-click="changeNews('articles')">
+                                Articles
+                            </div>
+                            <div class = "button" ng-class="{ 'active': showMeetings}" ng-click="changeNews('meetings')">
+                               Meetings
+                            </div>
+                            <div class = "button" ng-class="{ 'active': showPresentations}" ng-click="changeNews('presentations')">
+                                Presentations
+                            </div>
+                         </div> 
+                <div class = "cell ui-scrollfix" ui-scrollfix="0">
+                    <h3>Older Articles</h3>
+
+                        <div ng-repeat="article in news track by $index" style = "padding-bottom:8px" >
+                            <b>{{article.date}}</b><a href = '#'>
+                                 {{article.title}}
+                            </a>
+                        </div>
+
+                       
+                   
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-pull-4" >
+                <div class = " ">
+                    <div ng-repeat="article in news track by $index" class = "right-col cell">
+                        <br/><div class = "date">{{article.date}}</date>
+                       <h2>{{article.title}}</h2>
+                        <div class="row">
+                            <div class="col-md-12">
+                               <p ng-bind-html="article.text"></p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    </div>
+    <div class="row">
+
+            <div class="col-sm-4 col-sm-push-8" style="background-color:lavender;">.col-sm-4 .col-sm-push-8</div>
+    <div class="col-sm-8 col-sm-pull-4" style="background-color:lavenderblush;">.col-sm-8 .col-sm-pull-4</div>
+    </div>
+    <div class="row">
+    
+    
+    </div>

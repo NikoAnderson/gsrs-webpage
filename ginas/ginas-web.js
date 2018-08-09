@@ -83,16 +83,17 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
        'ginasWeb.faqFactory',
        'ginasWeb.apiFactory',
        'ginasWeb.versionFactory',
+       'ngTextTruncate',
         'ginasWeb.gsrs'
     ])
-        .config(['$stateProvider','$urlRouterProvider', function ($stateProvider ,$urlRouterProvider) {
+        .config(['$stateProvider','$urlRouterProvider', function ($stateProvider ,$urlRouterProvider, $location, $window) {
             $urlRouterProvider.when('', '/');
             $urlRouterProvider.otherwise('/');
             $stateProvider
                 .state('ginas', {
                      url: '',
                     templateUrl: 'ginas/ginas.html',
-                    controller: function ($scope, $sce) {
+                    controller: function ($scope, $sce, $location, $window) {
                         $scope.$sce = $sce;
                         $scope.headline = function(text){
                             var head = text.substring(0,200);
@@ -101,6 +102,31 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
                                  head = head.substring(0,(sentence+1));
                             }
                             return head;
+                        }
+
+                        $scope.showgdocForm = true;
+                        $scope.toggleForm = function(){
+                            console.log('testing123');
+                              if($scope.showgdocForm === false){
+                                $scope.showgdocForm = true;
+                              }else{
+                                $scope.showgdocForm = false;
+                              }
+                        }
+                        $scope.test1=function(){
+//loaded();
+                        _global.loaded();
+                    };
+                              $scope.gdocForm = 'ginas/gdocTemplate.html';
+                              console.log('testing');
+                       
+
+                        $scope.redirect = function ( cid ) {
+                            console.log(cid);
+                            $location.path(cid);
+                        }
+                        $scope.redirectExt = function(url){
+                              $window.location.href = url; //You should have http here.
                         }
                         $scope.news = [
                         {
@@ -192,7 +218,7 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
                             },{
                                 date:'March 17, 2016',
                                 heading: 'ginas presentation at ACS',
-                                doc: './assets/files/ginas_031616.pdf'
+                                url: './assets/files/ginas_031616.pdf'
                             },{
                                 date:'September 7, 2015',
                                 heading: 'past ginas presentations',
@@ -238,24 +264,163 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
                          }
                          $scope.changeView('ginas');
 
-                         $scope.changeNews= function(val){
-                            if (val == 'articles'){
-                                $scope.active = $scope.news;
-                                $scope.showArticles = true;
-                                 $scope.showPresentations = false;
-                                $scope.showMeetings = false;
+                    }
+                })
+                .state('ginas.ginas2', {
+                     url: '/ginas2',
+                    templateUrl: 'ginas/ginas2.html',
+                    controller: function ($scope, $sce, $location, $window) {
+                        $scope.$sce = $sce;
+                        $scope.headline = function(text){
+                            var head = text.substring(0,200);
+                            var sentence = head.lastIndexOf('.');
+                            if(sentence > 0){
+                                 head = head.substring(0,(sentence+1));
                             }
+                            return head;
                         }
-
-                        var content = {
-                            ginas: {
-                                title: "",
-                                content: ""
+                        $scope.redirect = function ( cid ) {
+                            console.log(cid);
+                            $location.path(cid);
+                        }
+                        $scope.redirectExt = function(url){
+                              $window.location.href = url; //You should have http here.
+                        }
+                        $scope.news = [
+                        {
+                            title:"Lorem ipsum dolor sit amet, consectetur",
+                            date:"July 7, 2018",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        },
+                        {
+                            title:"Non pulvinar neque laoreet suspendisse interdum",
+                            date:"July 6, 2017",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        },
+                        {
+                            title:"Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh",
+                            date:"July 7, 2016",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        },
+                        {
+                            title:"Lorem ipsum dolor sit amet, consectetur",
+                            date:"July 7, 2016",
+                            text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
+                        }];
+                        $scope.mmeetings=[
+                            {
+                                heading: 'Ginas Monthly Meeting: February 2018',
+                                topics: [
+                                    {
+                                        url: './assets/files/monthlymeetings/GSRSDevelopmentUpdateFeb2018.pdf',
+                                        txt: 'GSRS Development Update'
+                                    } ,
+                                    {
+                                        url: './assets/files/monthlymeetings/ExcelToolsForGinasFeb2018.pdf',
+                                        txt: 'Excel Tools For Ginas'
+                                    },
+                                    {
+                                        url:'./assets/files/monthlymeetings/installing-ginas-ubuntu-pg-20180207.pdf',
+                                        txt: 'Installing G-SRS in Different Environments'
+                                    }
+                                ]
                             },
-                            gsrs: {
+                            {
+                                heading: 'Ginas Monthly Meeting: December 2017',
+                                topics: [
+                                    {
+                                        url: 'replace',
+                                        txt: 'Overview of data in FDA G-SRS system'
+                                    },
+                                    {
+                                        url: './assets/files/monthlymeetings/GSRSDevelopmentUpdateDec2017.pdf',
+                                        txt: 'Overview of NCATS Inxight Drug Information System'
+                                    }
 
+                                ]
                             }
+                        ];
+                        $scope.links=[
+                            {
+                                heading: 'Ginas 2017: October 2017 Ginas Meeting',
+                                url: './#/meetings/ginas2017'
+                            },
+                            {heading: 'IPQ 2015: Global Excipient Databases Are Advancing That Will Fill Content and Functionality Gaps ' +
+                            'in Existing Regulatory Efforts and Further Industry/Regulator Communication',
+                                url: 'http://multibriefs.com/briefs/ipec/IPEC%20GInAS%20NIPTE%20IID.pdf'
+                            },{
+                                heading: 'EMA 2015: September 2015 Ginas Meeting Highlights',
+                                url: 'http://www.ema.europa.eu/docs/en_GB/document_library/Presentation/2015/10/WC500196210.pdf'
+                            },{
+                                heading: 'Nature Reviews Drug Discovery: NCATS launches \'periodic table\' for medicinal product ingredients',
+                                url: 'http://www.nature.com/nrd/journal/v15/n6/full/nrd.2016.116.html'
+                            },{
+                                heading: 'NCATS: Global Ingredient Archival System (ginas)',
+                                url: 'https://ncats.nih.gov/expertise/preclinical/ginas'
+                            },{
+                                heading:'IDMP: ginas Workshop Uppsala',
+                                url: 'https://www.idmp1.com/ginas-workshop-uppsala/'
+                            },{
+                                heading:'RAPS: Seven Pharmaceutical Regulators and NIH Collaborate to Build Drug Ingredient Database',
+                                url: 'http://www.raps.org/Regulatory-Focus/News/2016/04/20/24804/Seven-Pharmaceutical-Regulators-and-NIH-Collaborate-to-Build-Drug-Ingredient-Database/'
+                            }
+                        ];
+                        $scope.presentations=[
+                            {   date: 'June 8, 2016',
+                                heading: 'IRISS: Defining Substances and Organizing Regulatory Information: The deployment of the G-SRS at FDA',
+                                url: 'https://www.iriss-forum.org/webinars/defining-substances-and-organizing-regulatory-information-the-deployment-of-the-g-srs-at-fda'
+                            },{
+                                date: 'April 6, 2016',
+                                heading:'Bio IT Boston Panel Discussion',
+                                desc: 'Tyler Peryea and Larry Callahan (FDA) sat on a panel discussion presenting the work of IUPAC and US Government agencies to describe large molecules.'
+                            },{
+                                date:'March 17, 2016',
+                                heading: 'ginas presentation at ACS',
+                                url: './assets/files/ginas_031616.pdf'
+                            },{
+                                date:'September 7, 2015',
+                                heading: 'past ginas presentations',
+                                url: './#/meetings/uppsala/monday'
+                            }
+                        ];
+
+
+                        $scope.accordianMenu = function(data, title, content){
                         }
+                         $scope.showGinas = false;
+                        $scope.showGsrs = false;
+                        $scope.showTeam = false;
+                        $scope.changeView = function(val){
+
+                        
+
+                             if(val == 'ginas'){
+                                $scope.title = 'The Ginas Project';
+                                $scope.content = "The main goal of ginas is the production of software, called G-SRS, to assist agencies in registering and documenting information about substances found in medicines. The Global Ingredient Archival System provides a common identifier for all of the substances used in medicinal products, utilizing a consistent definition of substances globally, including active substances under clinical investigation, consistent with the ISO 11238 standard. ";
+
+                                 $scope.showGinas = true;
+                                 $scope.showGsrs = false;
+                                $scope.showTeam = false;
+                              } 
+                                else if (val == 'gsrs') {
+                                    $scope.title = "G-SRS Software";
+                                     $scope.content = "The software tools created by the ginas project are developed, maintained, and distributed to ginas and other interested parties by the National Center for Advancing Translational Sciences (NCATS) at the National Institutes of Health (NIH), in close collaboration with the Food and Drug Administration (FDA).  ";
+
+                                    $scope.showGinas = false;
+                                    $scope.showGsrs = true;
+                                    $scope.showTeam = false;
+                                
+                              }   
+                              else if (val == 'team') {
+                                    $scope.title = "The Ginas Team";
+                                     $scope.content = "Ginas will be able to store, retrieve, and distribute substance-related information described in the ISO 11238 standard. It will enable authorized agents to register new substances and curate and review existing substance data. ";
+
+                                    $scope.showGinas = false;
+                                    $scope.showGsrs = false;
+                                    $scope.showTeam = true;
+                              }   
+                         }
+                         $scope.changeView('ginas');
                     }
                 })
                 .state('ginas.main', {
@@ -266,14 +431,69 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
                 templateUrl: './faqs/faqs.html',
                 controller: 'faqsController'
                
+            }).state('ginas.data', {
+                url: "/data",
+                templateUrl: './data.html'
+            }).state('ginas.signup', {
+                url: "/signup",
+                templateUrl: './gdocTemplate.html'
+            })
+                .state('ginas.release', {
+                url: "/release",
+                templateUrl: './release/release.html',
+                controller: 'releaseController'
             })
                 .state('ginas.articles', {
                 url: "/articles",
-                templateUrl: './ginas/news.html'
+                templateUrl: './news/news.html',
+                controller: 'newsController'
             })
                 .state('ginas.testing', {
                 url: "/testing",
-                templateUrl: './ginas/testing.html'
+                templateUrl: './ginas/gdocTemplate.html',
+                controller: function ($scope, $sce, $location, $window) {
+                    $scope.test1=function(){
+//loaded();
+                        _global.loaded();
+                    };
+                  
+                    /*$.ajax({
+                        url: "https://script.google.com/macros/s/AKfycbxrOeWl2D--dFY5aGFfGjZ3bMff9YNWWp9tzOND/exec",
+                        data: {"entry.1023121230": field3, "entry.1230072460": field1, "entry.2113237615": field2},
+                        type: "POST",
+                        dataType: "xml",
+                        statusCode: {
+                            0: function() {
+                                //Success message
+                            },
+                            200: function() {
+                                //Success Message
+                            }
+                        }
+                    });*/
+                },
+        
+            })
+                .state('ginas.about', {
+                url: "/about",
+                templateUrl: './about/about.html',
+                controller: 'aboutController'
+            }).state('ginas.api', {
+            url: "/api",
+            templateUrl: './api/api.html',
+            controller: 'apiController'
+            /*    $scope.calls = apiFactory.getCalls();
+                
+                $scope.makeCall = function(call){
+                    $http.get(call.url, {cache: true}, {
+                        headers: {
+                            'Content-Type': 'text/plain'
+                        }
+                    }).then(function (response) {
+                        _.set(call, 'results', response.data);
+                    });
+                }*/
+
             })
                 .state('gsrs', {
                     url: "^/gsrs",
@@ -340,7 +560,43 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
         return {
             templateUrl: "menu/footer.html"
         };
-    });
+    })
+    .directive('signupForm', function () {
+        return {
+
+          /*  link: function($scope, element, attrs) {
+            // Trigger when number of children changes,
+            // including by directives like ng-repeat
+            var watch = $scope.$watch(function() {
+                return element.children().length;
+            }, function() {
+                // Wait for templates to render
+                $scope.$evalAsync(function() {
+                    // Finally, directives are evaluated
+                    // and templates are renderer here
+                    var children = element.children();
+                    console.log(children);
+                });
+            });
+        },*/
+        templateUrl: "./gdocTemplate.html",
+        };
+    })
+    .directive('version', function () {
+    return {
+        templateUrl: "./release/version.html",
+        scope:{
+            release: '='
+        }
+    };
+}).directive('changelog', function () {
+    return {
+        templateUrl: "./release/changelog.html",
+        scope:{
+            changes: '='
+        }
+    };
+});
     /*.directive('accordion', function () {
             return {
                 restrict: 'E',

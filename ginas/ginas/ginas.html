@@ -1,7 +1,7 @@
     
     <style>
 .top-menu{
-            margin-bottom:15px;
+           
         }
 .aligned-row {
   display: flex;
@@ -44,13 +44,13 @@
         </div>
          <div class = "row">
            <div class = "col-sm-4 front-menu2" >
-                Get The Code
+               <u> Get The Code</u>
            </div> 
-           <div class = "col-sm-4 front-menu2" >
-                Try The Demo
+           <div class = "col-sm-4 front-menu2" ng-click = 'redirectExt("https://ginas.ncats.nih.gov/ginas/app")' >
+               <u>  Try The Demo</u>
            </div>
            <div class = "col-sm-4 front-menu2" >
-                Download
+                <u>  Download</u>
            </div>
         </div>
         <div class="row">
@@ -82,12 +82,12 @@
                     </div>
                     <div class = "row">
                         <div class = "col-sm-6">
-                            <div class = "button" style = 'float:left'>
+                            <div class = "button" ng-click = "redirect('release')" style = 'float:left'>
                                 View All Versions
                             </div>
                         </div>
                         <div class = "col-sm-6">
-                            <div class = "button" style = 'float:right'>
+                            <div class = "button" ng-click = "redirect('release')" style = 'float:right'>
                                 Download / View full notes
                             </div>
                         </div>
@@ -96,14 +96,24 @@
             </div>
             <div class = "col-md-4">
                      <div class =  "cell">
-                        <h3>Statistics</h3>
+                        <h3>ginas Newsletter</h3>
+                        <br/>
+                        
+                        <h4>Recieve email updates on ginas news and G-SRS releases</h4>
+                        <br/>
+                        <div class = "button" ng-click = "toggleForm()">Signup</div>
+                        <!--
                          value 1 <div style = "float:left;width:50%;background-color:red;height:18px;"></div><br/><br/>
                           value 2 <div style = "float:left;width:60%;background-color:blue;height:18px;"></div><br/><br/>
                            value 3 <div style = "float:left;width:30%;background-color:yellow;height:18px;"></div><br/><br/>
-                            value 4 <div style = "float:left;width:25%;background-color:green;height:18px;"></div><br/>
+                            value 4 <div style = "float:left;width:25%;background-color:green;height:18px;"></div><br/>-->
                      </div>   
             </div>
         </div>
+        <div ng-if="!showgdocForm">
+           <div ng-include="gdocForm"></div>
+                
+            </div>
          <div class="row">
            <div class = "col-md-8">
                 <h2>Latest News</h2>
@@ -120,7 +130,8 @@
                         <div class = "col-sm-12">  
                             <div class = 'date'>{{news[0].date}}</div>
                                <h3>  {{news[0].title}}</h3>
-                               {{headline(news[0].text)}}
+                              <p ng-text-truncate="news[0].text"
+                                ng-tt-chars-threshold="200"></p>
                         </div>
                         <!--<div class = "col-sm-4 ">
                             <img class = "img-responsive" src = "./assets/images/simethicone.png" />
@@ -129,12 +140,12 @@
                     </div>
                     <div class = "row">
                         <div class = "col-sm-6">
-                            <div class = "button" style = 'float:left'>
+                            <div class = "button" ng-click = "redirect('articles')" style = 'float:left'>
                                 View All News
                             </div>
                         </div>
                         <div class = "col-sm-6">
-                            <div class = "button" style = 'float:right'>
+                            <div class = "button" ng-click = "redirect('articles')" style = 'float:right'>
                                 Read Full Article
                             </div>
                         </div>
@@ -145,19 +156,19 @@
             <div class = "col-md-4">
                          <div class =  "cell">
                             <h3>News Archives</h3>
-                            <div class = "button">
+                            <div class = "button" ng-click = "redirect('articles')" >
                                 Articles
                             </div>
-                            <div class = "button">
+                            <div class = "button" ng-click = "redirect('articles#meetings')" >
                                Meetings
                             </div>
-                            <div class = "button">
+                            <div class = "button" ng-click = "redirect('articles')" >
                                 Presentations
                             </div>
                          </div>   
                 </div>
         </div>
-        <div class="container">
+        <!--<div class="container">
         <div class="row">
             <div class="col-md-4">
                 <h1>ginas Monthly Meetings</h1>
@@ -199,5 +210,5 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>

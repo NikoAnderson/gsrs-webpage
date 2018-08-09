@@ -1,0 +1,338 @@
+<div>
+    <div class="row ginas-background">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="banner-heading"><i class="fa fa-cogs" aria-hidden="true"></i> Starting with G-SRS</div>
+            <h3>Download and installation instructions</h3>
+        </div>
+    </div>
+    <div class="container ginas-container">
+
+<version release = release></version>
+<changelog changes = release.changelog></changelog>
+        <hr>
+<div class = "row">
+            <div class="col-md-4">
+                <a ui-sref="gsrs.older">Older Versions</a></li>
+            </div>
+        </div>
+<hr>
+                <div class="row" id="links">
+                    <div class="col-md-10">
+                        <h2>Quick Links</h2>
+                        <ul>
+                            <li><a ng-click="scrollTo('system')">System Requirements</a></li>
+                            <li><a ng-click="scrollTo('install')">Installation Instructions</a></li>
+                            <li><a ng-click="scrollTo('database')">Database Connection</a></li>
+                            <li><a ng-click="scrollTo('user')">User Registration</a></li>
+                            <li><a ng-click="scrollTo('loading')">Data Loading</a></li>
+                            <li><a ng-click="scrollTo('questions')">Questions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" id="system">
+                    <div class="col-md-10">
+                        <h2>System Requirements</h2>
+                        <p>Performance will vary based on size of data, number of concurrent users, and network
+                            infrastructure.
+                            Typical small-scale installations,
+                            anticipating dozens of concurrent users, and around 100k substance records have performed
+                            well
+                            with
+                            the following configuration:</p>
+                        <ul>
+                            <li>4-core (+) CPU</li>
+                            <li>8GB (+) Memory</li>
+                            <li>100GB (+) hard drive</li>
+                            <li>Java 8</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="row" id="install">
+                    <div class="col-md-10">
+                        <h2>Installation Instructions</h2>
+                        <ol>
+                            <li>Download the zip file</li>
+                            <li>Unzip the zip file</li>
+                            <li><code>cd</code> into the unzipped folder</li>
+                            <li>Check <code>conf/ginas.conf</code> file for<a ng-click="scrollTo('database')"> database
+                                configuration options</a> (optional)
+                            </li>
+                            <li>In a unix environment, you may need to make the files executable. Run <code>chmod +x ./bin/ginas</code></li>
+                            <div class="alert alert-warning" role="alert">Skip step 6 if you are using in-memory h2 database.</div>
+                            <li>Create database tables:
+                                <div class="alert alert-danger" role="alert">This step will run evolutions and create table structure in your database. This is intended to run only on a new database.
+                                    If you run this step on an existing database, it will wipe out all the data and create new tables.</div>
+                                <div>Mac/Linux 
+                                    <pre><code>bash bin/evolutions.sh "conf/DB_CONFIG_FILE_NAME.conf"</code></pre>
+                                        <div class="alert alert-warning" role="alert">replace "conf/DB_CONFIG_FILE_NAME.conf" with your config file path</div>
+                                    </div>
+                                <div>Windows
+                                    <pre><code>bin\evolutions.bat conf\DB_CONFIG_FILE_NAME.conf</code></pre>
+                                        <div class="alert alert-warning" role="alert">replace "conf/DB_CONFIG_FILE_NAME.conf" with your config file path</div>
+                                </div>
+                            </li>
+                            <li>Start G-SRS
+                                <div>Mac/Linux 
+                                    <pre><code>nohup ./bin/ginas -Dconfig.file=conf/ginas.conf -J-Xmx4G</code></pre>
+                                    <div class="alert alert-warning" role="alert">If G-SRS fails to load, replace <code>-J-Xmx4G</code> with <code>-mem 4000</code></div>
+                                    <div class="alert alert-warning" role="alert"><code>nohup</code> specifies that the process is not tied to the user session, so it will continue to run in the background</div>
+                                    </div>
+                                <div>Windows
+                                    <pre>java -DapplyEvolutions.default=true -Xmx4096M -Xms512M -Dconfig.file=conf/ginas.conf -cp lib/* play.core.server.NettyServer</pre>
+                                </div>
+                            </li>
+                            <li>G-SRS should now be running. Open a browser and go to
+                                <code>localhost:9000/ginas/app</code>
+                            </li>
+                            <li>When you want to end the process gracefully:
+                                <div>Mac/Linux
+                                    <pre><code>kill -SIGTERM XXXX</code></pre>
+                                </div>
+                                where XXXX is the process number (printed upon executing <code>nohup</code>)
+                                <div>Windows
+                                    <pre><code>Taskkill /PID XXXX /F</code></pre>
+                                </div>
+                                where XXXX is the process number (printed in the <code>RUNNING_PID</code> file)
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row" id="database">
+                    <div class="col-md-10">
+                        <h2>Database Configuration</h2>
+                        <p>G-SRS comes with an embedded H2 database. Any database configuration should take place by manually editing the <code>ginas.conf</code> file, or by creating a custom <code>.conf</code> file.
+                        </p>
+                        <ul>
+                            <li><strong>Embedded H2</strong><br/>
+                                This database is set by default, and is best used for testing small datasets.
+                                Performance is
+                                reduced >10,000 records.
+                            </li>
+                            <li><strong>Local MySQL</strong><br/>
+                                In order to use a local MySQL instance, add the following block of code to a custom <code>.conf</code> file, or the current <code>conf/ginas.conf</code> file:
+                            <pre>
+################
+#MySQL Local
+db.default.driver="com.mysql.jdbc.Driver"
+db.default.url="jdbc:mysql://localhost:3306/ixginas"
+db.default.user="root"
+db.default.password=""
+#END MySQL example
+################
+                            </pre>
+                                <ol>
+                                    <li>The default Url parameter is the defaul MySQL port. This may need to be changed if it is in use by another application.
+                                    </li>
+                                    <li><code>/ixginas</code> is the default schema name.</li>
+                                    <li>Change user and password as necessary</li>
+                                </ol>
+                            </li>
+                            <li><strong>MySQL</strong><br/>
+                                Follow the above MySQL instructions, changing the url to your MySQL instance.
+                            <pre>
+################
+#MySQL example
+db.default.driver="com.mysql.jdbc.Driver"
+db.default.url="jdbc:mysql://"
+db.default.user=""
+db.default.password=""
+#END MySQL example
+################
+                            </pre>
+                            </li>
+                            <li><strong>postgreSQL</strong><br/>
+                                Add the following block of code to a custom <code>.conf</code> file, or the current <code>conf/ginas.conf</code> file:
+                           <pre>
+################
+#postGreSQL example
+db.default.driver="org.postgresql.Driver"
+db.default.url="jdbc:postgresql://"
+db.default.user=""
+db.default.password=""
+#END postGreSQL example
+################
+                           </pre>
+                            </li>
+                            <li><strong>Oracle</strong><br/>
+                                Add the following block of code to a custom <code>.conf</code> file, or the current <code>conf/ginas.conf</code> file:
+                            <pre>
+################
+#ORACLE Example
+evolutionplugin=disabled
+db.default.driver="oracle.jdbc.OracleDriver"
+db.default.url="jdbc:oracle:thin:/"
+
+# This is the schema owner. Capable of making tables.
+db.default.user=""
+db.default.password=""
+
+# Schema setting
+# Keep only for oracle
+# Schema name:
+db.default.schema=""
+
+# Set from above schema
+db.default.initSQL="ALTER SESSION SET CURRENT_SCHEMA="${?db.default.schema}
+db.default.connectionInitSql=${?db.default.initSQL}
+
+#END ORACLE Example
+################
+                            </pre>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row" id="user">
+                    <div class="col-md-10">
+                        <h2>User Registration</h2>
+                        <div class="row">
+                            <div class="col-md-7">
+                                1. Click
+                                <button class="btn btn-default">Login</button>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/login.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                2. G-SRS ships with a default username <code>admin</code> and password
+                                <code>admin</code>.
+                                Once a user with admin privileges has been added,
+                                this account should be removed from the <code>ginas/ginas.conf</code>, under
+                                ix.core.users.
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                3. Click
+                                <button class="btn btn-default">Admin</button>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/admin-button.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                4. Select the "User Management" tab.
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/admin-page.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                5. Click User Management. This will bring you to a page listing all registered users.
+                                Click
+                                <a>Add New User</a>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/user-page.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                6. Fill out required information, set permission levels and click
+                                <button class="btn btn-default">Save</button>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/new-user.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                The new user will be successfully added.
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/added-user.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row" id="loading">
+                    <div class="col-md-10">
+                        <h2>Data Loading</h2>
+                        <div class="row">
+                            <div class="col-md-7">
+                                1. <a ng-click="scrollTo('user')">Register</a> as a user with admin privileges and
+                                login.
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                2. Click
+                                <button class="btn btn-default">Admin</button>
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/admin-button.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                3. Select the "Data Management" tab.
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/data-management.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                4. Click
+                                <button class="btn btn-primary"><i class="fa fa-folder-open"></i> Browse</button>
+                                A dialogue will appear prompting you to choose the <code>.ginas</code>
+                                file you want to upload.
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                5. Click
+                                <button class="btn btn-success">Load</button>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                6. You will see an import screen which displays the progress of your data upload.
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/loading.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-7">
+                                7. You may browse the data as it is loading. You will see process : COMPLETE when the data is loaded.
+                            </div>
+                            <div class="col-md-5">
+                                <img class="img-responsive" src="./assets/images/screenshots/load-complete.png"/>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row" id="questions">
+                    <div class="col-md-10">
+                        <h2>Questions</h2>
+                        <p>Have a deployment related question? First, be sure to check our <a ui-sref="gsrs.faq">FAQS</a>. Couldn't find
+                            the
+                            answer? Send us an email and we will respond as soon as possible.
+                            <a
+                                    href="mailto:ginas@mail.nih.gov?subject=ginas%20Inquiry"
+                                    target="_blank">ginas Team</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+</div>

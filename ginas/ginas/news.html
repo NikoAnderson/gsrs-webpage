@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="row no-gutter">
-               <accordion model="faq" id="test"></accordion>
+            
              <div class="col-sm-4 col-sm-push-8" data-spy="affix" >
                  <div class =  "cell" >
                             <h3>News Archives</h3>
@@ -58,22 +58,42 @@
                             </div>
                          </div> 
                 <div class = "cell ui-scrollfix" ui-scrollfix="0">
-                    <h3>Older Articles</h3>
+                  <div ng-show = "showArticles">
+                        <h3>Older Articles</h3>
 
-                        <div ng-repeat="article in news track by $index" style = "padding-bottom:8px" >
-                            <b>{{article.date}}</b><a href = '#'>
-                                 {{article.title}}
-                            </a>
+                            <div ng-repeat="article in news track by $index" style = "padding-bottom:8px" >
+                                <b>{{article.date}}</b><a ng-click="scrollTo(article.title, $index)">
+                                     {{article.title}}
+                                </a>
+                        </div>
+                    </div>
+
+                    <div ng-show = "showPresentations">
+                        <h3>Older Presentations</h3>
+
+                            <div ng-repeat="item in presentations track by $index" style = "padding-bottom:8px" >
+                                <b>{{item.date}}</b><a ng-click="scrollTo(item.heading, $index)">
+                                     {{item.heading}}
+                                </a>
+                            </div>
                         </div>
 
-                       
-                   
+                    <div ng-show = "showMeetings">
+                        <h3>Older Meetings</h3>
+
+                            <div ng-repeat="item in mmeetings track by $index" style = "padding-bottom:8px" >
+                                <a  ng-click="scrollTo(item.heading, $index)">
+                                     {{item.heading}}
+                                </a>
+                            </div>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-8 col-sm-pull-4" >
                 <div class = " ">
-                    <div ng-repeat="article in news track by $index" class = "right-col cell">
-                        <br/><div class = "date">{{article.date}}</date>
+
+                    <div ng-repeat="article in news track by $index" ng-show = "showArticles" class = "left-col cell">
+                        <br/><div class = "date" id={{article.title}}-{{$index}}>{{article.date}}</div>
                        <h2>{{article.title}}</h2>
                         <div class="row">
                             <div class="col-md-12">
@@ -82,18 +102,26 @@
                             
                         </div>
                     </div>
+
+                    <div ng-repeat="item in presentations track by $index" ng-show = "showPresentations" class = "left-col cell">
+                        <br/><div class = "date" id={{item.heading}}-{{$index}}>{{item.date}}</div>
+                       <a ng-if ="item.url" href = "{{item.url}}"><h3>{{item.heading}}</h3></a>
+                       <div ng-if="!item.url"><h3>{{item.heading}}</h3>
+                            {{item.desc}}
+                       </div>
+                    </div>
+
+                    <div ng-repeat="item in mmeetings track by $index" ng-show = "showMeetings" class = "left-col cell">
+                       <div id={{item.heading}}-{{$index}}> 
+                       <h2>{{item.heading}}</h2>
+                        <div ng-repeat = "topics in item.topics">
+                            <a href = "{{topics.url}}">{{topics.txt}}</a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
            
         </div>
     </div>
-    </div>
-    <div class="row">
-
-            <div class="col-sm-4 col-sm-push-8" style="background-color:lavender;">.col-sm-4 .col-sm-push-8</div>
-    <div class="col-sm-8 col-sm-pull-4" style="background-color:lavenderblush;">.col-sm-8 .col-sm-pull-4</div>
-    </div>
-    <div class="row">
-    
-    
     </div>

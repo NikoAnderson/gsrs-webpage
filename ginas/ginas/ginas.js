@@ -6,12 +6,7 @@
 angular.module('ginasWeb.ginas', ['ui.router'])
     .config(['$stateProvider','$urlRouterProvider', function ($stateProvider ,$urlRouterProvider) {
         $stateProvider
-            .state('ginas.about', {
-                url: "/about",
-                templateUrl: './ginas/about.html',
-                controller: 'aboutController'
             
-
             .state('ginas.faq2', {
                 url: "/faqs2",
                 templateUrl: './ginas/faqs2.html',

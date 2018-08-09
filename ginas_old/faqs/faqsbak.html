@@ -1,0 +1,357 @@
+
+ 
+<style>
+#main-div{
+    max-width:991px;
+}
+.banner-heading{
+    padding-top:0%;
+    font-size: 5em;
+}
+
+.header-icon{
+    height:50px;
+    width:50px;
+    float:left;
+    margin-top:12px;
+}
+
+.ginas-background{
+    padding-bottom:0px;
+}
+
+#main-div{
+    background-color:white;
+    padding-left:0px;
+    padding-right:0px;
+}
+.right-cont{
+  padding:10px;
+}
+
+.left-cont{
+    margin:10px;
+}
+@media (max-width: 767px) {
+    .left-bar{
+      
+    }
+}
+
+h2.banner-name{
+    color:white;
+    margin-top:20px;
+    float:left;
+    padding-right:5px;
+}
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.left-col{
+    margin-right:15px;
+}
+.cell{
+    background-color:#f4f4f4;
+    padding:10px;
+}
+
+/*angular-ui-bootstrap accordion re-styling*/
+.panel-group{
+    margin-bottom:5px;!important
+    background-color:#3A5273;!important
+            color:white;
+}
+.panel-body{
+    background-color:#f4f4f4;
+    border:0px solid #f4f4f4;
+}
+.panel{
+    background-color:#3A5273;!important
+            color:white;
+}
+.panel-title > a{
+    color:white;
+}
+
+.big {
+  margin-top : 2000px;
+}
+
+
+.well {
+  background : #eee;
+}
+
+.well.ui-scrollfix {
+  position : fixed;
+  background : #f00;
+  top : 0;
+
+
+}
+</style>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div >
+    <div class="row ginas-background justify-content-center" id="faq-background" style = "align-items: center;">
+        <div class="col-md-4 col-sm-12 col-md-offset-1 " align="center">
+            <h1 class="banner-heading" style = "margin:10px"><i class="fa fa-question-circle-o" aria-hidden="true"></i> FAQs</h1>
+        </div>
+        <div class="col-md-6 col-sm-12 col-md-offset-1" align="center" style ="vertical-align: middle ;margin-top:10px;margin-bottom:10px">
+           <div style = "width:300px"> <h2 class = "banner-name"></i>The Ginas Project </h2>&nbsp <img class = "header-icon" src = "../ginas/assets/images/pillIconColor.png" /></div>
+        </div>
+    </div>
+    <div >
+        <div class="row">
+           <div class = "col-lg-12">
+             <h2>frequently asked questions</h2>
+            </div>
+        </div>
+        <div class="row no-gutter">
+            
+             <div class="col-sm-4 col-sm-push-8" >
+               <div style = "position: relative !important;">
+                <div class = 'cell' id = 'faq-container' >
+                    <div class = 'well' ui-scrollfix> 
+                    <h3>Question Index</h3>
+                      <uib-accordion ng-repeat="subject in faqs track by $index">
+                        <uib-accordion-group ng-class = "new" is-open="status.open">
+                            <uib-accordion-heading>
+                                {{subject.subject}}<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                              </uib-accordion-heading>
+                            <li ng-repeat="faq in subject.questions track by $index">
+                                <a ng-click="scrollTo(subject.subject, $index)">{{faq.question}}</a>
+                            </li>
+                         </uib-accordion-group>
+                            
+                      </uib-accordion> 
+                          </div>
+                        
+                   <!-- <div ng-repeat="subject in faqs track by $index" class = 'cell'>
+                   
+                        <ul>
+                             <br/>
+                            <li ng-repeat="faq in subject.questions track by $index">
+
+                                <a ng-click="scrollTo(subject.subject, $index)">{{faq.question}}</a>
+                            </li>
+                        </ul>
+                    </div>-->
+                    </div>
+                </div>
+            </div>
+         
+            <div class="col-sm-8 col-sm-pull-4  " >
+                <div class = "cell left-col">
+                    <div ng-repeat="subject in faqs track by $index" class = "">
+
+                       <!-- <h1>{{subject.subject}}</h1>-->
+                        <div class="no-gutter" ng-repeat="faq in subject.questions track by $index">
+                            <div  id={{subject.subject}}-{{$index}}>
+                                <div class="">
+                                    <h3>{{faq.question}}</h3>
+                                </div>
+                            </div>
+                            <div class="">
+                                <div class="">
+                                    <p>{{faq.answer}}</p>
+                                    <a ng-click="scrollTo('faq-container')"><h5>back to top</h5></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+        </div>
+    </div>
+    </div>
+    <div class="row" id = 'bottom'>
+
+            <div class="col-sm-4 col-sm-push-8" style="background-color:lavender;">.col-sm-4 .col-sm-push-8</div>
+    <div class="col-sm-8 col-sm-pull-4" style="background-color:lavenderblush;">.col-sm-8 .col-sm-pull-4</div>
+    </div>
+    <div class="row">
+      <div class="well" ui-scrollfix>
+      I should be fix when I reach the top
+  </div>
+  <div class="big"></div>
+    
+    </div>
+
+    <script>
+     /* ========================================================================
+ * Bootstrap: affix.js v3.3.6
+ * http://getbootstrap.com/javascript/#affix
+ * ========================================================================
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // AFFIX CLASS DEFINITION
+  // ======================
+
+  var Affix = function (element, options) {
+    this.options = $.extend({}, Affix.DEFAULTS, options)
+
+    this.$target = $(this.options.target)
+      .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
+      .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+
+    this.$element     = $(element)
+    this.affixed      = null
+    this.unpin        = null
+    this.pinnedOffset = null
+
+    this.checkPosition()
+  }
+
+  Affix.VERSION  = '3.3.6'
+
+  Affix.RESET    = 'affix affix-top affix-bottom'
+
+  Affix.DEFAULTS = {
+    offset: 0,
+    target: window
+  }
+
+  Affix.prototype.getState = function (scrollHeight, height, offsetTop, offsetBottom) {
+    var scrollTop    = this.$target.scrollTop()
+    var position     = this.$element.offset()
+    var targetHeight = this.$target.height()
+
+    if (offsetTop != null && this.affixed == 'top') return scrollTop < offsetTop ? 'top' : false
+
+    if (this.affixed == 'bottom') {
+      if (offsetTop != null) return (scrollTop + this.unpin <= position.top) ? false : 'bottom'
+      return (scrollTop + targetHeight <= scrollHeight - offsetBottom) ? false : 'bottom'
+    }
+
+    var initializing   = this.affixed == null
+    var colliderTop    = initializing ? scrollTop : position.top
+    var colliderHeight = initializing ? targetHeight : height
+
+    if (offsetTop != null && scrollTop <= offsetTop) return 'top'
+    if (offsetBottom != null && (colliderTop + colliderHeight >= scrollHeight - offsetBottom)) return 'bottom'
+
+    return false
+  }
+
+  Affix.prototype.getPinnedOffset = function () {
+    if (this.pinnedOffset) return this.pinnedOffset
+    this.$element.removeClass(Affix.RESET).addClass('affix')
+    var scrollTop = this.$target.scrollTop()
+    var position  = this.$element.offset()
+    return (this.pinnedOffset = position.top - scrollTop)
+  }
+
+  Affix.prototype.checkPositionWithEventLoop = function () {
+    setTimeout($.proxy(this.checkPosition, this), 1)
+  }
+
+  Affix.prototype.checkPosition = function () {
+    if (!this.$element.is(':visible')) return
+
+    var height       = this.$element.height()
+    var offset       = this.options.offset
+    var offsetTop    = offset.top
+    var offsetBottom = offset.bottom
+    var scrollHeight = Math.max($(document).height(), $(document.body).height())
+
+    if (typeof offset != 'object')         offsetBottom = offsetTop = offset
+    if (typeof offsetTop == 'function')    offsetTop    = offset.top(this.$element)
+    if (typeof offsetBottom == 'function') offsetBottom = offset.bottom(this.$element)
+
+    var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
+
+    if (this.affixed != affix) {
+      if (this.unpin != null) this.$element.css('top', '')
+
+      var affixType = 'affix' + (affix ? '-' + affix : '')
+      var e         = $.Event(affixType + '.bs.affix')
+
+      this.$element.trigger(e)
+
+      if (e.isDefaultPrevented()) return
+
+      this.affixed = affix
+      this.unpin = affix == 'bottom' ? this.getPinnedOffset() : null
+
+      this.$element
+        .removeClass(Affix.RESET)
+        .addClass(affixType)
+        .trigger(affixType.replace('affix', 'affixed') + '.bs.affix')
+    }
+
+    if (affix == 'bottom') {
+      this.$element.offset({
+        top: scrollHeight - height - offsetBottom
+      })
+    }
+  }
+
+
+  // AFFIX PLUGIN DEFINITION
+  // =======================
+
+  function Plugin(option) {
+    return this.each(function () {
+      var $this   = $(this)
+      var data    = $this.data('bs.affix')
+      var options = typeof option == 'object' && option
+
+      if (!data) $this.data('bs.affix', (data = new Affix(this, options)))
+      if (typeof option == 'string') data[option]()
+    })
+  }
+
+  var old = $.fn.affix
+
+  $.fn.affix             = Plugin
+  $.fn.affix.Constructor = Affix
+
+
+  // AFFIX NO CONFLICT
+  // =================
+
+  $.fn.affix.noConflict = function () {
+    $.fn.affix = old
+    return this
+  }
+
+
+  // AFFIX DATA-API
+  // ==============
+
+  $(window).on('load', function () {
+    $('[data-spy="affix"]').each(function () {
+      var $spy = $(this)
+      var data = $spy.data()
+
+      data.offset = data.offset || {}
+
+      if (data.offsetBottom != null) data.offset.bottom = data.offsetBottom
+      if (data.offsetTop    != null) data.offset.top    = data.offsetTop
+
+      Plugin.call($spy, data)
+    })
+  })
+
+}(jQuery);
+    
+       </script>  
+       <script>
+        $('[data-spy="affix"]').on('affixed.bs.affix', function () {
+            // from http://stackoverflow.com/questions/6551429/adjust-a-width-based-on-parent-w-jquery
+            $(".affix").css("width",$(".affix").parent().css("width").replace('px','') - 30);
+        })
+        </script>

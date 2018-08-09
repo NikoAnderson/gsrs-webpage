@@ -1,0 +1,115 @@
+<style>
+#main-div{
+    max-width:991px;
+}
+.banner-heading{
+    padding-top:0%;
+    font-size: 5em;
+}
+
+.header-icon{
+    height:50px;
+    width:50px;
+}
+
+.ginas-background{
+    padding-bottom:0px;
+}
+
+.h1{
+    }
+.left-bar{
+    margin-left:-15px;
+    padding-left:30px;
+    padding-right:8px;
+    margin-right:-8px;
+    background-color:#f4f4f4;
+    margin-bottom:15px;
+}
+.right-bar{
+    margin-right:-15px;
+    padding-right:30px;
+    padding-left:8px;
+    margin-left:-8px;
+background-color:#f4f4f4;
+}
+#main-div{
+    background-color:white;
+    padding-left:0px;
+    padding-right:0px;
+}
+.right-cont{
+  
+}
+
+.left-cont{
+
+}
+
+
+</style>
+ <style>
+  /* Note: Try to remove the following lines to see the effect of CSS positioning */
+ 
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div >
+    <div class="row ginas-background justify-content-center" id="faq-background" style = "align-items: center;">
+        <div class="col-md-4 col-sm-12 col-md-offset-1 " align="center">
+            <h1 class="banner-heading" style = "margin:10px"><i class="fa fa-question-circle-o" aria-hidden="true"></i> News</h1>
+        </div>
+        <div class="col-md-6 col-sm-12 col-md-offset-1" align="center" style ="vertical-align: middle ;margin-top:10px;margin-bottom:10px">
+           <div style = "width:300px"> <h2 style = 'float:left'></i>The Ginas Project </h2>&nbsp <img class = "header-icon" src = "../ginas/assets/images/pillIconColor.png" style = 'float:left;margin-top:12px' /></div>
+        </div>
+    </div>
+    <div >
+        <div class="row">
+           <div class = "col-lg-12">
+             <h2>frequently asked questions</h2>
+            </div>
+        </div>
+        <div class="row">
+            
+             <div class="col-sm-4 col-sm-push-8 right-cont " data-spy="affix" >
+                <div class = "right-bar ui-scrollfix" ui-scrollfix="0">
+                    <div ng-repeat="heading in mmeetings track by $index" >
+                   <h4>{{heading.heading}}</h4>
+                        <ul>
+                            <a ng-repeat="topic in heading.topics track by $index" href = {{topic.url}}>{{topic.txt}}
+                                </a>
+                            
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-sm-pull-4  left-cont" >
+                <div >
+                    <div ng-repeat="article in news track by $index" class = "left-bar">
+                        <br/><h2>{{article.date}}</h2>
+                       <h1>{{article.title}}</h1>
+                        <div class="row">
+                            <div class="col-md-12">
+                               {{article.text}}
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    </div>
+    <div class="row">
+
+            <div class="col-sm-4 col-sm-push-8" style="background-color:lavender;">.col-sm-4 .col-sm-push-8</div>
+    <div class="col-sm-8 col-sm-pull-4" style="background-color:lavenderblush;">.col-sm-8 .col-sm-pull-4</div>
+    </div>
+    <div class="row">
+    
+    
+    </div>

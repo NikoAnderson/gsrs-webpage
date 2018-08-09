@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="ginas" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="ginas" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="ginas" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="ginas" class="no-js"> <!--<![endif]-->
+<head>
+<!--
+    <base href="/ginas2/">
+-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to ginas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="img/ico" href='assets/images/pillIconColor.ico'>
+    <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/angular-swagger-ui-master/dist/css/swagger-ui.min.css">
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/bower_components/json-formatter/dist/json-formatter.css">
+    <link rel="stylesheet" href="assets/bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="assets/css/ginas.css">
+
+
+</head>
+<body>
+<!--
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+-->
+<ginas-menu></ginas-menu>
+<!--[if lt IE 7]>
+<![endif]-->
+
+<!--
+<div class="container-fluid" ng-view></div>
+-->
+<div class="container-fluid" id = "main-div" ui-view></div>
+<ginas-footer></ginas-footer>
+<!--
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+-->
+
+<script src="assets/bower_components/lodash/lodash.js"></script>
+<script src="assets/bower_components/angular/angular.js"></script>
+<script src="assets/addons/angular-jquery.js"></script>
+<script src="assets/bower_components/angular-route/angular-route.js"></script>
+<script src="assets/bower_components/angular-animate/angular-animate.js"></script>
+<script src="assets/bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="assets/bower_components/angular-aria/angular-aria.js"></script>
+<script src="assets/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="assets/bower_components/json-formatter/dist/json-formatter.js"></script>
+<script src="assets/bower_components/angular-click-outside/clickoutside.directive.js"></script>
+<script src="assets/addons/angular-bootstrap-affix.js"></script>
+<script src="assets/angular-swagger-ui-master/dist/scripts/swagger-ui.js"></script>
+<script src="assets/angular-swagger-ui-master/src/scripts/modules/swagger-auth.js"></script>
+
+<script src="ginas-web.js"></script>
+<script src="ginas/ginas.js"></script>
+<script src="gsrs/gsrs.js"></script>
+<script src="gsrs/faq.js"></script>
+<script src="gsrs/api.js"></script>
+<script src="gsrs/versions.js"></script>
+<script src="faqs/faqs.controller.js"></script>
+<script type="text/javascript">
+
+function submitForm() {
+    if (submitted) {
+        var elements = [
+            'entry_1301820629',
+            'entry_670035918',
+            'entry_1283870749',
+            'entry_1074140443',
+            'entry_987241197'
+        ];
+        var sub = {};
+//   var submitted = true;
+        _.forEach(elements, function (el) {
+            var target = angular.element(document.getElementById(el));
+            _.set(sub, el, target.val());
+            /*
+         .push(el +':'+ target.val());
+         */
+            //  target.empty();
+            target.val('');
+    });
+        var a = document.getElementById('ss-submit');
+        a.className += " disabled";
+        var b = document.getElementById('formSubmitted');
+        b.className -= " hidden";
+
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+    
+    <style>
+.top-menu{
+           
+        }
+.aligned-row {
+  display: flex;
+  flex-flow: row wrap;
+
+  &::before {
+    display: block;
+  }
+}
+.button-container{
+    position:relative;
+    height:auto;
+}
+
+.button.two{
+            margin-top:10px;
+            background-color:#3A5273;
+            border:1px solid #233c5e;
+            color:white;
+            font-size:18px;
+            text-align:center;
+            padding-top:6px;
+            padding-bottom:6px;
+            padding-left:10px;
+            padding-right:10px;
+            border-radius: 4px;
+            background-color: #337ab7;
+        }
+.button.three{
+            margin-top:10px;
+            background-color:#3A5273;
+            color:white;
+            font-size:18px;
+            text-align:center;
+            padding-top:6px;
+            padding-bottom:6px;
+            padding-left:10px;
+            padding-right:10px;
+            border-radius: 4px;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+        }
+         .button.active{
+            background-color:#9cc1da;
+        }
+        .button.corner{
+            display:inline-block;
+            right:0;
+            bottom: 0;
+            position: absolute;
+            margin-right:15px;
+        }
+        .button.corner2{
+            display:inline-block;
+            float:right;
+        }
+        .button:hover{
+            background-color:#265c8a;
+        }
+
+ .front-menu2{
+            margin-top:15px;
+            margin-bottom:10px;
+            background-color:#9cc1da;
+            font-size:26px;
+            border-right:1px solid white;
+            border-left:1px solid white;
+            text-align:center;
+            padding-top:10px;
+            padding-bottom:10px;
+            border-radius: 4px;
+
+        }
+        .front-menu2:hover{
+            background-color:#7eb5da;
+        }
+        .main-menu{
+            border-top-right-radius:4px;
+            border-top-left-radius:4px;
+        }
+
+        .b2{
+            background-color:#3A5273;
+            border:1px solid #223044;
+            border-radius: 4px;
+        }
+        .b3{
+            background-color:#0c203a;
+            border:1px solid #223044;
+            border-radius: 4px;
+        }
+    </style>
+    <div ui-view>
+        <div class = "row top-menu">
+            <div class = "col-sm-4 main-menu" ng-class="{ 'active': showGinas}" ng-click="changeView('ginas')">
+                The Ginas Project
+            </div>
+            <div class = "col-sm-4 main-menu"  ng-class="{ 'active': showGsrs}" ng-click="changeView('gsrs')">
+                G-SRS Software
+            </div>
+            <div class = "col-sm-4 main-menu"  ng-class="{ 'active': showTeam}" ng-click="changeView('team')">
+               The Ginas Team
+            </div>
+        </div>
+        <div class="row banner" style = "padding-bottom:20px">
+            <div class = "col-md-6 col-sm-6">
+                <div class = "test">
+                    <span class = "main-title">{{title}}</span><br/>
+                    <img src = "file:///home/andersonng/Documents/GINAS_Git/ginas2/ginas/assets/images/pillIconColor.png"/>
+                </div>
+            </div>
+            <div class = "col-md-6 col-sm-6">
+                <div style = "margin:10px;font-size:16px">
+                    <br/>
+                    {{content}}
+                </div>
+            </div>
+        </div>
+         <div class = "row">
+           <div class = "col-sm-4 front-menu2" >
+                Get The Code
+           </div> 
+           <div class = "col-sm-4 front-menu2" ng-click = 'redirectExt("https://ginas.ncats.nih.gov/ginas/app")' >
+                Try The Demo
+           </div>
+           <div class = "col-sm-4 front-menu2" >
+                Download
+           </div>
+        </div>
+        <div class="row">
+           <div class = "col-md-8">
+             <h2>Latest Release</h2>
+            </div>
+            <div class = "col-md-4">
+                
+            </div>
+        </div>
+        <div class = "row no-gutter">
+            <div class = "col-md-8">
+                <div class =  "left-col cell">
+                    <div class = "row">
+                        <div class = "col-sm-4">
+                            
+                             <div class = "date">July 7, 2018</div>
+                                 <h3> <code> G-SRS v2.0</code></h3>
+                        </div>   
+                        <div class = "col-sm-8" >
+                             <h4>CHANGELOG</h4>
+                            <ul>
+                                <li> fixed issue of structures sometimes losing lychi information when cached</li>
+                                  <li>  fixed inability to remove NA sugar</li>
+                                 <li>   Bug fix for suggestions with white space getting listed multiple times...</li>
+                                 
+                             </ul>  
+                        </div> 
+                    </div>
+                    <div class = "row">
+                        <div class = "col-sm-6">
+                            <div class = "button two" ng-click = "redirect('release')" style = 'float:left'>
+                                View All Versions
+                            </div>
+                        </div>
+                        <div class = "col-sm-6">
+                            <div class = "button three" ng-click = "redirect('release')" style = 'float:right'>
+                                Download / View full notes
+                            </div>
+                        </div>
+                    </div> 
+                 </div>  
+            </div>
+            <div class = "col-md-4">
+                     <div class =  "cell">
+                        <h3>Statistics</h3>
+                         value 1 <div style = "float:left;width:50%;background-color:red;height:18px;"></div><br/><br/>
+                          value 2 <div style = "float:left;width:60%;background-color:blue;height:18px;"></div><br/><br/>
+                           value 3 <div style = "float:left;width:30%;background-color:yellow;height:18px;"></div><br/><br/>
+                            value 4 <div style = "float:left;width:25%;background-color:green;height:18px;"></div><br/>
+                     </div>   
+            </div>
+        </div>
+         <div class="row">
+           <div class = "col-md-8">
+                <h2>Latest News</h2>
+            </div>
+            <div class = "col-md-4">
+                
+            </div>
+        </div>
+
+        <div class = "row no-gutter">
+            <div class = "col-md-8">
+                <div class =  "left-col cell">
+                    <div class = "row">
+                        <div class = "col-sm-12">  
+                            <div class = 'date'>{{news[0].date}}</div>
+                               <h3>  {{news[0].title}}</h3>
+                               {{headline(news[0].text)}}
+                        </div>
+                        <!--<div class = "col-sm-4 ">
+                            <img class = "img-responsive" src = "./assets/images/simethicone.png" />
+                                    
+                        </div> -->   
+                    </div>
+                    <div class = "row">
+                        <div class = "col-sm-4">
+                            <div class = "button b2" ng-click = "redirect('articles')" style = 'float:left'>
+                                View All News
+                            </div>
+                        </div>
+                        <div class = "col-sm-4">
+                            <div class = "button" ng-click = "redirect('articles')" style = 'float:right'>
+                                Read Full Article
+                            </div>
+                        </div>
+                        <div class = "col-sm-4">
+                            <div class = "button b3" ng-click = "redirect('articles')" style = 'float:right'>
+                                Read Full Article
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class = "col-md-4">
+                         <div class =  "cell">
+                            <h3>News Archives</h3>
+                            <div class = "button b2" ng-click = "redirect('articles')" >
+                                Articles
+                            </div>
+                            <div class = "button b2" ng-click = "redirect('articles#meetings')" >
+                               Meetings
+                            </div>
+                            <div class = "button b2" ng-click = "redirect('articles')" >
+                                Presentations
+                            </div>
+                         </div>   
+                </div>
+        </div>
+        <!--<div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1>ginas Monthly Meetings</h1>
+                <ul class="list-unstyled">
+                    <li ng-repeat="link in mmeetings">
+                        <br/>
+                        <h4>{{link.heading}}</h4> <br/>
+                        <ul ng-if="link.topics" class ="list-unstyled">
+                            <li ng-repeat="tp in link.topics">
+                                <a href={{tp.url}} target="_blank">{{tp.txt}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h1>ginas presentations</h1>
+                <ul class="list-unstyled">
+                    <li ng-repeat="link in presentations">
+                        <div ng-if="link.url||link.doc">
+                        <h3 ng-if="link.date">{{link.date}}</h3>
+                        <a href={{link.url||link.doc}} target="_blank">{{link.heading}}<span ng-if="link.doc"> <i class="fa fa-file-pdf-o"></i></span></a>
+                            </div>
+                        <div ng-if="link.desc">
+                            <h3 ng-if="link.date">{{link.date}}</h3>
+                            <h4>{{link.heading}}</h4>
+                            <p>{{link.desc}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h1>ginas in the news</h1>
+                <ul class ="list-unstyled">
+                    <li ng-repeat="link in links">
+                        <br/>
+                        <a href={{link.url}} target="_blank">{{link.heading}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+</div>

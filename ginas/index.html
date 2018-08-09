@@ -51,6 +51,7 @@
 <script src="assets/bower_components/json-formatter/dist/json-formatter.js"></script>
 <script src="assets/bower_components/angular-click-outside/clickoutside.directive.js"></script>
 <script src="assets/addons/angular-bootstrap-affix.js"></script>
+<script src="assets/addons/ng-text-truncate.js"></script>
 <script src="assets/angular-swagger-ui-master/dist/scripts/swagger-ui.js"></script>
 <script src="assets/angular-swagger-ui-master/src/scripts/modules/swagger-auth.js"></script>
 
@@ -58,12 +59,16 @@
 <script src="ginas/ginas.js"></script>
 <script src="gsrs/gsrs.js"></script>
 <script src="gsrs/faq.js"></script>
-<script src="gsrs/api.js"></script>
-<script src="gsrs/versions.js"></script>
+<script src="api/api.js"></script>
+<script src="api/api.controller.js"></script>
+<script src="release/versions.js"></script>
+<script src="release/release.controller.js"></script>
 <script src="faqs/faqs.controller.js"></script>
+<script src="news/news.controller.js"></script>
+<script src="about/about.controller.js"></script>
 <script type="text/javascript">
 
-function submitForm() {
+/*function submitForm() {
     if (submitted) {
         var elements = [
             'entry_1301820629',
@@ -81,7 +86,7 @@ function submitForm() {
          .push(el +':'+ target.val());
          */
             //  target.empty();
-            target.val('');
+        /*    target.val('');
     });
         var a = document.getElementById('ss-submit');
         a.className += " disabled";
@@ -89,8 +94,8 @@ function submitForm() {
         b.className -= " hidden";
 
     }
-}
+}*/
 </script>
-
+<script data-cfasync="false" type="text/javascript" src="/assets/addons/form-submission-handler.js"></script>
 </body>
 </html>
