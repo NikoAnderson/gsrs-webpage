@@ -93,7 +93,7 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
                 .state('ginas', {
                      url: '',
                     templateUrl: 'ginas/ginas.html',
-                    controller: function ($scope, $sce, $location, $window) {
+                    controller: function ($scope, $sce, $location, $window, $uibModal) {
                         $scope.$sce = $sce;
                         $scope.headline = function(text){
                             var head = text.substring(0,200);
@@ -103,7 +103,12 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
                             }
                             return head;
                         }
-
+                        $scope.open = function (size) {
+                            var modalInstance = $uibModal.open({
+                                templateUrl: './modal/modal.html',
+                                controller: 'ModalInstanceCtrl'
+                            });
+                        }
                         $scope.showgdocForm = true;
                         $scope.toggleForm = function(){
                             console.log('testing123');
@@ -445,7 +450,7 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
             })
                 .state('ginas.articles', {
                 url: "/articles",
-                templateUrl: './news/news.html',
+                templateUrl: './news/newstest.html',
                 controller: 'newsController'
             })
                 .state('ginas.testing', {
@@ -559,6 +564,16 @@ angular.module('ui.scrollfix',[]).directive('uiScrollfix', ['$window', function 
     .directive('ginasFooter', function () {
         return {
             templateUrl: "menu/footer.html"
+        };
+    })
+    .controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
+
+        $scope.ok = function () {
+            $uibModalInstance.close();
+        };
+
+        $scope.cancel = function () {
+            $uibModalInstance.dismiss('cancel');
         };
     })
     .directive('signupForm', function () {

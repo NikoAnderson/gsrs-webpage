@@ -16,13 +16,25 @@
       padding-bottom:0px;
   }
 
-
+.filter-menu{
+    padding-left:18px;
+    font-size:105%;
+    color:rgb(51, 122, 183);;
+}
 
 </style>
- <style>
-  /* Note: Try to remove the following lines to see the effect of CSS positioning */
- 
-  </style>
+<style>
+    .affix{
+        top:50px;
+        display: block;
+        width:330px;
+    }
+
+    @media (max-width:991px){
+        .affix{width:auto;
+            position:relative;}
+</style>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -44,81 +56,96 @@
         </div>
         <div class="row no-gutter">
             
-             <div class="col-sm-4 col-sm-push-8" data-spy="affix" >
+             <div class="col-sm-4 col-sm-push-8" >
+                 <div  bs-affix data-offset-top="50">
                  <div class =  "cell" >
-                            <h3>News Archives</h3>
-                            <div class = "button active" ng-class="{ 'active': showArticles}" ng-click="changeNews('articles')">
-                                Articles
-                            </div>
-                            <div class = "button" ng-class="{ 'active': showMeetings}" ng-click="changeNews('meetings')">
-                               Meetings
-                            </div>
-                            <div class = "button" ng-class="{ 'active': showPresentations}" ng-click="changeNews('presentations')">
-                                Presentations
-                            </div>
-                         </div> 
+                            <h3>Filters</h3>
+                     <div class = 'row'>
+                         <div class = 'col-sm-6'>
+                            <h4>Category</h4>
+                             <div class = "filter-menu"  ng-click="myFilter = {}">All</div>
+                             <div class = "filter-menu"  ng-click="myFilter = {type: 'news'};">news</div>
+                             <div class = "filter-menu"  ng-click="myFilter = {type: 'meeting'}">meetings</div>
+                             <div class = "filter-menu"  ng-click="myFilter = {type: 'presentation'}">presentations</div>
+                             </div>
+                         <div class = 'col-sm-6'>
+                             <h4>Year</h4>
+                             <div class = "filter-menu"  ng-click="filterYear = ''">All</div>
+                             <div class = "filter-menu"  ng-click="filterYear = '2018'">2018</div>
+                             <div class = "filter-menu"  ng-click="filterYear = '2017'">2017</div>
+                             <div class = "filter-menu"  ng-click="filterYear = '2016'">2016</div>
+                             <div class = "filter-menu" ng-click="filterYear = '2015'">2015</div>
+                         </div>
+                     </div>
+                 </div>
                 <div class = "cell ui-scrollfix" ui-scrollfix="0">
-                   <div ng-show = "showArticles">
+                   <div >
                         <h3>Older Articles</h3>
 
-                            <div ng-repeat="article in news track by $index" style = "padding-bottom:8px" >
+                        <div ng-repeat="article in articles | yearReduce:filterYear:'date'| filter:myFilter" style = "padding-bottom:8px" >
+
+                            <div ng-if = "article.type == 'news'">
                                 <b>{{article.date}}</b><a ng-click="scrollTo(article.title, $index)">
                                      {{article.title}}
                                 </a>
+                             </div>
+
+                                <div ng-if = "article.type == 'presentation'">
+                                        <b>{{article.date}}</b><a ng-click="scrollTo(article.heading, $index)">
+                                             {{article.heading}}
+                                        </a>
+                                    </div>
+
+
+                                    <div ng-if = "article.type == 'meeting'">
+                                        <a  ng-click="scrollTo(article.heading, $index)">
+                                             {{article.heading}}
+                                        </a>
+                                    </div>
+
                         </div>
-                    </div>
-
-                    <div ng-show = "showPresentations">
-                        <h3>Older Presentations</h3>
-
-                            <div ng-repeat="item in presentations track by $index" style = "padding-bottom:8px" >
-                                <b>{{item.date}}</b><a ng-click="scrollTo(item.heading, $index)">
-                                     {{item.heading}}
-                                </a>
-                            </div>
-                        </div>
-
-                    <div ng-show = "showMeetings">
-                        <h3>Older Meetings</h3>
-
-                            <div ng-repeat="item in mmeetings track by $index" style = "padding-bottom:8px" >
-                                <a  ng-click="scrollTo(item.heading, $index)">
-                                     {{item.heading}}
-                                </a>
-                            </div>
-                    </div>
+                   </div>
+                   </div>
                 </div>
             </div>
             <div class="col-sm-8 col-sm-pull-4" >
                 <div class = " ">
+                    <div ng-repeat="article in articles | yearReduce:filterYear:'date'| filter:myFilter ">
+                        <div ng-if = "article.type == 'news'">
 
-                    <div ng-repeat="article in news track by $index" ng-show = "showArticles" class = "left-col cell">
-                        <br/><div class = "date" id={{article.title}}-{{$index}}>{{article.date}}</div>
-                       <h2>{{article.title}}</h2>
-                        <div class="row">
-                            <div class="col-md-12">
-                               <p ng-bind-html="article.text"></p>
+                            <div class = "left-col cell">
+                                <div style = "float:right"><b style = "font-size:110%">Article</b></div>
+                                <br/><div class = "date" id={{article.title}}-{{$index}}>{{article.date}}</div>
+                               <h2>{{article.title}}</h2>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                       <p ng-bind-html="article.text"></p>
+                                    </div>
+
+                                </div>
                             </div>
-                            
+                        </div>
+                        <div ng-if = "article.type == 'presentation'">
+                            presentation
+                            <div   class = "left-col cell">
+                                <div style = "float:right"><b style = "font-size:110%">Presentation</b></div>
+                                <br/><div class = "date" id={{article.heading}}-{{$index}}>{{article.date}}</div>
+                                <a ng-if ="article.url" href = "{{article.url}}"><h3>{{article.heading}}</h3></a>
+                                <div ng-if="!article.url"><h3>{{article.heading}}</h3>
+                                    {{article.desc}}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-if = "article.type == 'meeting'" class = "left-col cell">
+                            <div style = "float:right"><b style = "font-size:110%">Meeting</b></div>
+                           <div id={{article.heading}}-{{$index}}>
+                           <h2>{{article.heading}}</h2>
+                            <div ng-repeat = "topics in article.topics">
+                                <a href = "{{topics.url}}"><u>{{topics.txt}}</u></a>
+                            </div>
                         </div>
                     </div>
-
-                    <div ng-repeat="item in presentations track by $index" ng-show = "showPresentations" class = "left-col cell">
-                        <br/><div class = "date" id={{item.heading}}-{{$index}}>{{item.date}}</div>
-                       <a ng-if ="item.url" href = "{{item.url}}"><h3>{{item.heading}}</h3></a>
-                       <div ng-if="!item.url"><h3>{{item.heading}}</h3>
-                            {{item.desc}}
-                       </div>
-                    </div>
-
-                    <div ng-repeat="item in mmeetings track by $index" ng-show = "showMeetings" class = "left-col cell">
-                       <div id={{item.heading}}-{{$index}}> 
-                       <h2>{{item.heading}}</h2>
-                        <div ng-repeat = "topics in item.topics">
-                            <a href = "{{topics.url}}">{{topics.txt}}</a>
-                        </div>
-                    </div>
-
                 </div>
             </div>
            

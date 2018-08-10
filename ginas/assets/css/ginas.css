@@ -244,7 +244,7 @@ a {
 
         }
         .front-menu2:hover{
-            background-color:#d3d3d3;
+            background-color:#7eb5da;
         }
         
         .test {
@@ -288,7 +288,8 @@ a {
 
         .button{
             margin-top:10px;
-            background-color:#3A5273;
+            background-color:rgb(55, 85, 118);
+            border:2px solid #213851;
             color:white;
             font-size:18px;
             text-align:center;
@@ -299,6 +300,7 @@ a {
         }
          .button.active{
             background-color:#9cc1da;
+             border:1px solid #729ab5;
         }
         .button.corner{
             display:inline-block;
@@ -313,6 +315,7 @@ a {
         }
         .button:hover{
             background-color:#9cc1da;
+            border:1px solid #729ab5;
         }
         .date{
             font-size:17px;
@@ -402,4 +405,9 @@ a {
             top:30px;
 
        
+        }
+
+        label{
+            font-weight:normal;
+            font-size:16px;
         }

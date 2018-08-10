@@ -1,3 +1,15 @@
+<style>
+
+    .affix{
+        top:50px;
+        display: block;
+        width:277.75px;
+    }
+    @media (max-width:991px){
+        .affix{width:auto;
+            position:relative;}
+
+</style>
 <div>
     <div class="row ginas-background justify-content-center" style = "align-items: center;">
         <div class="col-md-4 col-sm-12 col-md-offset-1 " align="center">
@@ -7,14 +19,14 @@
            <div style = "width:300px"> <h2 class = "banner-name"></i>The Ginas Project </h2>&nbsp <img class = "banner-icon" src = "../ginas/assets/images/pillIconColor.png" /></div>
         </div>
     </div>
-         <div class="row">
+         <div class="row" id = "pageTop">
             <div class = "col-lg-12">
                 <h2>Release Notes</h2>
             </div>
         </div>
             <div class="row no-gutter">
                     <div class="col-md-3 col-md-push-9">
-                        <div class = "row">
+                        <div class = "row" bs-affix data-offset-top="50">
                             <div class = "col-md-12 col-sm-6">
                                 <div class = "cell">
                                     <h3>Quick Links</h3>
@@ -32,7 +44,7 @@
                                 <div class = "cell">
                                     <h3>Other Versions</h3>
                                     <div ng-repeat = "item in releases track by $index">
-                                    <b>{{parseDate(item.date) | date: "M-dd-y"}}</b> &nbsp <a ng-click = "setRelease($index)">{{item.version}}</a>
+                                    <b>{{parseDate(item.date) | date: "M-dd-y"}}</b> &nbsp <a ng-click = "setRelease($index);scrollTo('pageTop')">{{item.version}}</a>
                                     </div>
                                 </div>
                             </div>

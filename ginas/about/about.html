@@ -1,12 +1,15 @@
 <style>
 
-
+    .affix{
+        top:50px;
+        display: block;
+        width:247.75px;
+    }
+    @media (max-width:991px){
+        .affix{width:auto;
+            position:relative;}
 
 </style>
- <style>
-  /* Note: Try to remove the following lines to see the effect of CSS positioning */
- 
-  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 <div >
@@ -27,7 +30,7 @@
 
       <div class = "row no-gutter">
         <div class = "col-md-3 col-md-push-9"  id="links">
-            <div class = 'cell'>
+            <div class = 'cell' bs-affix data-offset-top="50">
                   <h2>Quick Links</h2>
                   <ul>
                       <li><a ng-click="scrollTo('background')">Background</a></li>

@@ -11,12 +11,7 @@ angular.module('ginasWeb.gsrs', ['ui.router','jsonFormatter', 'ui.bootstrap', 'n
                 templateUrl: './gsrs/gsrs.html',
                 controller: function ($scope, faqFactory, $uibModal) {
                     $scope.faqs = faqFactory.getFaqs();
-                    $scope.open = function (size) {
-                        var modalInstance = $uibModal.open({
-                            templateUrl: './gsrs/modal.html',
-                            controller: 'ModalInstanceCtrl'
-                        });
-                    }
+
                 }
             })
             .state('gsrs.release', {

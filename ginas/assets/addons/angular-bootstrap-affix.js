@@ -22,10 +22,13 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery']).directive('bsAffix',
     var checkPosition = function (instance, el, options) {
 
       var scrollTop = window.pageYOffset;
-      var windowHeight = window.innerHeight;
+      var windowHeight = window.innerHeight+50;
+        var windowWidth = window.innerWidth;
       var scrollHeight = getDocHeight();///document.body.scrollHeight;
       var position = dimensions.offset.call(el[0]);
-      var height = dimensions.height.call(el[0]);
+      var height = dimensions.height.call(el[0])+100;
+
+      console.log(windowWidth);
       var offsetTop = options.offsetTop * 1;
       var offsetBottom = options.offsetBottom * 1;
       var reset = 'affix affix-top affix-bottom';
@@ -33,7 +36,7 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery']).directive('bsAffix',
       if (instance.originTop == null) {
         instance.originTop = position.top;
       }
-      if (windowHeight >= height && instance.originTop <= scrollTop) {
+      if (windowHeight >= height && windowWidth > 991 && instance.originTop <= (scrollTop + 50)) {
         affix = 'top';
       } else if (windowHeight <= height && scrollTop >= instance.originTop) {
         affix = 'bottom';

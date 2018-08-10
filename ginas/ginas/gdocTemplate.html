@@ -7,69 +7,89 @@
           <!-- change the form action to your script url -->
           <div class="form-elements">
           <div class = "row">
-            <div class = "col-sm-6">
+            <div class = "col-xs-12">
               
-                <div class="form-group">
+
+                    <div class = "row">
+                        <div class = "col-md-6">
+                            <div class="form-group">
+                                <div class = "row">
+                                    <div class = "col-xs-3">
+                                        <label for="FirstName">First Name: </label>
+                                    </div>
+                                    <div class = "col-xs-9">
+                                        <input  class="form-control" ng-model="firstName" id="FirstName" name="FirstName" placeholder="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-md-6">
+                            <div class="form-group">
+                                <div class = "row">
+                                    <div class = "col-xs-3">
+                                        <label for="LastName">Last Name: </label>
+                                    </div>
+                                    <div class = "col-xs-9">
+                                        <input class="form-control" id="LastName" name="LastName" rows="10" placeholder="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                   <div class = "row">
-                    <div class = "col-xs-3">
-                        <label for="FirstName">First Name: </label>
+                      <div class = "col-md-6">
+
+                        <div class="form-group">
+                          <div class = "row">
+                            <div class = "col-xs-3">
+                                <label for="Email">Email:</label>
+                              </div>
+                              <div class = "col-xs-9">
+                                <input class="form-control" id="Email" name="Email" type="Email" value=""
+                                 required placeholder="your.name@email.com"/>
+                                <span class="email-invalid" style="display:none">
+                                  Must be a valid email address</span>
+                            </div>
+                          </div>
+                        </div>
                       </div>
-                      <div class = "col-xs-9">
-                        <input  class="form-control" ng-model="firstName" id="FirstName" name="FirstName" placeholder="" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class = "row">
-                    <div class = "col-xs-3">
-                        <label for="LastName">Last Name: </label>
+                      <div class = "col-md-6">
+                          <div class="form-group">
+                              <div class = "row">
+                                  <div class = "col-xs-3">
+                                      <label for="Team">Team: </label>
+                                  </div>
+                                  <div class = "col-xs-9">
+                                      <input id="Team" class="form-control" name="Team" placeholder="" />
+                                  </div>
+                              </div>
+                          </div>
                       </div>
-                      <div class = "col-xs-9">
-                        <input class="form-control" id="LastName" name="LastName" rows="10" placeholder="" />
-                    </div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <div class = "row">
-                    <div class = "col-xs-3">
-                        <label for="Email">Email:</label>
+                      <div class = "row">
+                        <div class = "col-sm-10">
+
+                            <div class="form-group">
+                              <div class = "row">
+                                <div class = "col-xs-2">
+                                   <label for="Comments">Comments: </label>
+                                  </div>
+                                  <div class = "col-xs-10">
+                                    <textarea class="form-control" id="Comments" name="Comments" placeholder=""></textarea>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        <div class = "col-sm-2">
+
+                            <button class="button">
+                              <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
+                          </div>
                       </div>
-                      <div class = "col-xs-9">
-                        <input class="form-control" id="Email" name="Email" type="Email" value=""
-                         required placeholder="your.name@email.com"/>
-                        <span class="email-invalid" style="display:none">
-                          Must be a valid email address</span>
-                    </div>
                   </div>
-                </div>
-              </div>
-              <div class = "col-sm-6">
-                <div class="form-group">
-                  <div class = "row">
-                    <div class = "col-xs-3">
-                        <label for="Team">team </label>
-                      </div>
-                      <div class = "col-xs-9">
-                        <input id="Team" class="form-control" name="Team" placeholder="" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class = "row">
-                    <div class = "col-xs-3">
-                       <label for="Comments">comments </label>
-                      </div>
-                      <div class = "col-xs-9">
-                        <textarea class="form-control" id="Comments" name="Comments" placeholder="green"></textarea><br/><br/>
-                    </div>
-                  </div>
-                </div>
-                <div class = "row">
-                    <div class = "col-xs-3 col-xs-offset-9">
-                    <button class="button corner">
-                      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-                    </div>
-                  </div>
+
               </div>
             </div>
           </div>
