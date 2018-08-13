@@ -9,15 +9,12 @@ angular.module('ginas')
 	})*/
 	$anchorScroll.yOffset = -50;
     $scope.scrollTo = function (subject, index) {
-                        console.log(subject);
-                        console.log(index);
                         var prmElementToScrollTo;
                         if(index >= 0){
                             prmElementToScrollTo = subject+'-'+index;
                         }else{
                             prmElementToScrollTo= subject;
                         }
-                        console.log(prmElementToScrollTo);
                         $anchorScroll.yOffset = 50;
                         $anchorScroll(prmElementToScrollTo);
                     };

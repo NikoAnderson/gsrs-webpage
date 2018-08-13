@@ -86,8 +86,9 @@
       // xhr.withCredentials = true;
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
-          console.log(xhr.status, xhr.statusText);
-          console.log(xhr.responseText);
+        //  console.log(xhr.status, xhr.statusText);
+          //console.log(xhr.responseText);
+          console.log('root');
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
             formElements.style.display = "none"; // hide form
@@ -108,7 +109,7 @@
   
   window["_global"]={};
   window["_global"].loaded=function() {
-    console.log("Contact form submission handler loaded successfully.");
+    console.log("Contact form submission handler loaded successfully.3");
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");
     console.log(forms);

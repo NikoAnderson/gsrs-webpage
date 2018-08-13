@@ -224,6 +224,9 @@ a {
 
 
         }
+        .main-menu.border{
+            
+        }
         .main-menu.active{
             background-color:#375576;
         }

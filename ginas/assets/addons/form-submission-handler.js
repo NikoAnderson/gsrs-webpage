@@ -85,14 +85,17 @@
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
           console.log(xhr.status, xhr.statusText);
-          console.log(xhr.responseText);
+         //// console.log(xhr.responseText);
+          console.log('addons');
           var formElements = form.querySelector(".form-elements")
           if (formElements) {
             formElements.style.display = "none"; // hide form
           }
           var thankYouMessage = form.querySelector(".thankyou_message");
+          console.log(thankYouMessage);
           if (thankYouMessage) {
             thankYouMessage.style.display = "block";
+            console.log('display');
           }
           return;
       };
@@ -103,9 +106,10 @@
       xhr.send(encoded);
     }
   }
-  
-  function loaded() {
-    console.log("Contact form submission handler loaded successfully.");
+
+    window["_global"]={};
+    window["_global"].loaded=function() {
+    console.log("Contact form submission handler loaded successfully 1.");
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");
     for (var i = 0; i < forms.length; i++) {

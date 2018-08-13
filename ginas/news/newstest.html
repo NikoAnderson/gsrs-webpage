@@ -29,6 +29,9 @@
         display: block;
         width:330px;
     }
+    .test1{
+    font-size:150%;
+    color:yellow;}
 
     @media (max-width:991px){
         .affix{width:auto;
@@ -62,18 +65,18 @@
                      <div class = 'row'>
                          <div class = 'col-sm-6'>
                             <h4>Category</h4>
-                             <div class = "filter-menu"  ng-click="myFilter = {}">All</div>
-                             <div class = "filter-menu"  ng-click="myFilter = {type: 'news'};">news</div>
-                             <div class = "filter-menu"  ng-click="myFilter = {type: 'meeting'}">meetings</div>
-                             <div class = "filter-menu"  ng-click="myFilter = {type: 'presentation'}">presentations</div>
+                             <div class = "filter-menu" ng-style="!myFilter.type && {'font-weight':'bold'}"  ng-click="myFilter = {}">All</div>
+                             <div class = "filter-menu" ng-style="myFilter.type == 'news' && {'font-weight':'bold'}"  ng-click="myFilter = {type: 'news'};">News</div>
+                             <div class = "filter-menu" ng-style="myFilter.type == 'meeting' && {'font-weight':'bold'}"  ng-click="myFilter = {type: 'meeting'}">Meetings</div>
+                             <div class = "filter-menu" ng-style="myFilter.type == 'presentation' && {'font-weight':'bold'}"  ng-click="myFilter = {type: 'presentation'}">Presentations</div>
                              </div>
                          <div class = 'col-sm-6'>
                              <h4>Year</h4>
-                             <div class = "filter-menu"  ng-click="filterYear = ''">All</div>
-                             <div class = "filter-menu"  ng-click="filterYear = '2018'">2018</div>
-                             <div class = "filter-menu"  ng-click="filterYear = '2017'">2017</div>
-                             <div class = "filter-menu"  ng-click="filterYear = '2016'">2016</div>
-                             <div class = "filter-menu" ng-click="filterYear = '2015'">2015</div>
+                             <div class = "filter-menu"  ng-style="filterYear == '' && {'font-weight':'bold'}" ng-click="filterYear = ''">All</div>
+                             <div class = "filter-menu"  ng-style="filterYear == '2018' && {'font-weight':'bold'}" ng-click="filterYear = '2018'">2018</div>
+                             <div class = "filter-menu"  ng-style="filterYear == '2017' && {'font-weight':'bold'}" ng-click="filterYear = '2017'">2017</div>
+                             <div class = "filter-menu"  ng-style="filterYear == '2016' && {'font-weight':'bold'}" ng-click="filterYear = '2016'">2016</div>
+                             <div class = "filter-menu"  ng-style="filterYear == '2015' && {'font-weight':'bold'}" ng-click="filterYear = '2015'">2015</div>
                          </div>
                      </div>
                  </div>

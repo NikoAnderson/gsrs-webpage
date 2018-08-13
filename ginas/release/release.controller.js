@@ -1,9 +1,15 @@
 angular.module('ginas')
 .controller('releaseController',function($http,$scope,$location, $anchorScroll,versionFactory){
-                    $scope.scrollTo = function (prmElementToScrollTo) {
-                    	$anchorScroll.yOffset = 50;
+                    $scope.scrollTo =  function (subject, index) {
+                        var prmElementToScrollTo;
+                        if (index >= 0) {
+                            prmElementToScrollTo = subject + '-' + index;
+                        } else {
+                            prmElementToScrollTo = subject;
+                        }
+                        $anchorScroll.yOffset = 50;
                         $anchorScroll(prmElementToScrollTo);
-                    };
+                    }
                     $scope.release = versionFactory.getData()[0];
                     $scope.releases = versionFactory.getData();
                    // console.log($scope.release);
