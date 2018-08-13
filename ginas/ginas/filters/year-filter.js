@@ -2,9 +2,9 @@ angular.module('ginas')
     .filter('yearReduce',function (){
         return function(inputArray, year, propertyToLook) {
             var returnArray = [];
-            console.log(inputArray, year, propertyToLook)
+           // console.log(inputArray, year, propertyToLook)
             inputArray.forEach(function(instance){
-                console.log(instance);
+               // console.log(instance);
                if(instance[propertyToLook]){
 
                    if(instance[propertyToLook].indexOf(year)>-1){
@@ -12,7 +12,7 @@ angular.module('ginas')
                     }
                }
             })
-            console.log(returnArray);
+           // console.log(returnArray);
             return returnArray;
 
         }

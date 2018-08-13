@@ -28,7 +28,7 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery']).directive('bsAffix',
       var position = dimensions.offset.call(el[0]);
       var height = dimensions.height.call(el[0])+100;
 
-      console.log(windowWidth);
+     // console.log(windowWidth);
       var offsetTop = options.offsetTop * 1;
       var offsetBottom = options.offsetBottom * 1;
       var reset = 'affix affix-top affix-bottom';

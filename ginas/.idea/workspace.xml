@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0215189a-08ba-49af-804b-6d7d4f80fc0e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WatchPushTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WatchPushTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/about/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/addons/angular-bootstrap-affix.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/addons/angular-bootstrap-affix.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/ginas.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/ginas.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faqs/faqs.html" beforeDir="false" afterPath="$PROJECT_DIR$/faqs/faqs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ginas-web.js" beforeDir="false" afterPath="$PROJECT_DIR$/ginas-web.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ginas/filters/year-filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/ginas/filters/year-filter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ginas/gdocTemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/ginas/gdocTemplate.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ginas/ginas.html" beforeDir="false" afterPath="$PROJECT_DIR$/ginas/ginas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/gsrs.js" beforeDir="false" afterPath="$PROJECT_DIR$/gsrs/gsrs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/modal/modal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsrs/release.html" beforeDir="false" afterPath="$PROJECT_DIR$/gsrs/release.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/menu/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news/news.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/news/news.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/news/newstest.html" beforeDir="false" afterPath="$PROJECT_DIR$/news/newstest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release/release.html" beforeDir="false" afterPath="$PROJECT_DIR$/release/release.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/release/release.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/release/release.controller.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,35 +46,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
-          <entry key="html" value="25" />
-          <entry key="js" value="15" />
+          <entry key="css" value="3" />
+          <entry key="html" value="31" />
+          <entry key="js" value="19" />
           <entry key="jshintrc" value="1" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="25" />
+          <entry key="CSS" value="3" />
+          <entry key="HTML" value="31" />
           <entry key="JSHint" value="1" />
-          <entry key="JavaScript" value="15" />
+          <entry key="JavaScript" value="19" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="87" />
-          <entry key="html" value="1271" />
-          <entry key="js" value="1191" />
+          <entry key="css" value="303" />
+          <entry key="html" value="1328" />
+          <entry key="js" value="1252" />
           <entry key="txt" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="87" />
-          <entry key="HTML" value="1271" />
-          <entry key="JavaScript" value="1191" />
+          <entry key="CSS" value="303" />
+          <entry key="HTML" value="1328" />
+          <entry key="JavaScript" value="1252" />
           <entry key="PLAIN_TEXT" value="39" />
         </counts>
       </usages-collector>
@@ -99,47 +92,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/addons/ng-text-truncate.js">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/menu/menu.html">
+        <entry file="file://$PROJECT_DIR$/ginas/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="388">
-              <caret line="33" column="98" selection-start-line="33" selection-start-column="98" selection-end-line="33" selection-end-column="98" />
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="19" selection-end-column="10" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ginas/gdocTemplate.html">
+        <entry file="file://$PROJECT_DIR$/about/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="78" column="110" lean-forward="true" selection-start-line="78" selection-start-column="110" selection-end-line="78" selection-end-column="110" />
+            <state relative-caret-position="255">
+              <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gsrs/gsrs.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gsrs/gsrs.js">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="67" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/news/news.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+            <state relative-caret-position="480">
+              <caret line="35" column="63" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -147,8 +124,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ginas-web.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="579" column="16" lean-forward="true" selection-start-line="579" selection-start-column="16" selection-end-line="579" selection-end-column="16" />
+            <state relative-caret-position="118">
+              <caret line="542" column="9" lean-forward="true" selection-start-line="542" selection-start-column="9" selection-end-line="542" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/ginas.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="322" column="30" selection-start-line="322" selection-start-column="30" selection-end-line="322" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/menu/menu.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/faqs/faqs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -156,8 +160,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/news/newstest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+            <state relative-caret-position="154">
+              <caret line="122" column="38" lean-forward="true" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -172,10 +176,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/faqs/faqs.html">
+        <entry file="file://$PROJECT_DIR$/assets/addons/angular-bootstrap-affix.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="35" column="66" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="66" />
+            <state relative-caret-position="256">
+              <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -188,6 +192,9 @@
       <find>option</find>
       <find>checkP</find>
       <find>open</find>
+      <find>99</find>
+      <find>ng-view</find>
+      <find>ng-vi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,22 +207,23 @@
         <option value="$PROJECT_DIR$/about/about.controller.js" />
         <option value="$PROJECT_DIR$/ginas/ginas.js" />
         <option value="$PROJECT_DIR$/faqs/faqs.html" />
-        <option value="$PROJECT_DIR$/assets/addons/angular-bootstrap-affix.js" />
-        <option value="$PROJECT_DIR$/about/about.html" />
         <option value="$PROJECT_DIR$/gsrs/release.html" />
         <option value="$PROJECT_DIR$/release/release.html" />
-        <option value="$PROJECT_DIR$/assets/css/ginas.css" />
         <option value="$PROJECT_DIR$/WatchPushTest.txt" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/ginas/filters/yearFilter.js" />
-        <option value="$PROJECT_DIR$/ginas/filters/year-filter.js" />
-        <option value="$PROJECT_DIR$/ginas/gdocTemplate.html" />
         <option value="$PROJECT_DIR$/gsrs/gsrs.js" />
-        <option value="$PROJECT_DIR$/ginas-web.js" />
-        <option value="$PROJECT_DIR$/menu/menu.html" />
         <option value="$PROJECT_DIR$/ginas/ginas.html" />
-        <option value="$PROJECT_DIR$/news/newstest.html" />
+        <option value="$PROJECT_DIR$/ginas/gdocTemplate.html" />
         <option value="$PROJECT_DIR$/news/news.controller.js" />
+        <option value="$PROJECT_DIR$/release/release.controller.js" />
+        <option value="$PROJECT_DIR$/ginas/filters/year-filter.js" />
+        <option value="$PROJECT_DIR$/assets/addons/angular-bootstrap-affix.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/ginas-web.js" />
+        <option value="$PROJECT_DIR$/about/about.html" />
+        <option value="$PROJECT_DIR$/menu/menu.html" />
+        <option value="$PROJECT_DIR$/news/newstest.html" />
+        <option value="$PROJECT_DIR$/assets/css/ginas.css" />
       </list>
     </option>
   </component>
@@ -259,8 +267,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="337" />
-    <option name="y" value="71" />
+    <option name="x" value="261" />
+    <option name="y" value="179" />
     <option name="width" value="1532" />
     <option name="height" value="1000" />
   </component>
@@ -319,6 +327,12 @@
             <path>
               <item name="ginas" type="b2602c69:ProjectViewProjectNode" />
               <item name="ginas" type="462c0819:PsiDirectoryNode" />
+              <item name="ginas" type="462c0819:PsiDirectoryNode" />
+              <item name="filters" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ginas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ginas" type="462c0819:PsiDirectoryNode" />
               <item name="gsrs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -351,7 +365,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533930678527" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534173319935" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -388,18 +402,18 @@
       <option name="presentableId" value="Default" />
       <updated>1533222124020</updated>
       <workItem from="1533222125293" duration="11139000" />
-      <workItem from="1533830690473" duration="28973000" />
+      <workItem from="1533830690473" duration="33973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40112000" />
+    <option name="totallyTimeSpent" value="45112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="337" y="71" width="1532" height="1000" extended-state="0" />
+    <frame x="261" y="179" width="1532" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19986542" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19986542" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -414,10 +428,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.4986541" visible="true" weight="0.36123854" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4986541" weight="0.36123854" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7886945" weight="0.27293578" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013459" side_tool="true" visible="true" weight="0.36123854" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.7880215" visible="true" weight="0.27293578" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.21197847" side_tool="true" visible="true" weight="0.27293578" />
       <window_info anchor="right" id="Preview" weight="0.32974428" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.2498618" />
@@ -459,16 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ginas/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/faqs/faqs.controller.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -479,13 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gsrs/release.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -493,20 +490,6 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/addons/angular-bootstrap-affix.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/ginas.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="411" column="24" selection-start-line="411" selection-start-column="24" selection-end-line="411" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -524,20 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/release/release.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="13" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="63" column="43" lean-forward="true" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ginas/filters/yearFilter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -547,13 +516,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/angular-swagger-ui-master/grunt/.jshintrc">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ginas/filters/year-filter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/news/news.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -567,21 +529,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/faqs/faqs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="35" column="66" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ginas/gdocTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="78" column="110" lean-forward="true" selection-start-line="78" selection-start-column="110" selection-end-line="78" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gsrs/gsrs.html">
+    <entry file="file://$PROJECT_DIR$/assets/addons/ng-text-truncate.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/gsrs/gsrs.js">
@@ -591,22 +539,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ginas-web.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="579" column="16" lean-forward="true" selection-start-line="579" selection-start-column="16" selection-end-line="579" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/menu/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="33" column="98" selection-start-line="33" selection-start-column="98" selection-end-line="33" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/addons/ng-text-truncate.js">
+    <entry file="file://$PROJECT_DIR$/gsrs/gsrs.html">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginas/gdocTemplate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="54" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/news.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/release.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginas/filters/year-filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faqs/faqs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/addons/angular-bootstrap-affix.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ginas/ginas.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -615,10 +594,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ginas-web.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="542" column="9" lean-forward="true" selection-start-line="542" selection-start-column="9" selection-end-line="542" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ginas/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="19" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="63" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/menu/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="67" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/news/newstest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="64" column="40" selection-start-line="64" selection-start-column="40" selection-end-line="64" selection-end-column="40" />
+        <state relative-caret-position="154">
+          <caret line="122" column="38" lean-forward="true" selection-start-line="122" selection-start-column="38" selection-end-line="122" selection-end-column="38" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -631,10 +648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/news/news.controller.js">
+    <entry file="file://$PROJECT_DIR$/assets/css/ginas.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        <state relative-caret-position="207">
+          <caret line="322" column="30" selection-start-line="322" selection-start-column="30" selection-end-line="322" selection-end-column="30" />
         </state>
       </provider>
     </entry>

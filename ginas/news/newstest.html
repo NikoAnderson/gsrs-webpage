@@ -37,8 +37,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <div >
     <div class="row ginas-background justify-content-center" id="faq-background" style = "align-items: center;">
         <div class="col-md-4 col-sm-6 col-md-offset-1 " align="center">
@@ -112,7 +111,6 @@
                 <div class = " ">
                     <div ng-repeat="article in articles | yearReduce:filterYear:'date'| filter:myFilter ">
                         <div ng-if = "article.type == 'news'">
-
                             <div class = "left-col cell">
                                 <div style = "float:right"><b style = "font-size:110%">Article</b></div>
                                 <br/><div class = "date" id={{article.title}}-{{$index}}>{{article.date}}</div>
@@ -126,7 +124,6 @@
                             </div>
                         </div>
                         <div ng-if = "article.type == 'presentation'">
-                            presentation
                             <div   class = "left-col cell">
                                 <div style = "float:right"><b style = "font-size:110%">Presentation</b></div>
                                 <br/><div class = "date" id={{article.heading}}-{{$index}}>{{article.date}}</div>

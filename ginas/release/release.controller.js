@@ -6,7 +6,7 @@ angular.module('ginas')
                     };
                     $scope.release = versionFactory.getData()[0];
                     $scope.releases = versionFactory.getData();
-                    console.log($scope.release);
+                   // console.log($scope.release);
                     $scope.platform = window.navigator.platform;
 
                     $scope.parseDate = function (date) {

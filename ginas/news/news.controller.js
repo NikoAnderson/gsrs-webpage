@@ -7,9 +7,9 @@ angular.module('ginas')
     $scope.myFilters = { };
     $scope.filterYear = '';
     $scope.check = function(){
-        console.log(myFilter);
+       // console.log(myFilter);
     }
-    $scope.changeNews= function(val){
+    /*$scope.changeNews= function(val){
             if (val == 'articles'){
                 $scope.active = $scope.news;
                 $scope.showArticles = true;
@@ -24,8 +24,9 @@ angular.module('ginas')
                  $scope.showPresentations = true;
                 $scope.showMeetings = false;
             }
-        }
+        }*/
     $scope.scrollTo = function (subject, index) {
+                        console.log('scroll called');
                         var prmElementToScrollTo;
                         if(index >= 0){
                             prmElementToScrollTo = subject+'-'+index;
@@ -39,16 +40,7 @@ angular.module('ginas')
     $scope.parseDate = function (date) {
         return new Date(Date.parse(date));
     }
-    $scope.testFunction = function(val,test){
-        var year = $scope.parseDate(val.date);
-        console.log(test);
-        year = year.getFullYear();
-        console.log(year);
 
-    }
-    $scope.testfilter = function(year){
-        $scope.myFilter = {date:'2018'};
-    }
     $scope.news = [
                         {
                             title:"Lorem ipsum dolor sit amet, consectetur",
