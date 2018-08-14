@@ -32,11 +32,15 @@ angular.module('mgcrea.bootstrap.affix', ['mgcrea.jquery']).directive('bsAffix',
       var offsetTop = options.offsetTop * 1;
       var offsetBottom = options.offsetBottom * 1;
       var reset = 'affix affix-top affix-bottom';
+      var unDock = el.hasClass('undock');
       var affix;
       if (instance.originTop == null) {
         instance.originTop = position.top;
       }
-      if (windowHeight >= height && windowWidth > 991 && instance.originTop <= (scrollTop + 50)) {
+      if(unDock === true){
+        affix = false;
+      }
+      else if (windowHeight >= height && windowWidth > 991 && instance.originTop <= (scrollTop + 50)) {
         affix = 'top';
       } else if (windowHeight <= height && scrollTop >= instance.originTop) {
         affix = 'bottom';

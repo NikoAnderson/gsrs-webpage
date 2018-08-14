@@ -10,6 +10,20 @@ angular.module('ginas')
         console.log('not');
     }*/
     $scope.myFilters = {};
+    $scope.dockSwitch = function(event){
+        var el = document.getElementById('docker');
+        if(event.target.innerHTML == "undock"){
+            event.target.innerHTML = "dock";
+            angular.element(el).removeClass('affix');
+            angular.element(el).addClass('undock');
+        }else{
+            event.target.innerHTML = "undock";
+            angular.element(el).removeClass('undock');
+            //angular.element(el).addClass('affix');
+        }
+
+        //angular.element(myElement).addClass('new-class');
+    }
     $scope.myFilter = {};
     $scope.filterYear = '';
     $http.get('data/news.json').success(function(data) {

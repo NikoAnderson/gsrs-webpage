@@ -21,7 +21,13 @@
     font-size:105%;
     color:rgb(51, 122, 183);;
 }
-
+#dockswitch{
+    font-size: 115%;
+    color:rgb(51, 122, 183);
+    float:right;
+    margin-top:5px;
+}
+  }
 </style>
 <style>
     .affix{
@@ -29,9 +35,6 @@
         display: block;
         width:330px;
     }
-    .test1{
-    font-size:150%;
-    color:yellow;}
 
     @media (max-width:991px){
         .affix{width:auto;
@@ -59,9 +62,16 @@
         <div class="row no-gutter">
             
              <div class="col-sm-4 col-sm-push-8" >
-                 <div  bs-affix data-offset-top="50">
-                 <div class =  "cell" >
-                            <h3>Filters</h3>
+                 <div id = "docker" bs-affix data-offset-top="50">
+                     <div class =  "cell" >
+                         <div class = 'row'>
+                             <div class = 'col-sm-6'>
+                                <h3>Filters</h3>
+                             </div>
+                             <div class = 'col-sm-6'>
+                                 <div id = "dockswitch" ng-click="dockSwitch($event)">undock</div>
+                             </div>
+                         </div>
                      <div class = 'row'>
                          <div class = 'col-sm-6'>
                             <h4>Category</h4>
@@ -106,13 +116,16 @@
                                     </div>
 
                         </div>
+
                    </div>
                    </div>
                 </div>
             </div>
             <div class="col-sm-8 col-sm-pull-4" >
                 <div class = " ">
+
                     <div ng-repeat="article in articles | yearReduce:filterYear:'date'| filter:myFilter ">
+
                         <div ng-if = "article.type == 'news'">
                             <div class = "left-col cell">
                                 <div style = "float:right"><b style = "font-size:110%">Article</b></div>
@@ -147,6 +160,7 @@
                         </div>
                     </div>
                 </div>
+                    <div class = "cell left-col" ng-show="(articles | yearReduce:filterYear:'date'| filter:myFilter).length == 0"><h3>Your filter returned no results</h3></div>
             </div>
            
         </div>
