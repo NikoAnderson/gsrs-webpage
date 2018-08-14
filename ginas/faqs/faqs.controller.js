@@ -7,6 +7,13 @@ angular.module('ginas')
 
 
 	})*/
+    $http.get('data/faqs.json').success(function(data) {
+        $scope.faqs = data;
+        //console.log('success');
+    }).error(function(errorCallback){
+        console.log(errorCallback);
+    });
+
 	$anchorScroll.yOffset = -50;
     $scope.scrollTo = function (subject, index) {
                         var prmElementToScrollTo;
@@ -18,6 +25,7 @@ angular.module('ginas')
                         $anchorScroll.yOffset = 50;
                         $anchorScroll(prmElementToScrollTo);
                     };
+    /*
 $scope.news = [
     {
         title:"Lorem ipsum dolor sit amet, consectetur",
@@ -199,5 +207,5 @@ $scope.faqs = [
                         answer: 'Yes. Please contact us for info.'
                     }
                 ]
-    }];
+    }];*/
 })

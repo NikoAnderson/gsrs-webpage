@@ -1,31 +1,43 @@
 angular.module('ginas')
 .controller('newsController',function ($http, $scope, $location, $anchorScroll){
-    $scope.showArticles = true;
-    $scope.showMeetings = false;
-    $scope.showPresentations = false;
-
+   /* var url = 'news/news.json';
+    var request = new XMLHttpRequest();
+    request.open('HEAD', url, false);
+    request.send();
+    if(request.status == 200) {
+        console.log('found');
+    }else{
+        console.log('not');
+    }*/
     $scope.myFilters = {};
     $scope.myFilter = {};
     $scope.filterYear = '';
-    $scope.check = function(){
-       // console.log(myFilter);
-    }
-    /*$scope.changeNews= function(val){
-            if (val == 'articles'){
-                $scope.active = $scope.news;
-                $scope.showArticles = true;
-                 $scope.showPresentations = false;
-                $scope.showMeetings = false;
-            }else if(val == 'meetings'){
-                $scope.showArticles = false;
-                 $scope.showPresentations = false;
-                $scope.showMeetings = true;
-            }else if(val == 'presentations'){
-                $scope.showArticles = false;
-                 $scope.showPresentations = true;
-                $scope.showMeetings = false;
-            }
-        }*/
+    $http.get('data/news.json').success(function(data) {
+        $scope.articles = data;
+        console.log('success');
+    }).error(function(errorCallback){
+        console.log(errorCallback);
+    });
+
+    /* $scope.showArticles = true;
+     $scope.showMeetings = false;
+     $scope.showPresentations = false;
+     $scope.changeNews= function(val){
+             if (val == 'articles'){
+                 $scope.active = $scope.news;
+                 $scope.showArticles = true;
+                  $scope.showPresentations = false;
+                 $scope.showMeetings = false;
+             }else if(val == 'meetings'){
+                 $scope.showArticles = false;
+                  $scope.showPresentations = false;
+                 $scope.showMeetings = true;
+             }else if(val == 'presentations'){
+                 $scope.showArticles = false;
+                  $scope.showPresentations = true;
+                 $scope.showMeetings = false;
+             }
+         }*/
     $scope.scrollTo = function (subject, index) {
                         console.log('scroll called');
                         var prmElementToScrollTo;
@@ -41,7 +53,7 @@ angular.module('ginas')
     $scope.parseDate = function (date) {
         return new Date(Date.parse(date));
     }
-
+/*
     $scope.news = [
                         {
                             title:"Lorem ipsum dolor sit amet, consectetur",
@@ -233,5 +245,5 @@ angular.module('ginas')
             heading: 'past ginas presentations',
             url: './#/meetings/uppsala/monday'
         }
-    ];
+    ];*/
 })

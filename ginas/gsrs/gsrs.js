@@ -16,15 +16,9 @@ angular.module('ginasWeb.gsrs', ['ui.router','jsonFormatter', 'ui.bootstrap', 'n
             })
             .state('gsrs.release', {
                 url: "/release",
-                templateUrl: './gsrs/release.html',
-                controller: function ($scope, $location, $anchorScroll, versionFactory) {
-                    $scope.scrollTo = function (prmElementToScrollTo) {
-                        $anchorScroll(prmElementToScrollTo);
-                    };
-                    $scope.release = versionFactory.getData()[0];
-                    console.log($scope.release);
-                    $scope.platform = window.navigator.platform;
-                }
+                templateUrl: './ginas/releases.html',
+                controller: 'releaseController'
+
             })
             .state('gsrs.older', {
                 url: "/older",
@@ -40,25 +34,8 @@ angular.module('ginasWeb.gsrs', ['ui.router','jsonFormatter', 'ui.bootstrap', 'n
             
             .state('gsrs.faq', {
                 url: "/faq",
-                templateUrl: './gsrs/faq.html',
-                controller: function ($scope, $location, $anchorScroll, faqFactory) {
-                    $scope.faqs = faqFactory.getFaqs();
-                    $scope.scrollTo = function (subject, index) {
-                        console.log(subject);
-                        console.log(index);
-                        var prmElementToScrollTo;
-                        if(index >= 0){
-                            prmElementToScrollTo = subject+'-'+index;
-                        }else{
-                            prmElementToScrollTo= subject;
-                        }
-                        console.log(prmElementToScrollTo);
-                        $anchorScroll(prmElementToScrollTo);
-                    };
-
-                    $scope.platform = window.navigator.platform;
-
-                }
+                templateUrl: './faqs/faqs.html',
+                controller: 'faqsController'
             })
     }])
 
