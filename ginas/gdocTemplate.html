@@ -1,7 +1,7 @@
   
 <div class = "row no-gutter">
   <div class = "col-md-12">
-      <div class = "cell">test
+      <div class = "cell">
         <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
         action="https://script.google.com/macros/s/AKfycbyAhS5n6x_lSEWrlAOwTPSywKrRVbR9RagTRMVw1C-p9Gbo7Og/exec">
           <!-- change the form action to your script url -->
@@ -9,13 +9,13 @@
           <div class="form-elements">
             <fieldset class="pure-group">
               <label for="FirstName">First Name: </label>
-              <input id="FirstName" name="FirstName" placeholder="What your Mom calls you" />
+              <input id="FirstName" name="FirstName" required placeholder="What your Mom calls you" />
             </fieldset>
 
             <fieldset class="form-group">
               <label for="LastName">Message: </label>
               <input id="LastName" name="LastName" rows="10"
-              placeholder=""></input>
+               required placeholder=""></input>
             </fieldset>
 
             <fieldset class="form-group">
@@ -33,7 +33,7 @@
 
             <fieldset class="form-group">
               <label for="Comments">comments </label>
-              <textarea id="Comments" name="Comments" placeholder="green"></textarea>
+              <textarea id="Comments" name="Comments" placeholder=""></textarea>
             </fieldset>
 
             <button class="button-success pure-button button-xlarge">

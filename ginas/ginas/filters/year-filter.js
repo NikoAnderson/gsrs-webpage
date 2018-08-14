@@ -3,6 +3,7 @@ angular.module('ginas')
         return function(inputArray, year, propertyToLook) {
             var returnArray = [];
            // console.log(inputArray, year, propertyToLook)
+            if(inputArray){
             inputArray.forEach(function(instance){
                // console.log(instance);
                if(instance[propertyToLook]){
@@ -14,7 +15,7 @@ angular.module('ginas')
             })
            // console.log(returnArray);
             return returnArray;
-
+            }
         }
 
     })

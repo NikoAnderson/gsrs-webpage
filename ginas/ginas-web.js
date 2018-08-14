@@ -24,14 +24,14 @@ var ginasWeb = angular.module('ginas', [
     'ngTextTruncate',
     'ginasWeb.gsrs'
 ])
-    .config(['$stateProvider','$urlRouterProvider', function ($stateProvider ,$urlRouterProvider, $location, $window) {
+    .config(['$stateProvider','$urlRouterProvider', function ($stateProvider ,$urlRouterProvider, $location, $http, $window) {
         $urlRouterProvider.when('', '/');
         $urlRouterProvider.otherwise('/');
         $stateProvider
             .state('ginas', {
                 url: '',
                 templateUrl: 'ginas/ginas.html',
-                controller: function ($scope, $sce, $location, $window, $uibModal) {
+                controller: function ($scope, $sce, $location, $window, $http, $uibModal) {
                     $scope.$sce = $sce;
                     $scope.headline = function(text){
                         var head = text.substring(0,200);
@@ -65,6 +65,73 @@ var ginasWeb = angular.module('ginas', [
                     console.log('testing');
 
 
+                    $scope.redirect = function ( cid ) {
+                        console.log(cid);
+                        $location.path(cid);
+                    }
+                    $scope.redirectExt = function(url){
+                        $window.location.href = url; //You should have http here.
+                    }
+                    $http.get('data/news.json').success(function(data) {
+                        $scope.news = data;
+                        console.log('success');
+                    }).error(function(errorCallback){
+                        console.log(errorCallback);
+                    });
+
+
+                    $scope.accordianMenu = function(data, title, content){
+                    }
+                    $scope.showGinas = false;
+                    $scope.showGsrs = false;
+                    $scope.showTeam = false;
+                    $scope.changeView = function(val){
+
+
+
+                        if(val == 'ginas'){
+                            $scope.title = 'The Ginas Project';
+                            $scope.content = "The main goal of ginas is the production of software, called G-SRS, to assist agencies in registering and documenting information about substances found in medicines. The Global Ingredient Archival System provides a common identifier for all of the substances used in medicinal products, utilizing a consistent definition of substances globally, including active substances under clinical investigation, consistent with the ISO 11238 standard. ";
+
+                            $scope.showGinas = true;
+                            $scope.showGsrs = false;
+                            $scope.showTeam = false;
+                        }
+                        else if (val == 'gsrs') {
+                            $scope.title = "G-SRS Software";
+                            $scope.content = "The software tools created by the ginas project are developed, maintained, and distributed to ginas and other interested parties by the National Center for Advancing Translational Sciences (NCATS) at the National Institutes of Health (NIH), in close collaboration with the Food and Drug Administration (FDA).  ";
+
+                            $scope.showGinas = false;
+                            $scope.showGsrs = true;
+                            $scope.showTeam = false;
+
+                        }
+                        else if (val == 'team') {
+                            $scope.title = "The Ginas Team";
+                            $scope.content = "Ginas will be able to store, retrieve, and distribute substance-related information described in the ISO 11238 standard. It will enable authorized agents to register new substances and curate and review existing substance data. ";
+
+                            $scope.showGinas = false;
+                            $scope.showGsrs = false;
+                            $scope.showTeam = true;
+                        }
+                    }
+                    $scope.changeView('ginas');
+
+                }
+            })
+            .state('ginas.ginas2', {
+                url: '/ginas2',
+                templateUrl: 'ginas/ginas2.html',
+                controller: function ($scope, $sce, $location, $http, $window) {
+                    $scope.$sce = $sce;
+                    $scope.headline = function(text){
+                        var head = text.substring(0,200);
+                        var sentence = head.lastIndexOf('.');
+                        if(sentence > 0){
+                            head = head.substring(0,(sentence+1));
+                        }
+                        return head;
+                    }
                     $scope.redirect = function ( cid ) {
                         console.log(cid);
                         $location.path(cid);
@@ -169,68 +236,6 @@ var ginasWeb = angular.module('ginas', [
                             url: './#/meetings/uppsala/monday'
                         }
                     ];
-
-
-                    $scope.accordianMenu = function(data, title, content){
-                    }
-                    $scope.showGinas = false;
-                    $scope.showGsrs = false;
-                    $scope.showTeam = false;
-                    $scope.changeView = function(val){
-
-
-
-                        if(val == 'ginas'){
-                            $scope.title = 'The Ginas Project';
-                            $scope.content = "The main goal of ginas is the production of software, called G-SRS, to assist agencies in registering and documenting information about substances found in medicines. The Global Ingredient Archival System provides a common identifier for all of the substances used in medicinal products, utilizing a consistent definition of substances globally, including active substances under clinical investigation, consistent with the ISO 11238 standard. ";
-
-                            $scope.showGinas = true;
-                            $scope.showGsrs = false;
-                            $scope.showTeam = false;
-                        }
-                        else if (val == 'gsrs') {
-                            $scope.title = "G-SRS Software";
-                            $scope.content = "The software tools created by the ginas project are developed, maintained, and distributed to ginas and other interested parties by the National Center for Advancing Translational Sciences (NCATS) at the National Institutes of Health (NIH), in close collaboration with the Food and Drug Administration (FDA).  ";
-
-                            $scope.showGinas = false;
-                            $scope.showGsrs = true;
-                            $scope.showTeam = false;
-
-                        }
-                        else if (val == 'team') {
-                            $scope.title = "The Ginas Team";
-                            $scope.content = "Ginas will be able to store, retrieve, and distribute substance-related information described in the ISO 11238 standard. It will enable authorized agents to register new substances and curate and review existing substance data. ";
-
-                            $scope.showGinas = false;
-                            $scope.showGsrs = false;
-                            $scope.showTeam = true;
-                        }
-                    }
-                    $scope.changeView('ginas');
-
-                }
-            })
-            .state('ginas.ginas2', {
-                url: '/ginas2',
-                templateUrl: 'ginas/ginas2.html',
-                controller: function ($scope, $sce, $location, $window) {
-                    $scope.$sce = $sce;
-                    $scope.headline = function(text){
-                        var head = text.substring(0,200);
-                        var sentence = head.lastIndexOf('.');
-                        if(sentence > 0){
-                            head = head.substring(0,(sentence+1));
-                        }
-                        return head;
-                    }
-                    $scope.redirect = function ( cid ) {
-                        console.log(cid);
-                        $location.path(cid);
-                    }
-                    $scope.redirectExt = function(url){
-                        $window.location.href = url; //You should have http here.
-                    }
-
 
 
                     $scope.accordianMenu = function(data, title, content){

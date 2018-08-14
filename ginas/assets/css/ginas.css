@@ -225,7 +225,7 @@ a {
 
         }
         .main-menu.border{
-            
+
         }
         .main-menu.active{
             background-color:#375576;
@@ -418,4 +418,17 @@ a {
         label{
             font-weight:normal;
             font-size:16px;
+        }
+
+        /*news page specific */
+        .filter-menu{
+            padding-left:18px;
+            font-size:105%;
+            color:rgb(51, 122, 183);;
+        }
+        #dockswitch{
+            font-size: 115%;
+            color:rgb(51, 122, 183);
+            float:right;
+            margin-top:5px;
         }

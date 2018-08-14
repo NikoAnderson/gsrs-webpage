@@ -26,7 +26,7 @@
         </div>
         <div class="collapse navbar-collapse" ng-click="print();" uib-collapse="!isCollapsed">
 <ul class="nav navbar-nav navbar-left">
-    <li ng-class="{main: $state.includes('ginas')}"><a ui-sref="ginas.main">Home</a></li>
+    <li ng-class="{active: $state.is('ginas.main')}"><a ui-sref="ginas.main">Home</a></li>
     <li ng-class="{active: $state.includes('ginas.about')}"><a ui-sref="ginas.about">About</a></li>
     <li ng-class="{active: $state.includes('ginas.faq')}"><a ui-sref="ginas.faq">FAQs</a></li>
     <li ng-class="{active: $state.includes('ginas.articles')}"><a ui-sref="ginas.articles">News</a></li>

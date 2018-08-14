@@ -35,7 +35,7 @@
   ,
     {
       "question": "Can I get access to the API documentation?",
-      "answer": "The software is still in active development, but preliminary API documentation can be found on the NIH NCATS git repository. Interactive examples of using the REST API can also be found here (http://tripod.nih.gov/ginas/api.html)."
+      "answer": "The software is still in active development, but preliminary API documentation can be found on the NIH NCATS git repository. Interactive examples of using the REST API can also be found here (https://tripod.nih.gov/ginas/#/api)."
     }
   ,
     {
