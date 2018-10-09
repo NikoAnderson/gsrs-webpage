@@ -7,7 +7,71 @@
 angular.module('ginasWeb.versionFactory', ['ui.router'])
     .factory('versionFactory', function ($http) {
         var version = [
-		{
+            {
+                date: 'October 10, 2018',
+                version: '2.3.1',
+                filebundled: './releases/gsrs2_3_1_beta_bundled_h2_smallseed.zip',
+                fileempty: './releases/gsrs2_3_1_beta_empty_h2.zip',
+                changelog: [{
+                    type: 'bug fix',
+                    details: ["improved handling of empty types on new forms for Relationships and Codes ",
+                        "Fixed the error cause by clicking \"found exact duplicate sequence in ....\" links",
+                        "Fixed Nucleic Acid subunits not coming back in the right order",
+                        "Improved ease of adding CV terms",
+                        "Adjusted word-wrapping for CV values",
+                        "Fixed the positioning and word-wrapping of the \"Browse\" and \"Search\" page records",
+                        "Fixed the inability to describe \"X\"es in the amino acid sequence of a protein under Structural Modification",
+                        "Fixed alignment of Grid Browse View elements",
+                        "Fixed issue where smiles strings added via the REST API under the \"molfile\" property were not being converted to a molfile and dearomatized",
+                        "Relationship Modifications are now working correctly",
+                        "Fixed issue preventing molfiles from being saved from the substance creation screen",
+                        "Added an odd number of sites in Other Links fails (Proteins)",
+                        "Added Validation rule when adding \"One of\" components to a Mixture Record",
+                        "Fixed an issue causing JSDraw to prevent users from setting chiral flags",
+                        "Prevented Existing Relationship Types from being wiped whenever the Type itself is edited.",
+                        "Fixed canceled exports not being deleted and displaying a non-functional cancel button",
+                        "Fixed inability to upgrade a Concept when it has relations",
+                        "Fixed Substance Update submissions from failing when the edit window is open too long",
+                        "Added \"amount\" on structurally diverse structural modifications section",
+                        "Fixed the display of \'Hybrid Organism Details\' of Structurally Diverse substances with more than one component",
+                        "Replaced the Oracle FARM substance ID trigger with a post-commit processor in the Java code",
+                        "Removed the ability to ad the same name twice to the same record",
+                        "Improved Validation of \"\" Field Values",
+                        "Fixed Relationships not displaying amounts",
+                        "Added the display of relationships with mediator substances to the View Page of the substance ",
+                        "Fixed Nucleic Acid Classifications not displaying on registration forms",
+                        "Fixed the functionality of the Parent Organism Details field when adding a Part or Fraction of Structurally Diverse substances"]
+                }, {
+                    type: 'improvement',
+                    details: ["Created a GSRS Data Dictionary with information about every field returned from the API",
+                        "Improved user access management for a substance",
+                        "Added Hierarchy View to Browse Substances/Global Search Results",
+                        "Added a Validation rule which allows only admins to update existing relationships",
+                        "Updated the Related Substance Name on the Substance Relationship",
+                        "Improved the ad-hoc SQL reporting scheduled jobs mechanism to accept a TIMESTAMP for the saved report file",
+                        "Allowed for alphabetical sorting of CV Terms and CV Entries on the Admin Page",
+                        "Created Top-Docking Submission Menu",
+                        "Added facets for Product columns in the \"Browse Substance\" page.",
+                        "Fixed an issue where Attempting to create a user account which already exists results in a java Exception",
+                        "Added ability for admins to manage facet configuration",
+                        "Added the option to mark a Reference as Public Domain to the same simplified view as marking the reference itself public",
+                        "Added the ability to prevent a SMILES structure from being entered as Molfile, and vice-versa",
+                        "Compel the user to delete the old relationship when an alt definition is edited/created",
+                        "Improved the limit of relationships and references that can be handled by JSON",
+                        "Added a validation rule to prevent a sub-concept from being related to two parents",
+                        "Prevented the entry of two consecutive spaces in any NAME through a validation rule",
+                        "Improved View Relationships on Old Forms",
+                        "Improved management of Validation Rules",
+                        "Added automatic Glycosylation selection based on the sequence for Proteins",
+                        "Added Comments field to Property",
+                        "Added visual loading indicator to the wait for the Registration/Edit Form to Fully Load",
+                        "Added support for large Nucleic Acids",
+                        "Updated SPL Term Validation (XML) to match the logic of the SPL cron job"]
+
+                }
+
+                ]
+            },{
                 date: 'October 12, 2017',
                 version: '2.0',
                 filebundled: './releases/gsrs2_0_beta_bundled_h2_smallseed.zip',
