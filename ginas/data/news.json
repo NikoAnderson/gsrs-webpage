@@ -1,6 +1,11 @@
 
 [
   {"type":"news",
+    "title":"GSRS Version 2.3.1 Released",
+    "date":"October 10, 2018",
+    "text":"The newest version of the GSRS software, version 2.3.1 is now available to the public. The new version adds several new features, bug-fixes, and general quality of life improvements. The full change log as well as download links for this and older versions can be found on the <a href ng-click = \"redirect('release')\" >release page</a>"
+  },
+  {"type":"news",
     "title":"The ginas Project Public Website Relaunches",
     "date":"August 14, 2018",
     "text":"The ginas project has updated the look and layout of it’s public site. The update is intended to help visitors more easily access resources such as information and updates about the ginas project and the G-SRS software, as well as downloads and demos of G-SRS. Please <a href = “mailto:ginas@nih.gov> contact ginas</a> if anyone has questions or feedback about the new layout."
