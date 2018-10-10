@@ -161,6 +161,30 @@ var ginasWeb = angular.module('ginas', [
                             text:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse. Nibh ipsum consequat nisl vel pretium lectus. Sed elementum tempus egestas sed sed risus. Maecenas volutpat blandit aliquam etiam erat velit. In mollis nunc sed id. Tristique risus nec feugiat in fermentum. Mauris cursus mattis molestie a iaculis at. Nulla pellentesque dignissim enim sit amet venenatis. Cursus sit amet dictum sit amet. Ornare massa eget egestas purus viverra accumsan in nisl. Sit amet dictum sit amet.<br/><br/>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Id aliquet lectus proin nibh. Ac auctor augue mauris augue neque. Diam phasellus vestibulum lorem sed risus. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Neque egestas congue quisque egestas diam. Felis bibendum ut tristique et. Non pulvinar neque laoreet suspendisse interdum. Faucibus et molestie ac feugiat sed. Sodales ut etiam sit amet nisl purus in mollis. Fusce id velit ut tortor. Commodo odio aenean sed adipiscing diam donec adipiscing. Facilisis leo vel fringilla est ullamcorper. ",
                         }];
                     $scope.mmeetings=[
+                         {
+                                  heading: 'Ginas Monthly Meeting: June 2018',
+                                topics: [
+                                    {
+                                         url: './assets/files/monthlymeetings/201806/GSRS Development Update June 2018.pdf',
+                                        txt: 'GSRS Development Update'
+                                    },
+                                    {
+                                           url: './assets/files/monthlymeetings/201806/FDA-GInAS-June 2018-HD-SAVE.pdf',
+                                           txt: 'IDMP and how we can support the health care domain'
+                                    }
+                                    //TODO: add FDA->PDF and Fritz presentation
+                                   ]
+                            },
+                             {
+                                   heading: 'Ginas Monthly Meeting: April 2018',
+                                   topics: [
+                                    {
+                                           url: './assets/files/monthlymeetings/GSRSDevelopmentUpdate201804.pdf',
+                                           txt: 'GSRS Development Update'
+                                    }
+                                   //Add rancho presentation
+                                ]
+                            },
                         {
                             heading: 'Ginas Monthly Meeting: February 2018',
                             topics: [
