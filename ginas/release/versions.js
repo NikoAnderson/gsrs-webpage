@@ -10,8 +10,8 @@ angular.module('ginasWeb.versionFactory', ['ui.router'])
             {
                 date: 'October 10, 2018',
                 version: '2.3.1',
-                filebundled: './releases/gsrs2_3_1_beta_bundled_h2_smallseed.zip',
-                fileempty: './releases/gsrs2_3_1_beta_empty_h2.zip',
+                filebundled: './releases/gsrs2_3_1_bundled_h2_smallseed.zip',
+                fileempty: './releases/gsrs2_3_1_empty_h2.zip',
                 changelog: [{
                     type: 'bug fix',
                     details: ["improved handling of empty types on new forms for Relationships and Codes ",
