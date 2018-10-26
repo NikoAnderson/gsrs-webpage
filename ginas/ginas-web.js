@@ -314,6 +314,10 @@ var ginasWeb = angular.module('ginas', [
         }).state('ginas.signup', {
             url: "/signup",
             templateUrl: './gdocTemplate.html'
+        }).state('ginas.usp_signup', {
+            url: "/usp_signup",
+            templateUrl: './ginas/usp_signup.html',
+            controller: 'apiController'
         })
             .state('ginas.release', {
                 url: "/release",

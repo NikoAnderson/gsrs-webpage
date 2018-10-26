@@ -1,215 +1,223 @@
-    
-    <style>
-.top-menu{
-           
-        }
-.aligned-row {
-  display: flex;
-  flex-flow: row wrap;
 
-  &::before {
-    display: block;
-  }
-}
-.button-container{
-    position:relative;
-    height:auto;
-}
-        .ngTruncateToggleText{
-            font-size:120%;
-        }
-    </style>
-    <div ui-view>
-        <div class = "row top-menu">
-            <div class = "col-sm-4 main-menu border" ng-class="{ 'active': showGinas}" ng-click="changeView('ginas')">
-                The Ginas Project
-            </div>
-            <div class = "col-sm-4 main-menu border"  ng-class="{ 'active': showGsrs}" ng-click="changeView('gsrs')">
-                G-SRS Software
-            </div>
-            <div class = "col-sm-4 main-menu  border"  ng-class="{ 'active': showTeam}" ng-click="changeView('team')">
-               The Ginas Team
-            </div>
-        </div>
-        <div class="row banner" style = "padding-bottom:20px">
-            <div class = "col-md-6 col-sm-6">
-                <div class = "test">
-                    <span class = "main-title">{{title}}</span><br/>
-                    <img src = "assets/images/pillIconTest.svg" height="155"/>
-                </div>
-            </div>
-            <div class = "col-md-6 col-sm-6">
-                <div style = "margin:10px;font-size:16px">
-                    <br/>
-                    {{content}}
-                </div>
-            </div>
-        </div>
-         <div class = "row">
-           <div class = "col-sm-4 front-menu2"  ng-click = "open()">
-               <i class="fa fa-code" aria-hidden="true"></i> <u>Get The Code</u>
-           </div> 
-           <div class = "col-sm-4 front-menu2" ng-click = 'redirectExt("https://ginas.ncats.nih.gov/ginas/app")' >
-               <i class="fa fa-laptop" aria-hidden="true"></i>  <u>Try The Demo</u>
-           </div>
-           <div class = "col-sm-4 front-menu2" ng-click = "redirect('release')">
-               <i class="fa fa-download" aria-hidden="true" ></i> <u>Download</u>
-           </div>
-        </div>
-        <div class="row">
-           <div class = "col-md-8">
-             <h2>Latest Release</h2>
-            </div>
-            <div class = "col-md-4">
-                
-            </div>
-        </div>
-        <div class = "row no-gutter">
-            <div class = "col-md-8">
-                <div class =  "left-col cell">
-                    <div class = "row">
-                        <div class = "col-sm-4">
-                            
-                             <div class = "date">October 10, 2018</div>
-                                 <h3> <code> G-SRS v2.3.1</code></h3>
-                        </div>   
-                        <div class = "col-sm-8" >
-                             <h4>CHANGELOG</h4>
-                            <ul>
-                                <li> Created GSRS Data Dictionary with information on all JSON schema fields </li>
-                                  <li>  Improved user access management for a substance</li>
-                                 <li>   Added Hierarchy View to Browse Substances/Global Search Results...</li>
-                                 
-                             </ul>  
-                        </div> 
-                    </div>
-                    <div class = "row">
-                        <div class = "col-sm-6">
-                            <div class = "button" ng-click = "redirect('release')" style = 'float:left'>
-                                View All Versions
-                            </div>
-                        </div>
-                        <div class = "col-sm-6">
-                            <div class = "button" ng-click = "redirect('release')" style = 'float:right'>
-                                Download / View full notes
-                            </div>
-                        </div>
-                    </div> 
-                 </div>  
-            </div>
-            <div class = "col-md-4">
-                     <div class =  "cell">
-                        <h3>ginas Newsletter</h3>
-                        <br/>
-                        
-                        <h4>Recieve email updates on ginas news and G-SRS releases</h4>
-                        <br/>
-                        <div class = "button" ng-click = "toggleForm()">Signup</div>
-                        <!--
-                         value 1 <div style = "float:left;width:50%;background-color:red;height:18px;"></div><br/><br/>
-                          value 2 <div style = "float:left;width:60%;background-color:blue;height:18px;"></div><br/><br/>
-                           value 3 <div style = "float:left;width:30%;background-color:yellow;height:18px;"></div><br/><br/>
-                            value 4 <div style = "float:left;width:25%;background-color:green;height:18px;"></div><br/>-->
-                     </div>   
-            </div>
-        </div>
-        <div ng-if="!showgdocForm">
-           <div ng-include="gdocForm"></div>
-                
-            </div>
-         <div class="row">
-           <div class = "col-md-8">
-                <h2>Latest News</h2>
-            </div>
-            <div class = "col-md-4">
-                
-            </div>
-        </div>
+<style>
+    .top-menu{
 
-        <div class = "row no-gutter">
-            <div class = "col-md-8">
-                <div class =  "left-col cell">
-                    <div class = "row">
-                        <div class = "col-sm-12">  
-                            <div class = 'date'>{{news[0].date}}</div>
-                               <h3>  {{news[0].title}}</h3>
-                              <p ng-text-truncate="news[0].text"
-                                ng-tt-chars-threshold="200"></p>
-                        </div>
-                        <!--<div class = "col-sm-4 ">
-                            <img class = "img-responsive" src = "./assets/images/simethicone.png" />
-                                    
-                        </div> -->   
-                    </div>
-                    <div class = "row">
-                        <div class = "col-sm-6">
+    }
+    .aligned-row {
+        display: flex;
+        flex-flow: row wrap;
 
-                        </div>
-                        <div class = "col-sm-6">
-                            <div class = "button" ng-click = "redirect('articles')" style = 'float:right'>
-                                View All News
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <div class = "col-md-4">
-                         <div class =  "cell">
-                            <h3>News Archives</h3>
-                            <div class = "button" ng-click = "redirect('articles')" >
-                                Articles
-                            </div>
-                            <div class = "button" ng-click = "redirect('articles')" >
-                               Meetings
-                            </div>
-                            <div class = "button" ng-click = "redirect('articles')" >
-                                Presentations
-                            </div>
-                         </div>   
-                </div>
+    &::before {
+         display: block;
+     }
+    }
+    .button-container{
+        position:relative;
+        height:auto;
+    }
+    .ngTruncateToggleText{
+        font-size:120%;
+    }
+</style>
+<div ui-view>
+    <div class = "row top-menu">
+        <div class = "col-sm-4 main-menu border" ng-class="{ 'active': showGinas}" ng-click="changeView('ginas')">
+            The Ginas Project
         </div>
-        <!--<div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h1>ginas Monthly Meetings</h1>
-                <ul class="list-unstyled">
-                    <li ng-repeat="link in mmeetings">
-                        <br/>
-                        <h4>{{link.heading}}</h4> <br/>
-                        <ul ng-if="link.topics" class ="list-unstyled">
-                            <li ng-repeat="tp in link.topics">
-                                <a href={{tp.url}} target="_blank">{{tp.txt}}</a>
-                            </li>
+        <div class = "col-sm-4 main-menu border"  ng-class="{ 'active': showGsrs}" ng-click="changeView('gsrs')">
+            G-SRS Software
+        </div>
+        <div class = "col-sm-4 main-menu  border"  ng-class="{ 'active': showTeam}" ng-click="changeView('team')">
+            The Ginas Team
+        </div>
+    </div>
+    <div class="row banner" style = "padding-bottom:20px">
+        <div class = "col-md-6 col-sm-6">
+            <div class = "test">
+                <span class = "main-title">{{title}}</span><br/>
+                <img src = "assets/images/pillIconTest.svg" height="155"/>
+            </div>
+        </div>
+        <div class = "col-md-6 col-sm-6">
+            <div style = "margin:10px;font-size:16px">
+                <br/>
+                {{content}}
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-sm-4 front-menu2"  ng-click = "open()">
+            <i class="fa fa-code" aria-hidden="true"></i> <u>Get The Code</u>
+        </div>
+        <div class = "col-sm-4 front-menu2" ng-click = 'redirectExt("https://ginas.ncats.nih.gov/ginas/app")' >
+            <i class="fa fa-laptop" aria-hidden="true"></i>  <u>Try The Demo</u>
+        </div>
+        <div class = "col-sm-4 front-menu2" ng-click = "redirect('release')">
+            <i class="fa fa-download" aria-hidden="true" ></i> <u>Download</u>
+        </div>
+    </div>
+    <div class="row">
+        <div class = "col-md-8">
+            <h2>Latest Release</h2>
+        </div>
+        <div class = "col-md-4">
+
+        </div>
+    </div>
+    <div class = "row no-gutter">
+        <div class = "col-md-8">
+            <div class =  "left-col cell">
+                <div class = "row">
+                    <div class = "col-sm-4">
+
+                        <div class = "date">July 7, 2018</div>
+                        <h3> <code> G-SRS v2.0</code></h3>
+                    </div>
+                    <div class = "col-sm-8" >
+                        <h4>CHANGELOG</h4>
+                        <ul>
+                            <li> fixed issue of structures sometimes losing lychi information when cached</li>
+                            <li>  fixed inability to remove NA sugar</li>
+                            <li>   Bug fix for suggestions with white space getting listed multiple times...</li>
+
                         </ul>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h1>ginas presentations</h1>
-                <ul class="list-unstyled">
-                    <li ng-repeat="link in presentations">
-                        <div ng-if="link.url||link.doc">
-                        <h3 ng-if="link.date">{{link.date}}</h3>
-                        <a href={{link.url||link.doc}} target="_blank">{{link.heading}}<span ng-if="link.doc"> <i class="fa fa-file-pdf-o"></i></span></a>
-                            </div>
-                        <div ng-if="link.desc">
-                            <h3 ng-if="link.date">{{link.date}}</h3>
-                            <h4>{{link.heading}}</h4>
-                            <p>{{link.desc}}</p>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-sm-6">
+                        <div class = "button" ng-click = "redirect('release')" style = 'float:left'>
+                            View All Versions
                         </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h1>ginas in the news</h1>
-                <ul class ="list-unstyled">
-                    <li ng-repeat="link in links">
-                        <br/>
-                        <a href={{link.url}} target="_blank">{{link.heading}}</a>
-                    </li>
-                </ul>
+                    </div>
+                    <div class = "col-sm-6">
+                        <div class = "button" ng-click = "redirect('release')" style = 'float:right'>
+                            Download / View full notes
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>-->
+        <div class = "col-md-4">
+            <div class =  "cell">
+                <h3>GINAS Annual Update at USP</h3>
+                <br/>
+
+                <h4>Register to attend the GINAS Annual Update @ USP on November 16th</h4>
+                <br/>
+                <div class = "button" ng-click = "redirect('usp_signup')">Registration Form</div>
+                <!--
+                 value 1 <div style = "float:left;width:50%;background-color:red;height:18px;"></div><br/><br/>
+                  value 2 <div style = "float:left;width:60%;background-color:blue;height:18px;"></div><br/><br/>
+                   value 3 <div style = "float:left;width:30%;background-color:yellow;height:18px;"></div><br/><br/>
+                    value 4 <div style = "float:left;width:25%;background-color:green;height:18px;"></div><br/>-->
+            </div>
+        </div>
+    </div>
+    <div ng-if="!showgdocForm">
+        <div ng-include="gdocForm"></div>
+
+    </div>
+    <div class="row">
+        <div class = "col-md-8">
+            <h2>Latest News</h2>
+        </div>
+        <div class = "col-md-4">
+
+        </div>
+    </div>
+
+    <div class = "row no-gutter">
+        <div class = "col-md-8">
+            <div class =  "left-col cell">
+                <div class = "row">
+                    <div class = "col-sm-12">
+                        <div class = 'date'>{{news[0].date}}</div>
+                        <h3>  {{news[0].title}}</h3>
+                        <p ng-text-truncate="news[0].text"
+                           ng-tt-chars-threshold="200"></p>
+                    </div>
+                    <!--<div class = "col-sm-4 ">
+                        <img class = "img-responsive" src = "./assets/images/simethicone.png" />
+
+                    </div> -->
+                </div>
+                <div class = "row">
+                    <div class = "col-sm-6">
+
+                    </div>
+                    <div class = "col-sm-6">
+                        <div class = "button" ng-click = "redirect('articles')" style = 'float:right'>
+                            View All News
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class = "col-md-4">
+            <div class = "cell">
+                <!-- <div class =  "cell">
+                    <h3>News Archives</h3>
+                    <div class = "button" ng-click = "redirect('articles')" >
+                        Articles
+                    </div>
+                    <div class = "button" ng-click = "redirect('articles')" >
+                       Meetings
+                    </div>
+                    <div class = "button" ng-click = "redirect('articles')" >
+                        Presentations
+                    </div>
+                 </div>   -->
+                <h3>ginas Newsletter</h3>
+                <br/>
+
+                <h4>Recieve email updates on ginas news and G-SRS releases</h4>
+                <br/>
+                <div class = "button" ng-click = "toggleForm()">Signup</div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>ginas Monthly Meetings</h1>
+            <ul class="list-unstyled">
+                <li ng-repeat="link in mmeetings">
+                    <br/>
+                    <h4>{{link.heading}}</h4> <br/>
+                    <ul ng-if="link.topics" class ="list-unstyled">
+                        <li ng-repeat="tp in link.topics">
+                            <a href={{tp.url}} target="_blank">{{tp.txt}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h1>ginas presentations</h1>
+            <ul class="list-unstyled">
+                <li ng-repeat="link in presentations">
+                    <div ng-if="link.url||link.doc">
+                    <h3 ng-if="link.date">{{link.date}}</h3>
+                    <a href={{link.url||link.doc}} target="_blank">{{link.heading}}<span ng-if="link.doc"> <i class="fa fa-file-pdf-o"></i></span></a>
+                        </div>
+                    <div ng-if="link.desc">
+                        <h3 ng-if="link.date">{{link.date}}</h3>
+                        <h4>{{link.heading}}</h4>
+                        <p>{{link.desc}}</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h1>ginas in the news</h1>
+            <ul class ="list-unstyled">
+                <li ng-repeat="link in links">
+                    <br/>
+                    <a href={{link.url}} target="_blank">{{link.heading}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>-->
 </div>
