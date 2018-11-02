@@ -249,7 +249,7 @@ angular.module('ginasWeb.versionFactory', ['ui.router'])
                 date: 'September 9, 2016',
                 version: '1.2.06-beta',
                 filebundled: './releases/gsrsv1_2_06_beta_bundled_h2_smallseed.zip',
-                fileempty: './releases/ gsrsv1_2_06_beta_empty_h2.zip',
+                fileempty: './releases/gsrsv1_2_06_beta_empty_h2.zip',
                 changelog: [{
                     type: 'bug fix',
                     details: [
