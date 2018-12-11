@@ -121,6 +121,9 @@
                                 <div ng-if="!article.url"><h3>{{article.heading}}</h3>
                                     {{article.desc}}
                                 </div>
+                                <div ng-if ="article.topics" ng-repeat = "topics in article.topics">
+                                    <br/><a href = "{{topics.url}}"><u>{{topics.txt}}</u></a><br/>
+                                </div>
                             </div>
                         </div>
 

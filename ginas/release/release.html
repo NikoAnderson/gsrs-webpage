@@ -73,7 +73,9 @@
                                     <li>100GB (+) hard drive</li>
                                     <li>Java 8</li>
                                 </ul>
-                           
+
+                            <div class="alert alert-danger" role="alert"> Windows is not supported for production environments.
+                            We do however support windows for developers doing testing, which can be accomplished by running windows in dev mode with the code below.
                         </div>
                         <div id="install">
                             
@@ -89,38 +91,28 @@
                                     <div class="alert alert-warning" role="alert">Skip step 6 if you are using in-memory h2 database.</div>
                                     <li>Create database tables:
                                         <div class="alert alert-danger" role="alert">This step will run evolutions and create table structure in your database. This is intended to run only on a new database.
-                                            If you run this step on an existing database, it will wipe out all the data and create new tables.</div>
-                                        <div>Mac/Linux 
-                                            <pre><code>bash bin/evolutions.sh "conf/DB_CONFIG_FILE_NAME.conf"</code></pre>
+                                            If you run this step on an existing database, it will wipe out all the data and create new tables. On a new database, this process will lead to warnings regarding unfound tables which can safely be ignored.</div>
+                                        <div>
+                                            <pre><code>java -cp "lib/*" -Dconfig.file=conf/DB_CONFIG_FILE_NAME.conf ix.ginas.utils.Evolution</code></pre>
                                                 <div class="alert alert-warning" role="alert">replace "conf/DB_CONFIG_FILE_NAME.conf" with your config file path</div>
                                             </div>
-                                        <div>Windows
-                                            <pre><code>bin\evolutions.bat conf\DB_CONFIG_FILE_NAME.conf</code></pre>
-                                                <div class="alert alert-warning" role="alert">replace "conf/DB_CONFIG_FILE_NAME.conf" with your config file path</div>
-                                        </div>
+
                                     </li>
                                     <li>Start G-SRS
-                                        <div>Mac/Linux 
+                                        <div>
                                             <pre><code>nohup ./bin/ginas -Dconfig.file=conf/ginas.conf -J-Xmx4G</code></pre>
                                             <div class="alert alert-warning" role="alert">If G-SRS fails to load, replace <code>-J-Xmx4G</code> with <code>-mem 4000</code></div>
                                             <div class="alert alert-warning" role="alert"><code>nohup</code> specifies that the process is not tied to the user session, so it will continue to run in the background</div>
                                             </div>
-                                        <div>Windows
-                                            <pre>java -DapplyEvolutions.default=true -Xmx4096M -Xms512M -Dconfig.file=conf/ginas.conf -cp lib/* play.core.server.NettyServer</pre>
-                                        </div>
                                     </li>
                                     <li>G-SRS should now be running. Open a browser and go to
                                         <code>localhost:9000/ginas/app</code>
                                     </li>
                                     <li>When you want to end the process gracefully:
-                                        <div>Mac/Linux
+                                        <div>
                                             <pre><code>kill -SIGTERM XXXX</code></pre>
                                         </div>
                                         where XXXX is the process number (printed upon executing <code>nohup</code>)
-                                        <div>Windows
-                                            <pre><code>Taskkill /PID XXXX /F</code></pre>
-                                        </div>
-                                        where XXXX is the process number (printed in the <code>RUNNING_PID</code> file)
                                     </li>
                                 </ol>
                             
@@ -139,6 +131,8 @@
                                     <li><strong>Local MySQL</strong><br/>
                                         In order to use a local MySQL instance, add the following block of code to a custom <code>.conf</code> file, or the current <code>conf/ginas.conf</code> file:
                                     <pre>
+
+
         ################
         #MySQL Local
         db.default.driver="com.mysql.jdbc.Driver"
@@ -148,13 +142,15 @@
         #END MySQL example
         ################
                                     </pre>
+                                        And the following line after the block:
+                                        <pre>evolutionplugin=disabled</pre>
                                         <ol>
                                             <li>The default Url parameter is the defaul MySQL port. This may need to be changed if it is in use by another application.
                                             </li>
-                                            <li><code>/ixginas</code> is the default schema name.</li>
-                                            <li>Change user and password as necessary</li>
-                                        </ol>
-                                    </li>
+                                            <li>. <code>ixginas</code> is the default schema name. The installation process will not create a new database, so you will need to create a new empty one called "ixginas". If you need to use a database with a different name, enter it in place of "ixginas" </li>
+                                            <li>Change user and password as necessary</li></ol>
+
+
                                     <li><strong>MySQL</strong><br/>
                                         Follow the above MySQL instructions, changing the url to your MySQL instance.
                                     <pre>
@@ -180,6 +176,8 @@
         #END postGreSQL example
         ################
                                    </pre>
+                                        And the following line after the block:
+                                        <pre>evolutionplugin=disabled</pre>
                                     </li>
                                     <li><strong>Oracle</strong><br/>
                                         Add the following block of code to a custom <code>.conf</code> file, or the current <code>conf/ginas.conf</code> file:
@@ -206,6 +204,8 @@
         #END ORACLE Example
         ################
                                     </pre>
+                                        And the following line after the block:
+                                        <pre>evolutionplugin=disabled</pre>
                                     </li>
                                 </ul>
                             </div>

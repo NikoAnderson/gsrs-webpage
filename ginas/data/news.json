@@ -1,4 +1,63 @@
 [{
+	"type": "presentation",
+	"date": "November 16, 2018",
+	"heading": "The 2018 Annual GInAS / GSRS Update @ UPC",
+	"desc": "The presentations given at the annual GInAS / GSRS Update can be viewed from the links below.",
+	"topics": [
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Callahan-GSRS_roadmap LNCindia_10_31_2018.pdf",
+			"txt": "Larry Callahan - Overview of Global Substance Registration System: (GSRS) and Identification of Medicinal Products (IDMP)"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Diederik-GInAS Meeting November 16th-HD-CM.pdf",
+			"txt": "Herman Diederik - IDMP and how we can support the health care domain"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Emrick-G-SRS-Nov-16-2018 (1).pdf",
+			"txt": "Steve Emrick - USP Digital Solutions and Informatics Initiatives"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Gersing-ASPE for the GInAS  USP meeting 11-2018.pdf",
+			"txt": "Ken Gersing - Bridging Research, Clinical and Biomedical Informatics NCI’s "
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Katzel-GSRS_NCATS_USP_20181116.pdf",
+			"txt": "Danny Katzel - GSRS and NCATS (Inxight, GARD, Translator)"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Labadidi-Analysis of GSRS Part V.pdf",
+			"txt": "Samir Labadidi - Analyzing Adverse Events in the GSRS"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Lin-GSRS 2018 meeting Hopi_5_K.pdf",
+			"txt": "Ho-Pi Lin - Modernizing Quality Assessment through Automation: ONDP/Division of Biopharmaceutics Automation Tool Application."
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Miller-ginas 16 nov 2018 MAM.pdf",
+			"txt": "Mitch Miller - Excel tools for the GSRS and Chemid"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Peryea-GSRS Development Update November 2018.pdf",
+			"txt": "Tyler Peryea - GSRS Update "
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Ranieri-AGXPE_GInAS Meeting Nov 2018.pdf",
+			"txt": "Vincent Ranieri - AGXPE talk on GMP, GLP and GCP and substances an Industry Perspective"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Schmuff-USP GINAS GSRS 2018-11-16.pdf",
+			"txt": "Norman Schmuff - Structured Drug Submissions to FDA: The Pharmaceutical Quality/Chemistry Manufacturing and Controls Project."
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Slack-GInAS presentation-11-16-2018.pdf",
+			"txt": "Mary Ann Slack - CDER Informatics Initiatives and the IDMP"
+		},
+		{
+			"url": "./assets/files/GSRS_UPC_2018/Switzer-GSRS Excipients.pdf",
+			"txt": "Frank Switzer - GSRS and Inactive Ingredients"
+		}
+	]
+},{
 		"type": "news",
 		"title": "GSRS Version 2.3.1 Released",
 		"date": "October 10, 2018",
@@ -9,6 +68,65 @@
 		"title": "The ginas Project Public Website Relaunches",
 		"date": "August 14, 2018",
 		"text": "The ginas project has updated the look and layout of its public site. The update is intended to help visitors more easily access resources such as information and updates about the ginas project and the G-SRS software, as well as downloads and demos of G-SRS. Please <a href = “mailto:ginas@nih.gov> contact ginas</a> if anyone has questions or feedback about the new layout."
+	},
+	{
+		"type": "meeting",
+		"date": "November 2018",
+		"heading": "The 2018 Annual GInAS / GSRS Update @ UPC",
+		"topics": [
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Callahan-GSRS_roadmap LNCindia_10_31_2018.pdf",
+				"txt": "Larry Callahan - Overview of Global Substance Registration System: (GSRS) and Identification of Medicinal Products (IDMP)"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Diederik-GInAS Meeting November 16th-HD-CM.pdf",
+				"txt": "Herman Diederik - IDMP and how we can support the health care domain"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Emrick-G-SRS-Nov-16-2018 (1).pdf",
+				"txt": "Steve Emrick - USP Digital Solutions and Informatics Initiatives"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Gersing-ASPE for the GInAS  USP meeting 11-2018.pdf",
+				"txt": "Ken Gersing - Bridging Research, Clinical and Biomedical Informatics NCI’s "
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Katzel-GSRS_NCATS_USP_20181116.pdf",
+				"txt": "Danny Katzel - GSRS and NCATS (Inxight, GARD, Translator)"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Labadidi-Analysis of GSRS Part V.pdf",
+				"txt": "Samir Labadidi - Analyzing Adverse Events in the GSRS"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Lin-GSRS 2018 meeting Hopi_5_K.pdf",
+				"txt": "Ho-Pi Lin - Modernizing Quality Assessment through Automation: ONDP/Division of Biopharmaceutics Automation Tool Application."
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Miller-ginas 16 nov 2018 MAM.pdf",
+				"txt": "Mitch Miller - Excel tools for the GSRS and Chemid"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Peryea-GSRS Development Update November 2018.pdf",
+				"txt": "Tyler Peryea - GSRS Update "
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Ranieri-AGXPE_GInAS Meeting Nov 2018.pdf",
+				"txt": "Vincent Ranieri - AGXPE talk on GMP, GLP and GCP and substances an Industry Perspective"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Schmuff-USP GINAS GSRS 2018-11-16.pdf",
+				"txt": "Norman Schmuff - Structured Drug Submissions to FDA: The Pharmaceutical Quality/Chemistry Manufacturing and Controls Project."
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Slack-GInAS presentation-11-16-2018.pdf",
+				"txt": "Mary Ann Slack - CDER Informatics Initiatives and the IDMP"
+			},
+			{
+				"url": "./assets/files/GSRS_UPC_2018/Switzer-GSRS Excipients.pdf",
+				"txt": "Frank Switzer - GSRS and Inactive Ingredients"
+			}
+		]
 	},
 	{
 		"type": "meeting",
@@ -97,6 +215,7 @@
 		"heading": "RAPS: Seven Pharmaceutical Regulators and NIH Collaborate to Build Drug Ingredient Database",
 		"url": "http://www.raps.org/Regulatory-Focus/News/2016/04/20/24804/Seven-Pharmaceutical-Regulators-and-NIH-Collaborate-to-Build-Drug-Ingredient-Database/"
 	},
+
 	{
 		"type": "presentation",
 		"date": "June 8, 2016",
