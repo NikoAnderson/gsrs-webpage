@@ -99,12 +99,12 @@
         </div>
         <div class = "col-md-4">
             <div class =  "cell">
-                <h3>GINAS Annual Update at USP</h3>
+                <h3>ginas Newsletter</h3>
                 <br/>
 
-                <h4>Register to attend the GINAS Annual Update @ USP on November 16th</h4>
+                <h4>Recieve email updates on ginas news and G-SRS releases</h4>
                 <br/>
-                <div class = "button" ng-click = "redirect('usp_signup')">Registration Form</div>
+                <div class = "button" ng-click = "toggleForm()">Signup</div>
                 <!--
                  value 1 <div style = "float:left;width:50%;background-color:red;height:18px;"></div><br/><br/>
                   value 2 <div style = "float:left;width:60%;background-color:blue;height:18px;"></div><br/><br/>
@@ -133,6 +133,15 @@
                     <div class = "col-sm-12">
                         <div class = 'date'>{{news[0].date}}</div>
                         <h3>  {{news[0].title}}</h3>
+                        <div ng-if = "news[0].heading">
+                            <h3>Presentation:<br/><br/>
+                                {{news[0].heading}}
+                            </h3>
+                            <br/>
+                            <br/>
+
+                        </div>
+
                         <p ng-text-truncate="news[0].text"
                            ng-tt-chars-threshold="200"></p>
                     </div>
@@ -156,7 +165,7 @@
         </div>
         <div class = "col-md-4">
             <div class = "cell">
-                <!-- <div class =  "cell">
+                <div class =  "cell">
                     <h3>News Archives</h3>
                     <div class = "button" ng-click = "redirect('articles')" >
                         Articles
@@ -167,13 +176,7 @@
                     <div class = "button" ng-click = "redirect('articles')" >
                         Presentations
                     </div>
-                 </div>   -->
-                <h3>ginas Newsletter</h3>
-                <br/>
-
-                <h4>Recieve email updates on ginas news and G-SRS releases</h4>
-                <br/>
-                <div class = "button" ng-click = "toggleForm()">Signup</div>
+                 </div>
             </div>
         </div>
     </div>
