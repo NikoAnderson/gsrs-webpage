@@ -8,6 +8,47 @@ angular.module('ginasWeb.versionFactory', ['ui.router'])
     .factory('versionFactory', function ($http) {
         var version = [
             {
+                date: 'February 25, 2019',
+                version: '2.3.3',
+                filebundled: './releases/gsrs2_3_3_bundled_h2_smallseed.zip',
+                fileempty: './releases/gsrs2_3_3_empty_h2.zip',
+                changelog: [{
+                    type: 'Improvements',
+                    details: ["Molvec added - adds a program that uses OCR to discern and convert a chemical structure from an uploaded image into a format displayable in the structure editor. Images are uploaded by copying and pasting or dragging and dropping them onto the structure editor, after which the programs best approximation of that structure will appear, along with a copy of the original image below the editor. It also allows molfiles and SMILES text to be copied and pasted directly into the editor.",
+                        "Created scheduled task for remaking backups",
+                        "Added option to return to substance edit form after the form is submitted",
+                        "Improved performance of facet value filtering",
+                        "Improved protein validation rule check",
+                        "Improved the speed for sequence search results",
+                        "Added ability to search by “other” fields in the query builder",
+                        "Substance Hierarchy tree improvements",
+                        "Updated public name export filtering",
+                        "Added ability to sort by molecular weight on the browse page",
+                        "Added indication of the preferred substance name on the browse page",
+                        "Added a tab to display applications by center",
+                        "Updated the component substance record to indicate when a substance is part of a mixture or group 1 specified substance"]
+                }, {
+                    type: 'Bug fixes',
+                    details: ["Fixed an error that occurred when adding existing terms while registering a protein",
+                        "Fixed error preventing deletion of duplicate relationships on CD3",
+                        "added developmental stage  option for the “part/fraction” field on the structurally diverse edit form",
+                        "Fixed bug preventing registration of mineral structurally diverse substances",
+                        "Eliminated double searches for identical subunits",
+                        "Fixed the ability to copy and paste bookmarklet copies ’original submitter’ and ‘date of submission’ fields",
+                        "Fixed error caused by including semicolons in the global search",
+                        "Changed the java code to allow integer values to be null",
+                        "Fixed error when trying to update an application",
+                        "Fixed bug causing references to be missing from new relationships",
+                        "Prevented product amounts from defaulting to 0.0",
+                        "Improved the layout of details view reference tables",
+                        "Fixed edit form ‘add relationship’ button layout",
+                        "Fixed bug preventing substances from being upgraded or converted with a missing self reference"]
+
+                }
+
+                ]
+            },
+            {
                 date: 'October 10, 2018',
                 version: '2.3.1',
                 filebundled: './releases/gsrs2_3_1_bundled_h2_smallseed.zip',
