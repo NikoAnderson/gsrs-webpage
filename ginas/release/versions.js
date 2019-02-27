@@ -30,16 +30,12 @@ angular.module('ginasWeb.versionFactory', ['ui.router'])
                 }, {
                     type: 'Bug fixes',
                     details: ["Fixed an error that occurred when adding existing terms while registering a protein",
-                        "Fixed error preventing deletion of duplicate relationships on CD3",
+                        "Fixed error preventing deletion of certain duplicate relationship",
                         "added developmental stage  option for the “part/fraction” field on the structurally diverse edit form",
                         "Fixed bug preventing registration of mineral structurally diverse substances",
                         "Eliminated double searches for identical subunits",
-                        "Fixed the ability to copy and paste bookmarklet copies ’original submitter’ and ‘date of submission’ fields",
                         "Fixed error caused by including semicolons in the global search",
-                        "Changed the java code to allow integer values to be null",
-                        "Fixed error when trying to update an application",
                         "Fixed bug causing references to be missing from new relationships",
-                        "Prevented product amounts from defaulting to 0.0",
                         "Improved the layout of details view reference tables",
                         "Fixed edit form ‘add relationship’ button layout",
                         "Fixed bug preventing substances from being upgraded or converted with a missing self reference"]
