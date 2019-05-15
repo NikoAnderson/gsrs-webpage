@@ -1,4 +1,9 @@
 [{
+	"type": "news",
+	"title": "Newest GSRS Public Data Released",
+	"date": "April 10, 2019",
+	"text": "The most recent set of public data, comprised of 105,020 records, has been compiled and is available for download.<br/><br/> &nbsp <a href = './gsrs/dump-public-2019-04-03.gsrs'><b>Download</b></a>"
+},{
 	"type": "presentation",
 	"date": "November 16, 2018",
 	"heading": "The 2018 Annual GInAS / GSRS Update @ The United States Pharmacopeia",
@@ -57,7 +62,14 @@
 			"txt": "Frank Switzer - GSRS and Inactive Ingredients"
 		}
 	]
-},{
+},
+	{
+	"type": "news",
+	"title": " GSRS v2.3.3 Released",
+	"date": "February 25, 2019",
+	"text": "The newest version of the GSRS software is now available for download. Changes include The addition of Molvec, which uses OCR to convert images into molfiles displayable by the structure editor. Users can now drag and drop or copy and paste images into the structure editor and have the structure automatically rendered>"
+},
+	{
 		"type": "news",
 		"title": "GSRS Version 2.3.1 Released",
 		"date": "October 10, 2018",
