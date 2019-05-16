@@ -1,4 +1,19 @@
-[{
+[
+	{
+	"type": "presentation",
+	"date": "May 15, 2019",
+	"heading": "Ginas Public Development Update: May 2019",
+		"desc": "The public presentation on the latest GSRS Development updates can be viewed in the links below.",
+		"topics": [
+			{
+				"url": "./assets/files/PublicMeeting2019/GSRS Development Update May 2019.pdf",
+				"txt": "GSRS Development Update full presentation pdf"
+			},{
+				"url": "./assets/PublicMeeting2019/GSRS Public Meeting - May 2019-20190515 1359-1.mp4",
+				"txt": "GSRS Public Meeting Video Recording"
+			}]
+},
+	{
 	"type": "news",
 	"title": "Newest GSRS Public Data Released",
 	"date": "April 10, 2019",
