@@ -933,7 +933,7 @@
     "/substances/@validate": {
       "post": {
         "tags": [
-          "more"
+          "create and update"
         ],
         "summary": "validate a substance",
         "description": "Validate a substance - returns valid=false for any errors",
