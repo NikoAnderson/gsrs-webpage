@@ -786,7 +786,7 @@
       "get": {
         "tags": ["search text"],
         "summary": "Substance search for words that end in \"MAB\" and are restricted to proteins.",
-        "description": "Using facet filters, this search restricts the results to only include records which have \"protein\" as their \"Substance Class\", while also doing a search for words that end in "MAB". Note that facet filters can be applied to any search.",
+        "description": "Using facet filters, this search restricts the results to only include records which have \"protein\" as their \"Substance Class\", while also doing a search for words that end in \"MAB\". Note that facet filters can be applied to any search.",
         "parameters":[],
         "responses": {
           "200": {
@@ -799,7 +799,7 @@
       "get": {
         "tags": ["search text"],
         "summary": "Substance search for words that end in \"MAB\" and are restricted to proteins with ATC level 1 code in \"RESPRITORY SYSTEM\".",
-        "description": "Using facet filters, this search restricts the results to only include records which have \"protein\" as their \"Substance Class\", and \"RESPRITORY SYSTEM\" as their \"ATC Level 1\" facet value. In addition, this also is also doing a search for words that end in "MAB". Note that facet filters can be applied to any search.",
+        "description": "Using facet filters, this search restricts the results to only include records which have \"protein\" as their \"Substance Class\", and \"RESPRITORY SYSTEM\" as their \"ATC Level 1\" facet value. In addition, this also is also doing a search for words that end in \"MAB\". Note that facet filters can be applied to any search.",
         "parameters":[],
         "responses": {
           "200": {
