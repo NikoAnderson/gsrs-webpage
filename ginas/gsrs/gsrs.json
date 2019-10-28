@@ -58,7 +58,7 @@
       }
   },
   "paths": {
-    "/": {
+    "": {
       "get": {
         "tags": ["browse"],
         "summary": "Get all resources & operations",
