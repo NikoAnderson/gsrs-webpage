@@ -22,11 +22,11 @@
       "description": "Browse resources"
     },
     {
-      "name": "search text",
+      "name": "text search",
       "description": "Search by name, code, or other text fields"
     },
     {
-      "name": "search structure",
+      "name": "chemical search",
       "description": "Search by chemical structure"
     },
     {
@@ -663,7 +663,7 @@
 	"/suggest?q=ibupro": {
       "get": {
         "tags": [
-          "search text"
+          "text search"
         ],
         "summary": "Get search suggestions from partially typed word \"ibupro\"",
         "description": "Returns a list of suggestions for completing supplied text, grouped by fields where that text was found. This can be used for rapid suggestions for global searches.",
@@ -680,7 +680,7 @@
     },
     "/substances/search?q=ASPIRIN": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Global search for word \"ASPIRIN\"",
         "description": "Searches (globally) for any substance with 'ASPIRIN' found as a word somewhere in the record. This also returns metadata for top/skip and count information.",
         "parameters":[],
@@ -693,7 +693,7 @@
     },
     "/substances/search?q=root_approvalID:R16CO5Y76E": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Search Substance by approvlID, which in the default FDA-seeded system is equivalent to the UNII code.",
         "description": "Searches for a substance with approvalID (UNII) as 'R16CO5Y76E'",
         "parameters":[],
@@ -706,7 +706,7 @@
     },
     "/substances/search?q=root_names_name:OXYTOCIN": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Search for \"OXYTOCIN\" inside of a name",
         "description": "Searches for any substance with \"OXYTOCIN\" found as a word somewhere in a NAME. Returns metadata for top/skip and count information",
         "parameters":[],
@@ -719,7 +719,7 @@
     },
     "/substances/search?q=OXYTOCIN%20AND%20root_codes_codeSystem:WIKIPEDIA": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Substance search for \"OXYTOCIN\" within codes which also have codesystem containing \"WIKIPEDIA\"",
         "description": "Searches for any substance where 'OXYTOCIN' is found as a word somewhere in the record, and there is a code with a codeSystem of 'WIKIPEDIA'",
         "parameters":[],
@@ -732,7 +732,7 @@
     },
     "/substances/search?q=root_names_name:\"^OXYTOCIN$\"": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Exact name Search for \"OXYTOCIN\"",
         "description": "Searches for any substance with \"OXYTOCIN\" is an EXACT name match. The \"^\" character, surrounded by quotes, is used to mean the start of a field. The \"$\" character, also surrounded by quotes, is used to mean the end of a field. Returns metadata for top/skip and count information",
         "parameters":[],
@@ -745,7 +745,7 @@
     },
     "/substances/search?q=OXYTO*": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "substance search starting with \"OXYTO\"",
         "description": "Searches for any substance with a word starting with 'OXYTO'",
         "parameters":[],
@@ -758,7 +758,7 @@
     },
     "/substances/search?q=ASPIRIN%20ESTER": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Substance search with words \"ESTER\" or \"ASPIRIN\"",
         "description": "Searches for any substance with the words \"ESTER\" or \"ASPIRIN\" contained (lots of matches).",
         "parameters":[],
@@ -771,7 +771,7 @@
     },
     "/substances/search?q=ASPIRIN%20AND%20ESTER": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Substance search with words \"ESTER\" and \"ASPIRIN\"",
         "description": "Searches for any substance with the words \"ESTER\" AND \"ASPIRIN\" contained in any field (few matches).",
         "parameters":[],
@@ -784,7 +784,7 @@
     },
 	"/substances/search?q=*MAB&facet=Substance%20Class%2Fprotein": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Substance search for words that end in \"MAB\" and are restricted to proteins.",
         "description": "Using facet filters, this search restricts the results to only include records which have \"protein\" as their \"Substance Class\", while also doing a search for words that end in \"MAB\". Note that facet filters can be applied to any search.",
         "parameters":[],
@@ -797,7 +797,7 @@
     },
 	"/substances/search?q=*MAB&facet=Substance%20Class%2Fprotein&facet=ATC%20Level%201%2FRESPIRATORY%20SYSTEM": {
       "get": {
-        "tags": ["search text"],
+        "tags": ["text search"],
         "summary": "Substance search for words that end in \"MAB\" and are restricted to proteins with ATC level 1 code in \"RESPRITORY SYSTEM\".",
         "description": "Using facet filters, this search restricts the results to only include records which have \"protein\" as their \"Substance Class\", and \"RESPRITORY SYSTEM\" as their \"ATC Level 1\" facet value. In addition, this also is also doing a search for words that end in \"MAB\". Note that facet filters can be applied to any search.",
         "parameters":[],
@@ -810,7 +810,7 @@
     },
     "/substances/structureSearch?q=COCN": {
       "get": {
-        "tags": ["search structure"],
+        "tags": ["chemical search"],
         "summary": "Substructure search for SMILES/SMARTS string \"COCN\" -  Async",
         "description": "Searches substances for any structure containing the substructure described by the SMILES string \"COCN\". This is an asynchronous result. Returns a JSONObject with a link and metadata for the full response, as well as a URL for polling if the response has been completed yet or not.",
         "parameters":[],
@@ -823,7 +823,7 @@
     },
     "/substances/structureSearch?q=COCN&sync=true": {
       "get": {
-        "tags": ["search structure"],
+        "tags": ["chemical search"],
         "summary": "Substructure search for SMILES/SMARTS string \"COCN\" - Sync",
         "description": "Searches substances for any structure containing the substructure described by the SMILES string \"COCN\". This form of the query will block until the search is complete, and then redirect to a resource which contains the results.",
         "parameters":[],
@@ -836,7 +836,7 @@
     },
     "/substances/structureSearch?q=CCOC(N)=O&type=sim&cutoff=0.6": {
       "get": {
-        "tags": ["search structure"],
+        "tags": ["chemical search"],
         "summary": "Searches for similar structures to SMILES \"CCOC(N)=O\"",
         "description": "Searches substances similar structures to \"CCOC(N)=O\", with tanimoto cutoff of 0.6 (60%). This is an asynchronous result. Returns a JSONObject with a link and metadata for the full response, as well as a URL for polling if the response has been completed yet or not.",
         "parameters":[],
@@ -849,7 +849,7 @@
     },
     "/substances/structureSearch?q=CCOC(N)=O&type=exact": {
       "get": {
-         "tags": ["search structure"],
+         "tags": ["chemical search"],
         "summary": "Searches substances for structure equivalent to SMILES string \"CCOC(N)=O\".",
         "description": "Searches substances for chemical structures that are tautomerically equivalent to the supplied SMILEs string. This is a stereo sensitive search.",
         "parameters":[],
@@ -862,7 +862,7 @@
     },
 	"/substances/structureSearch?q=Cl&type=flex": {
       "get": {
-         "tags": ["search structure"],
+         "tags": ["chemical search"],
         "summary": "Searches substances for disconnected moiety equivalent to SMILES string \"Cl\".",
         "description": "Searches substances for disconnected moiety equivalent to SMILES string \"Cl\". This is a stereo-insensitive search.",
         "parameters":[],
