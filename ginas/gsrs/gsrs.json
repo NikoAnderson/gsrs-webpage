@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "This is a sample documentation for the GSRS api. The api is located at https://ginas.ncats.nih.gov/ginas/app/api/v1",
+    "description": "This is a sample documentation for the GSRS api. The api is located at https://ginas.ncats.nih.gov/ginas/app/api/v1. <br/> A copy of the GSRS schema and data dictionary can be found on the <a href = 'https://tripod.nih.gov/ginas/#/release'>Downloads page</a>",
     "version": "v1",
     "title": "GSRS API",
     "contact": {
