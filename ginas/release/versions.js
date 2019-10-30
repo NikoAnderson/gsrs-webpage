@@ -8,6 +8,14 @@ angular.module('ginasWeb.versionFactory', ['ui.router'])
     .factory('versionFactory', function ($http) {
         var version = [
             {
+                date: 'October 30, 2019',
+                version: '2.4',
+                filebundled: './releases/gsrs2_4_bundled_h2_smallseed.zip',
+                fileempty: './releases/gsrs2_4_empty_h2.zip',
+                changelog: [{}
+                ]
+            },
+            {
                 date: 'February 25, 2019',
                 version: '2.3.3',
                 filebundled: './releases/gsrs2_3_3_bundled_h2_smallseed.zip',

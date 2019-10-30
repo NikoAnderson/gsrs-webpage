@@ -1,0 +1,928 @@
+{
+    "uuid": "string",
+    "created": "number",
+    "createdBy": "string",
+    "lastEdited": "number",
+    "lastEditedBy": "string",
+    "deprecated": "boolean",
+    "definitionType": "string",
+    "definitionLevel": "string",
+    "substanceClass": "string",
+    "status": "string",
+    "version": "string",
+    "approvedBy": "string",
+    "changeReason": "string",
+    "names": [
+        {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "name": "string",
+            "type": "string",
+            "domains": [
+                "string"
+            ],
+            "languages": [
+                "string"
+            ],
+            "nameJurisdiction": [
+                "string"
+            ],
+            "nameOrgs": [
+                {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "nameOrg": "string",
+                    "references": [],
+                    "access": [],
+                    "deprecatedDate": "number"
+                }
+            ],
+            "preferred": "boolean",
+            "displayName": "boolean",
+            "references": [
+                "string"
+            ],
+            "access": [],
+            "_self": "string"
+        }
+    ],
+    "codes": [
+        {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "codeSystem": "string",
+            "code": "string",
+            "type": "string",
+            "url": "string",
+            "references": [
+                "string"
+            ],
+            "access": [],
+            "_self": "string",
+            "comments": "string"
+        }
+    ],
+    "modifications": {
+        "uuid": "string",
+        "created": "number",
+        "createdBy": "string",
+        "lastEdited": "number",
+        "lastEditedBy": "string",
+        "deprecated": "boolean",
+        "agentModifications": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "agentModificationRole": "string",
+                "agentModificationType": "string",
+                "agentSubstance": {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "refPname": "string",
+                    "refuuid": "string",
+                    "substanceClass": "string",
+                    "approvalID": "string",
+                    "linkingID": "string",
+                    "name": "string",
+                    "references": [],
+                    "access": []
+                },
+                "amount": {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "references": [],
+                    "access": [],
+                    "type": "string",
+                    "highLimit": "number",
+                    "lowLimit": "number",
+                    "nonNumericValue": "string",
+                    "average": "number",
+                    "high": "number",
+                    "low": "number",
+                    "units": "string"
+                },
+                "modificationGroup": "string",
+                "references": [],
+                "access": [],
+                "agentModificationProcess": "string"
+            }
+        ],
+        "physicalModifications": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "parameters": [
+                    {
+                        "uuid": "string",
+                        "created": "number",
+                        "createdBy": "string",
+                        "lastEdited": "number",
+                        "lastEditedBy": "string",
+                        "deprecated": "boolean",
+                        "parameterName": "string",
+                        "amount": {
+                            "uuid": "string",
+                            "created": "number",
+                            "createdBy": "string",
+                            "lastEdited": "number",
+                            "lastEditedBy": "string",
+                            "deprecated": "boolean",
+                            "lowLimit": "number",
+                            "units": "string",
+                            "references": [],
+                            "access": [],
+                            "highLimit": "number",
+                            "type": "string",
+                            "average": "number",
+                            "nonNumericValue": "string"
+                        },
+                        "references": [],
+                        "access": []
+                    }
+                ],
+                "modificationGroup": "string",
+                "references": [],
+                "access": [],
+                "physicalModificationRole": "string"
+            }
+        ],
+        "structuralModifications": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "extent": "string",
+                "molecularFragment": {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "refPname": "string",
+                    "refuuid": "string",
+                    "substanceClass": "string",
+                    "approvalID": "string",
+                    "linkingID": "string",
+                    "name": "string",
+                    "references": [],
+                    "access": []
+                },
+                "modificationGroup": "string",
+                "sites": [
+                    {
+                        "subunitIndex": "number",
+                        "residueIndex": "number"
+                    }
+                ],
+                "references": [],
+                "access": [],
+                "extentAmount": {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "average": "number",
+                    "references": [],
+                    "access": [],
+                    "type": "string",
+                    "highLimit": "number",
+                    "lowLimit": "number",
+                    "nonNumericValue": "string",
+                    "units": "string",
+                    "high": "number",
+                    "low": "number"
+                },
+                "structuralModificationType": "string",
+                "residueModified": "string",
+                "locationType": "string"
+            }
+        ],
+        "references": [],
+        "access": []
+    },
+    "notes": [
+        {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "note": "string",
+            "references": [
+                "string"
+            ],
+            "access": [
+                "string"
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "name": "string",
+            "type": "string",
+            "propertyType": "string",
+            "value": {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "type": "string",
+                "average": "number",
+                "units": "string",
+                "references": [],
+                "access": [],
+                "highLimit": "number",
+                "lowLimit": "number",
+                "nonNumericValue": "string",
+                "high": "number",
+                "low": "number"
+            },
+            "defining": "boolean",
+            "parameters": [
+                {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "name": "string",
+                    "type": "string",
+                    "value": {
+                        "uuid": "string",
+                        "created": "number",
+                        "createdBy": "string",
+                        "lastEdited": "number",
+                        "lastEditedBy": "string",
+                        "deprecated": "boolean",
+                        "nonNumericValue": "string",
+                        "references": [],
+                        "access": [],
+                        "average": "number",
+                        "units": "string",
+                        "high": "number",
+                        "low": "number",
+                        "type": "string"
+                    },
+                    "references": [],
+                    "access": []
+                }
+            ],
+            "references": [
+                "string"
+            ],
+            "access": []
+        }
+    ],
+    "relationships": [
+        {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "relatedSubstance": {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "refPname": "string",
+                "refuuid": "string",
+                "substanceClass": "string",
+                "approvalID": "string",
+                "linkingID": "string",
+                "name": "string",
+                "references": [],
+                "access": []
+            },
+            "originatorUuid": "string",
+            "type": "string",
+            "references": [
+                "string"
+            ],
+            "access": [],
+            "amount": {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "type": "string",
+                "lowLimit": "number",
+                "units": "string",
+                "references": [],
+                "access": [],
+                "highLimit": "number",
+                "average": "number",
+                "high": "number",
+                "low": "number",
+                "nonNumericValue": "string"
+            },
+            "interactionType": "string",
+            "comments": "string",
+            "qualification": "string",
+            "mediatorSubstance": {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "refPname": "string",
+                "refuuid": "string",
+                "substanceClass": "string",
+                "approvalID": "string",
+                "linkingID": "string",
+                "name": "string",
+                "references": [],
+                "access": []
+            }
+        }
+    ],
+    "references": [
+        {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "citation": "string",
+            "docType": "string",
+            "publicDomain": "boolean",
+            "tags": [
+                "string"
+            ],
+            "access": [
+                "string"
+            ],
+            "_self": "string",
+            "documentDate": "number",
+            "url": "string",
+            "id": "string",
+            "uploadedFile": "string"
+        }
+    ],
+    "approvalID": "string",
+    "tags": [
+        "string"
+    ],
+    "protein": {
+        "uuid": "string",
+        "created": "number",
+        "createdBy": "string",
+        "lastEdited": "number",
+        "lastEditedBy": "string",
+        "deprecated": "boolean",
+        "proteinType": "string",
+        "proteinSubType": "string",
+        "sequenceOrigin": "string",
+        "sequenceType": "string",
+        "glycosylation": {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "glycosylationType": "string",
+            "CGlycosylationSites": [
+                {
+                    "subunitIndex": "number",
+                    "residueIndex": "number"
+                }
+            ],
+            "NGlycosylationSites": [
+                {
+                    "subunitIndex": "number",
+                    "residueIndex": "number"
+                }
+            ],
+            "OGlycosylationSites": [
+                {
+                    "subunitIndex": "number",
+                    "residueIndex": "number"
+                }
+            ],
+            "references": [],
+            "access": []
+        },
+        "subunits": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "sequence": "string",
+                "subunitIndex": "number",
+                "length": "number",
+                "references": [],
+                "access": []
+            }
+        ],
+        "otherLinks": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "linkageType": "string",
+                "sites": [
+                    {
+                        "subunitIndex": "number",
+                        "residueIndex": "number"
+                    }
+                ],
+                "references": [],
+                "access": []
+            }
+        ],
+        "disulfideLinks": [
+            {
+                "sites": [
+                    {
+                        "subunitIndex": "number",
+                        "residueIndex": "number"
+                    }
+                ],
+                "sitesShorthand": "string"
+            }
+        ],
+        "references": [
+            "string"
+        ],
+        "access": []
+    },
+    "_approvalIDDisplay": "string",
+    "_name": "string",
+    "access": [
+        "string"
+    ],
+    "_self": "string",
+    "structure": {
+        "id": "string",
+        "created": "number",
+        "lastEdited": "number",
+        "deprecated": "boolean",
+        "digest": "string",
+        "molfile": "string",
+        "smiles": "string",
+        "formula": "string",
+        "opticalActivity": "string",
+        "atropisomerism": "string",
+        "stereoCenters": "number",
+        "definedStereo": "number",
+        "ezCenters": "number",
+        "charge": "number",
+        "mwt": "number",
+        "count": "number",
+        "createdBy": "string",
+        "lastEditedBy": "string",
+        "hash": "string",
+        "self": "string",
+        "stereochemistry": "string",
+        "references": [
+            "string"
+        ],
+        "access": [],
+        "stereoComments": "string"
+    },
+    "moieties": [
+        {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "id": "string",
+            "digest": "string",
+            "molfile": "string",
+            "smiles": "string",
+            "formula": "string",
+            "opticalActivity": "string",
+            "stereoCenters": "number",
+            "definedStereo": "number",
+            "ezCenters": "number",
+            "charge": "number",
+            "mwt": "number",
+            "count": "number",
+            "hash": "string",
+            "self": "string",
+            "stereochemistry": "string",
+            "references": [],
+            "access": [],
+            "countAmount": {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "type": "string",
+                "average": "number",
+                "units": "string",
+                "references": [],
+                "access": [],
+                "nonNumericValue": "string",
+                "high": "number",
+                "low": "number"
+            },
+            "atropisomerism": "string",
+            "stereoComments": "string"
+        }
+    ],
+    "mixture": {
+        "uuid": "string",
+        "created": "number",
+        "createdBy": "string",
+        "lastEdited": "number",
+        "lastEditedBy": "string",
+        "deprecated": "boolean",
+        "components": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "type": "string",
+                "substance": {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "refPname": "string",
+                    "refuuid": "string",
+                    "substanceClass": "string",
+                    "approvalID": "string",
+                    "linkingID": "string",
+                    "name": "string",
+                    "references": [],
+                    "access": []
+                },
+                "references": [],
+                "access": []
+            }
+        ],
+        "references": [
+            "string"
+        ],
+        "access": [],
+        "parentSubstance": {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "refPname": "string",
+            "refuuid": "string",
+            "substanceClass": "string",
+            "approvalID": "string",
+            "linkingID": "string",
+            "name": "string",
+            "references": [],
+            "access": []
+        }
+    },
+    "structurallyDiverse": {
+        "uuid": "string",
+        "created": "number",
+        "createdBy": "string",
+        "lastEdited": "number",
+        "lastEditedBy": "string",
+        "deprecated": "boolean",
+        "sourceMaterialClass": "string",
+        "sourceMaterialType": "string",
+        "part": [
+            "string"
+        ],
+        "parentSubstance": {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "refPname": "string",
+            "refuuid": "string",
+            "substanceClass": "string",
+            "approvalID": "string",
+            "linkingID": "string",
+            "name": "string",
+            "references": [],
+            "access": []
+        },
+        "references": [
+            "string"
+        ],
+        "access": [],
+        "fractionName": "string",
+        "organismAuthor": "string",
+        "organismFamily": "string",
+        "organismGenus": "string",
+        "organismSpecies": "string",
+        "sourceMaterialState": "string",
+        "developmentalStage": "string",
+        "partLocation": "string",
+        "infraSpecificType": "string",
+        "infraSpecificName": "string",
+        "fractionMaterialType": "string",
+        "hybridSpeciesPaternalOrganism": {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "refPname": "string",
+            "refuuid": "string",
+            "substanceClass": "string",
+            "approvalID": "string",
+            "linkingID": "string",
+            "name": "string",
+            "references": [],
+            "access": []
+        },
+        "hybridSpeciesMaternalOrganism": {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "refPname": "string",
+            "refuuid": "string",
+            "substanceClass": "string",
+            "approvalID": "string",
+            "linkingID": "string",
+            "name": "string",
+            "references": [],
+            "access": []
+        }
+    },
+    "polymer": {
+        "uuid": "string",
+        "created": "number",
+        "createdBy": "string",
+        "lastEdited": "number",
+        "lastEditedBy": "string",
+        "deprecated": "boolean",
+        "classification": {
+            "uuid": "string",
+            "created": "number",
+            "createdBy": "string",
+            "lastEdited": "number",
+            "lastEditedBy": "string",
+            "deprecated": "boolean",
+            "polymerClass": "string",
+            "polymerGeometry": "string",
+            "polymerSubclass": [
+                "string"
+            ],
+            "references": [],
+            "access": [],
+            "sourceType": "string",
+            "parentSubstance": {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "refPname": "string",
+                "refuuid": "string",
+                "substanceClass": "string",
+                "approvalID": "string",
+                "linkingID": "string",
+                "name": "string",
+                "references": [],
+                "access": []
+            }
+        },
+        "displayStructure": {
+            "id": "string",
+            "created": "number",
+            "lastEdited": "number",
+            "deprecated": "boolean",
+            "molfile": "string",
+            "count": "number",
+            "createdBy": "string",
+            "lastEditedBy": "string",
+            "self": "string",
+            "references": [],
+            "access": [],
+            "digest": "string",
+            "formula": "string",
+            "opticalActivity": "string",
+            "stereoCenters": "number",
+            "definedStereo": "number",
+            "ezCenters": "number",
+            "charge": "number",
+            "mwt": "number",
+            "stereochemistry": "string",
+            "smiles": "string"
+        },
+        "idealizedStructure": {
+            "id": "string",
+            "created": "number",
+            "lastEdited": "number",
+            "deprecated": "boolean",
+            "molfile": "string",
+            "count": "number",
+            "createdBy": "string",
+            "lastEditedBy": "string",
+            "self": "string",
+            "references": [],
+            "access": [],
+            "digest": "string",
+            "formula": "string",
+            "opticalActivity": "string",
+            "stereoCenters": "number",
+            "definedStereo": "number",
+            "ezCenters": "number",
+            "charge": "number",
+            "mwt": "number",
+            "stereochemistry": "string",
+            "smiles": "string"
+        },
+        "monomers": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "amount": {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "type": "string",
+                    "average": "number",
+                    "units": "string",
+                    "references": [],
+                    "access": [],
+                    "highLimit": "number",
+                    "lowLimit": "number",
+                    "high": "number",
+                    "low": "number",
+                    "nonNumericValue": "string"
+                },
+                "monomerSubstance": {
+                    "uuid": "string",
+                    "created": "number",
+                    "createdBy": "string",
+                    "lastEdited": "number",
+                    "lastEditedBy": "string",
+                    "deprecated": "boolean",
+                    "refPname": "string",
+                    "refuuid": "string",
+                    "substanceClass": "string",
+                    "approvalID": "string",
+                    "linkingID": "string",
+                    "name": "string",
+                    "references": [],
+                    "access": []
+                },
+                "type": "string",
+                "defining": "boolean",
+                "references": [],
+                "access": []
+            }
+        ],
+        "structuralUnits": [],
+        "references": [
+            "string"
+        ],
+        "access": []
+    },
+    "nucleicAcid": {
+        "uuid": "string",
+        "created": "number",
+        "createdBy": "string",
+        "lastEdited": "number",
+        "lastEditedBy": "string",
+        "deprecated": "boolean",
+        "linkages": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "linkage": "string",
+                "sites": [
+                    {
+                        "subunitIndex": "number",
+                        "residueIndex": "number"
+                    }
+                ],
+                "sitesShorthand": "string",
+                "references": [],
+                "access": []
+            }
+        ],
+        "subunits": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "sequence": "string",
+                "subunitIndex": "number",
+                "length": "number",
+                "references": [],
+                "access": []
+            }
+        ],
+        "sugars": [
+            {
+                "uuid": "string",
+                "created": "number",
+                "createdBy": "string",
+                "lastEdited": "number",
+                "lastEditedBy": "string",
+                "deprecated": "boolean",
+                "sugar": "string",
+                "sites": [
+                    {
+                        "subunitIndex": "number",
+                        "residueIndex": "number"
+                    }
+                ],
+                "sitesShorthand": "string",
+                "references": [],
+                "access": []
+            }
+        ],
+        "references": [
+            "string"
+        ],
+        "access": [],
+        "sequenceType": "string",
+        "nucleicAcidType": "string",
+        "sequenceOrigin": "string"
+    }
+}
