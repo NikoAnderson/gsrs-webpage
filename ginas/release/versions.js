@@ -12,7 +12,7 @@ angular.module('ginasWeb.versionFactory', ['ui.router'])
                 version: '2.4',
                 filebundled: './releases/gsrs2_4_bundled_h2_smallseed.zip',
                 fileempty: './releases/gsrs2_4_empty_h2.zip',
-                changelog: [{ }
+                changelog: [{ details: ['TBA'] }
                 ]
             },
             {
