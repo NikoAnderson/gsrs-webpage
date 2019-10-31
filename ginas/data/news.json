@@ -1,5 +1,21 @@
 [
 	{
+		"type": "presentation",
+		"date": "October 30, 2019",
+		"heading": "Ginas Public Development Update: October 2019",
+		"desc": "The public presentation on the latest GSRS Development updates can be viewed in the links below.",
+		"topics": [
+			{
+				"url": "./downloads/GSRS_Development_Update_October_2019.pdf",
+				"txt": "GSRS Development Update full presentation pdf"
+			},{
+				"url": "./downloads/GSRS_October_2019_Public_Meeting-20191030 1349-1.mp4",
+				"txt": "GSRS Public Meeting Video Recording"
+			},{
+				"url": "./downloads/Signature Fields for a Protein Substance Registration.pdf",
+				"txt": "Signature Fields for a Protein Substance Registration Presentation"
+			}]
+	},{
 	"type": "presentation",
 	"date": "May 15, 2019",
 	"heading": "Ginas Public Development Update: May 2019",
