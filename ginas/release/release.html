@@ -49,6 +49,7 @@
                                     <ul>
                                         <li><a ng-click="scrollTo('system')">System Requirements</a></li>
                                         <li><a ng-click="scrollTo('install')">Installation Instructions</a></li>
+                                        <li><a ng-click="scrollTo('upgrade')">Upgrade Instructions</a></li>
                                         <li><a ng-click="scrollTo('database')">Database Connection</a></li>
                                         <li><a ng-click="scrollTo('user')">User Registration</a></li>
                                         <li><a ng-click="scrollTo('loading')">Data Loading</a></li>
@@ -94,9 +95,11 @@
                             <div class="alert alert-danger" role="alert"> Windows is not supported for production environments.
                             We do however support windows for developers doing testing, which can be accomplished by running windows in dev mode with the code below.
                         </div>
+
                         <div id="install">
                             
                                 <h2>Installation Instructions</h2>
+                          <div style = "margin-top:-35px;margin-bottom:5px;padding-right:10px;float:right"> <i> <a ng-click="scrollTo('upgrade')">or see Upgrade Instructions</a></i></div>
                                 <ol>
                                     <li>Download the zip file</li>
                                     <li>Unzip the zip file</li>
@@ -134,6 +137,34 @@
                                 </ol>
                             
                         </div>
+                            <div id="upgrade">
+                                <h2>Upgrade Instructions</h2>
+                                <li>Download the zip file of the latest release</li>
+                                <li>Unzip the zip file in a new directory, or rename the old installation and use the original folder name</li>
+                                <li>Copy user changes from the old conf/ginas.conf to the newly unzipped conf/ginas.conf</li>
+                                <div class="alert alert-warning" role="alert">We recommend having a config file that inherits from the default config file, as each new version will have new defaults to the configuration file. Any user changes to the old configuration
+                                    such as database configuration should be copied over to preserve the new defaults.</div>
+                                <li>If your old instance of the software is still running, kill it gracefully using:
+                                    <div>
+                                        <pre><code>kill -SIGTERM XXXX</code></pre>
+                                    </div>
+                                    where XXXX is the process number (printed upon executing <code>nohup</code>)
+                                </li>
+                                <li><code>cd</code> into the newly unzipped directory</li>
+                                <li>Start G-SRS
+                                    <div>
+                                        <pre><code>nohup ./bin/ginas -Dconfig.file=conf/ginas.conf -J-Xmx4G</code></pre>
+                                        <div class="alert alert-warning" role="alert">If G-SRS fails to load, replace <code>-J-Xmx4G</code> with <code>-mem 4000</code></div>
+                                        <div class="alert alert-warning" role="alert"><code>nohup</code> specifies that the process is not tied to the user session, so it will continue to run in the background</div>
+                                    </div>
+                                </li>
+                                <li>G-SRS should now be running. Open a browser and go to
+                                    <code>localhost:9000/ginas/app</code>
+                                </li>
+                                <li>From there,log in using the right header button, navigate to the 'admin' menu, and run the 'rebuild index' function</li>
+                                <img class="img-responsive" src="./assets/images/screenshots/rebuild_index.png"/>
+
+                            </div>
                         <div class="row" id="database">
                             <div class="col-md-10">
                                 <h2>Database Configuration</h2>
