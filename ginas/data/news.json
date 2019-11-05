@@ -1,5 +1,11 @@
 [
 	{
+		"type": "news",
+		"title": "Newest GSRS Public Data Released",
+		"date": "November 4, 2019",
+		"text": "The most recent set of public data, comprised of 2333 new records for a total of 107,353, has been compiled and is available for download.<br/><br/> &nbsp <a href = './downloads/dump-public-2019-10-11.gsrs'><b>Download</b></a>"
+	},
+	{
 		"type": "presentation",
 		"date": "October 30, 2019",
 		"heading": "Ginas Public Development Update: October 2019",
